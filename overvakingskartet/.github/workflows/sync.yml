@@ -1,0 +1,29 @@
+name: sync-notion
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci || npm i
+      - run: npm run sync:notion
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DB_ID: ${{ secrets.NOTION_DB_ID }}
+      - run: |
+          git config user.name "notion-sync"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/graph.json
+          git commit -m "sync: oppdater graf frå Notion" || echo "ingen endring"
+          git push
