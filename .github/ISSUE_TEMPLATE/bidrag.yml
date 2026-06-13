@@ -1,0 +1,30 @@
+name: Bidra med data
+description: Foreslå ny node, kant eller retting
+labels: [bidrag]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type
+      options: [Node, Kant, Retting]
+    validations:
+      required: true
+  - type: input
+    id: namn
+    attributes:
+      label: Namn
+    validations:
+      required: true
+  - type: textarea
+    id: detalj
+    attributes:
+      label: Detaljar
+      description: "Node: Type + Lag. Kant: Frå, Til, Relasjonstype."
+    validations:
+      required: true
+  - type: input
+    id: kjelde
+    attributes:
+      label: Kjelde-URL
+    validations:
+      required: true
