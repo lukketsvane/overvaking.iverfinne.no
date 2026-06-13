@@ -1,0 +1,3166 @@
+{
+  "meta": {
+    "kjelde": "Notion (live)",
+    "nodar": 132,
+    "kantar": 129,
+    "malingar": 45,
+    "foreldrelause": 6,
+    "lagFargar": {
+      "Kamera og sensorar": "#3b82f6",
+      "Register og biometri": "#8b5cf6",
+      "Kommunikasjon og etterretning": "#ef4444",
+      "Justis og kontroll": "#1f2937",
+      "Datainfrastruktur": "#06b6d4",
+      "Kapital og eigarskap": "#f59e0b",
+      "Politikk og styring": "#10b981",
+      "Media": "#ec4899",
+      "Personar og roller": "#92400e"
+    },
+    "typeTal": {
+      "Tilgang": 104,
+      "Organisasjon": 45,
+      "Sak": 6,
+      "Tilsyn": 4,
+      "Datadeling": 7,
+      "System": 28,
+      "Person": 16,
+      "Lovheimel": 15,
+      "Måling": 45,
+      "Forsking": 18
+    }
+  },
+  "nodes": [
+    {
+      "id": "79905271-494d-477e-bb48-6054c2fd5950",
+      "label": "Lyse (Altibox)",
+      "type": "Organisasjon",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "skildring": "Regional ekomtilbydar og fiberkonsern (Altibox-partnarskap). Som ekomtilbydar er selskapet underlagt same lagringsplikt for IP-adresser som dei landsdekkjande operatørane.",
+      "merknad": "Regional ekomtilbydar og fiberkonsern (Altibox-partnarskap). Som ekomtilbydar er selskapet underlagt same lagringsplikt for IP-adresser som dei landsdekkjande operatørane.",
+      "geografi": "Noreg"
+    },
+    {
+      "id": "942eb03c-4ae7-4c18-8bb1-a445d4d3e5f8",
+      "label": "Telia sporingssårbarheit (2026)",
+      "type": "Sak",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "kjeldeUrl": "https://www.dataguidance.com",
+      "kjeldeTittel": "DataGuidance 2026",
+      "skildring": "Sårbarheit i 2026 som gjorde det møgleg å spore mobilbrukarar; utløyste tilsyn frå både Nkom og Datatilsynet.",
+      "merknad": "Sårbarheit i 2026 som gjorde det møgleg å spore mobilbrukarar; utløyste tilsyn frå både Nkom og Datatilsynet.",
+      "geografi": "Noreg"
+    },
+    {
+      "id": "ac274714-d9af-4398-acaa-87272e272ee2",
+      "label": "Nkom (Nasjonal kommunikasjonsmyndigheit)",
+      "type": "Tilsyn",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "skildring": "Sektortilsyn for ekomnett. Fører tilsyn med tryggleik og lagringsplikt hos teleoperatørane (Telenor, Telia, Ice, Lyse).",
+      "merknad": "Sektortilsyn for ekomnett. Fører tilsyn med tryggleik og lagringsplikt hos teleoperatørane (Telenor, Telia, Ice, Lyse).",
+      "geografi": "Noreg"
+    },
+    {
+      "id": "a932ee81-da73-48d1-9eb7-d03eee827719",
+      "label": "Israel (forsvarsdepartementet / IDF)",
+      "type": "Organisasjon",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "skildring": "Palantir inngjekk strategisk partnarskap med Israel i januar 2024 for å levere teknologi til krigsinnsatsen. FN sin spesialrapportør har sett selskapet på lista over verksemder knytt til folkerettsbrot i Gaza.",
+      "merknad": "Palantir inngjekk strategisk partnarskap med Israel i januar 2024 for å levere teknologi til krigsinnsatsen. FN sin spesialrapportør har sett selskapet på lista over verksemder knytt til folkerettsbrot i Gaza.",
+      "geografi": "Israel"
+    },
+    {
+      "id": "2c10c159-7c2e-4317-be31-3444768d1684",
+      "label": "Oljefondet sin menneskerettsgjennomgang av Palantir (2026)",
+      "type": "Sak",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "kjeldeUrl": "https://www.bloomberg.com/news/articles/2026-05-29",
+      "kjeldeTittel": "Bloomberg / ai-cio.com 2026",
+      "skildring": "NBIM stemte i 2026 for alle aksjonærforslag om menneskerettsgransking og varsla eigen gjennomgang av Palantir, samstundes som fondet heldt aksjar verd om lag 5,15 mrd. USD i selskapet.",
+      "merknad": "NBIM stemte i 2026 for alle aksjonærforslag om menneskerettsgransking og varsla eigen gjennomgang av Palantir, samstundes som fondet heldt aksjar verd om lag 5,15 mrd. USD i selskapet.",
+      "geografi": "Noreg"
+    },
+    {
+      "id": "5bed8373-6b57-41d9-9e57-0ac49ae359ac",
+      "label": "Storebrand",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "skildring": "Norsk kapitalforvaltar som i oktober 2024 ekskluderte Palantir frå investeringsuniverset grunna risiko for medverknad til menneskerettsbrot via overvakingsteknologi.",
+      "merknad": "Norsk kapitalforvaltar som i oktober 2024 ekskluderte Palantir frå investeringsuniverset grunna risiko for medverknad til menneskerettsbrot via overvakingsteknologi.",
+      "geografi": "Noreg"
+    },
+    {
+      "id": "198a073f-c361-44dc-b87b-5319b598cf99",
+      "label": "USA-forsvaret (Pentagon / US Army)",
+      "type": "Organisasjon",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "skildring": "Inngjekk i 2025 ein rammeavtale med Palantir verd opp til 10 mrd. USD som samlar 75 separate forsvarskontraktar under eitt tak (Army Enterprise Agreement).",
+      "merknad": "Inngjekk i 2025 ein rammeavtale med Palantir verd opp til 10 mrd. USD som samlar 75 separate forsvarskontraktar under eitt tak (Army Enterprise Agreement).",
+      "geografi": "USA"
+    },
+    {
+      "id": "d68898a7-8ed0-4cc3-87e1-6b6d833733d9",
+      "label": "Cellebrite (mobilutlesing)",
+      "type": "System",
+      "lag": "Justis og kontroll",
+      "color": "#1f2937",
+      "sektor": "Justis/politi",
+      "status": "Aktiv",
+      "kategori": "Analyse",
+      "kjeldeUrl": "https://nrkbeta.no/2021/04/23/signal-grunnlegger-hacket-analyseverktoy-brukt-av-norsk-politi/",
+      "kjeldeTittel": "NRKbeta: analyseverktøy brukt av norsk politi",
+      "skildring": "Israelsk verktøy som norsk politi nyttar til å hente ut innhald frå mobiltelefonar; grunnlaget for mange tekniske bevis i norske straffesaker.",
+      "geografi": "Israel / Noreg"
+    },
+    {
+      "id": "0a0f63c9-4021-4077-ac77-202739a96bb2",
+      "label": "Unacast",
+      "type": "Organisasjon",
+      "lag": "Datainfrastruktur",
+      "color": "#06b6d4",
+      "sektor": "Privat næring",
+      "orgType": "Privat",
+      "status": "Aktiv",
+      "kjeldeUrl": "https://nrkbeta.no/2019/10/11/telia-og-telenor-selger-analyser-av-hvor-mobilbrukere-befinner-seg/",
+      "kjeldeTittel": "NRKbeta: Telia og Telenor sel analysar av kvar kundane er",
+      "skildring": "Norskgrunnlagt datamæglar som samlar og sel lokasjons- og rørsledata frå mobilappar. Samarbeidde med Telia om analyse av mobilitetsdata.",
+      "geografi": "Noreg / USA"
+    },
+    {
+      "id": "9191bcbc-4555-4657-ab77-d12b0be5f80e",
+      "label": "Kripos ansiktssøk (passregister)",
+      "type": "System",
+      "lag": "Register og biometri",
+      "color": "#8b5cf6",
+      "sektor": "Justis/politi",
+      "status": "Aktiv",
+      "kategori": "Biometri/register",
+      "kjeldeUrl": "https://www.nrk.no/nordland/omegle-saken_-kripos-brukte-eget-verktoy-for-a-identifisere-190-barn-i-overgrepssak-1.16901885",
+      "kjeldeTittel": "NRK: Kripos brukte eige verktøy for ansiktsgjenkjenning",
+      "skildring": "Kripos sitt eige ansiktsgjenkjenningsverktøy som søkjer i passregisteret for å identifisere personar. Piloterte i 2023 og er frå 2026 rulla ut til alle politidistrikt.",
+      "geografi": "Noreg"
+    },
+    {
+      "id": "bac5400c-9ff5-499d-bcbd-a43564e54f25",
+      "label": "NRK-avsløringa: 140 000 norske mobilar selde (2020)",
+      "type": "Sak",
+      "lag": "Datainfrastruktur",
+      "color": "#06b6d4",
+      "kjeldeUrl": "https://www.nrk.no/norge/xl/norske-offiserer-og-soldater-avslort-av-mobilen-1.14890424",
+      "kjeldeTittel": "Norske offiserer og soldater avslørt av mobilen – NRK",
+      "skildring": "NRK kjøpte i 2020 lokasjonsdata om 140 000 norske mobilar for 35 000 kr. Identifiserte offiserar (over 7500 mobilar i forbodssoner), ein stortingspolitikar og vanlege folk; fann 8300 mobilar på sjukehus/krisesenter. Datatilsynet opna gransking.",
+      "merknad": "NRK kjøpte i 2020 lokasjonsdata om 140 000 norske mobilar for 35 000 kr. Identifiserte offiserar (over 7500 mobilar i forbodssoner), ein stortingspolitikar og vanlege folk; fann 8300 mobilar på sjukehus/krisesenter. Datatilsynet opna gransking."
+    },
+    {
+      "id": "cfc73996-b093-4176-9eb1-a98055e3963c",
+      "label": "First Wap",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "kjeldeUrl": "https://www.nrk.no/norge/xl/telefonene-til-flere-nordmenn-har-blitt-sporet-av-verktoyet-til-indonesisk-selskap-1.17572938",
+      "kjeldeTittel": "Telefonene til flere nordmenn har blitt sporet av verktøyet til indonesisk selskap – NRK",
+      "skildring": "Indonesisk selskap med sporingsverktøy som har spora telefonane til fleire nordmenn. Sel overvakingssystem via skalselskap/stråmenn i ei «ørk gråsone» (NRK 2026).",
+      "merknad": "Indonesisk selskap med sporingsverktøy som har spora telefonane til fleire nordmenn. Sel overvakingssystem via skalselskap/stråmenn i ei «ørk gråsone» (NRK 2026)."
+    },
+    {
+      "id": "b7a5b061-60c5-43d3-b9df-5352c7674334",
+      "label": "Venntel / Babel Street",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "kjeldeUrl": "https://therecord.media/ftc-location-data-brokers-gravy-venntel-mobilewalla",
+      "kjeldeTittel": "FTC targets companies that collected and sold sensitive location data – The Record",
+      "skildring": "Amerikanske lokasjonsdatameklarar som sel mobilposisjonar til styresmakter. DHS, FBI og DEA har kjøpt tilgang; FBI signerte kontrakt verdt opptil 27 mill. dollar med Babel Street. FTC greip inn mot Venntel/Gravy Analytics 2024.",
+      "merknad": "Amerikanske lokasjonsdatameklarar som sel mobilposisjonar til styresmakter. DHS, FBI og DEA har kjøpt tilgang; FBI signerte kontrakt verdt opptil 27 mill. dollar med Babel Street. FTC greip inn mot Venntel/Gravy Analytics 2024."
+    },
+    {
+      "id": "811c48a9-bbf6-4073-b08f-90973f1b7c2e",
+      "label": "Grindr",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "kjeldeUrl": "https://www.datatilsynet.no/regelverk-og-verktoy/lover-og-regler/avgjorelser-fra-datatilsynet/2021/gebyr-til-grindr/",
+      "kjeldeTittel": "Gebyr til Grindr – Datatilsynet",
+      "skildring": "Datingapp bøtlagt 65 mill. kr av Datatilsynet for å dele sensitive personopplysningar (GPS, annonse-ID, seksuell legning) med tredjepartar for åtferdsbasert marknadsføring utan gyldig samtykke. Gebyret stadfesta i lagmannsretten 2025.",
+      "merknad": "Datingapp bøtlagt 65 mill. kr av Datatilsynet for å dele sensitive personopplysningar (GPS, annonse-ID, seksuell legning) med tredjepartar for åtferdsbasert marknadsføring utan gyldig samtykke. Gebyret stadfesta i lagmannsretten 2025."
+    },
+    {
+      "id": "8103a019-5ecf-47e1-b146-ed41f7d488a5",
+      "label": "Tamoco",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "kjeldeUrl": "https://www.digi.no/artikler/debatt-nordmenn-til-salgs-overvaknings-okonomien-er-fortsatt-ute-av-kontroll/503821",
+      "kjeldeTittel": "Nordmenn til salgs: Overvåknings-økonomien er fortsatt ute av kontroll – Digi.no",
+      "skildring": "Britisk lokasjonsdatameklar. Selde NRK lokasjonsdata frå 140 000 norske mobilar/nettbrett for 35 000 kr (2019-data). NRK kunne identifisere namngjevne personar trass påstand om anonymisering.",
+      "merknad": "Britisk lokasjonsdatameklar. Selde NRK lokasjonsdata frå 140 000 norske mobilar/nettbrett for 35 000 kr (2019-data). NRK kunne identifisere namngjevne personar trass påstand om anonymisering."
+    },
+    {
+      "id": "e73117a9-6f9c-4e15-b966-7d56c59c3dcb",
+      "label": "Clearview AI",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "kjeldeUrl": "https://www.forbes.com/sites/roberthart/2024/09/03/clearview-ai-controversial-facial-recognition-firm-fined-33-million-for-illegal-database/",
+      "kjeldeTittel": "Clearview AI Fined Yet Again For “Illegal” Face Recognition – Forbes",
+      "skildring": "Andletsgjenkjenning bygd på 10+ mrd. bilete skrapa frå sosiale medium. Bøtlagt fleire gonger i Europa (m.a. 30+ mill. dollar i Nederland 2024) for ulovleg database.",
+      "merknad": "Andletsgjenkjenning bygd på 10+ mrd. bilete skrapa frå sosiale medium. Bøtlagt fleire gonger i Europa (m.a. 30+ mill. dollar i Nederland 2024) for ulovleg database."
+    },
+    {
+      "id": "776aa4fd-5d03-40aa-93b0-d821a89cc2cf",
+      "label": "Oracle",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "kjeldeUrl": "https://www.iccl.ie/news/class-action-against-oracle/",
+      "kjeldeTittel": "Class action against Oracle's worldwide surveillance machine – ICCL",
+      "skildring": "Hevdar å ha detaljerte dossier på 5 mrd. menneske; ~42 mrd. dollar i årsinntekt. Forlikte amerikansk gruppesøksmål for 115 mill. dollar (2024) og lova å slutte å samle data på nettstader dei ikkje eig.",
+      "merknad": "Hevdar å ha detaljerte dossier på 5 mrd. menneske; ~42 mrd. dollar i årsinntekt. Forlikte amerikansk gruppesøksmål for 115 mill. dollar (2024) og lova å slutte å samle data på nettstader dei ikkje eig."
+    },
+    {
+      "id": "a67456d7-48b9-43e2-a84a-fadcf1348bea",
+      "label": "Hoan Ton-That",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "kjeldeUrl": "https://en.wikipedia.org/wiki/Clearview_AI",
+      "kjeldeTittel": "Clearview AI – Wikipedia",
+      "skildring": "Medgrunnleggjar og CEO i Clearview AI. Bygde database på over 10 mrd. ansiktsbilete skrapa frå internett. Peter Thiel var første investor.",
+      "merknad": "Medgrunnleggjar og CEO i Clearview AI. Bygde database på over 10 mrd. ansiktsbilete skrapa frå internett. Peter Thiel var første investor."
+    },
+    {
+      "id": "791a3f2b-1e44-47e0-a42d-00b222b1783e",
+      "label": "Acxiom (m. Experian, Equifax, Epsilon)",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "kjeldeUrl": "https://www.kaspersky.com/resource-center/preemptive-safety/how-to-stop-data-brokers-from-selling-your-personal-information",
+      "kjeldeTittel": "How to stop data brokers from selling your personal data – Kaspersky",
+      "skildring": "Blant dei største globale datameklarane. Bransjen er verdsett til ~200 mrd. dollar i året med opptil 4 000 selskap. Sel forbrukarprofilar til annonsørar, forsikring og styresmakter.",
+      "merknad": "Blant dei største globale datameklarane. Bransjen er verdsett til ~200 mrd. dollar i året med opptil 4 000 selskap. Sel forbrukarprofilar til annonsørar, forsikring og styresmakter."
+    },
+    {
+      "id": "4afe4959-ed58-4de0-8f75-9e0fb293bbd5",
+      "label": "Larry Ellison",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "kjeldeUrl": "https://www.theguardian.com/us-news/2025/sep/11/who-is-larry-ellison-richest-person-oracle",
+      "kjeldeTittel": "Larry Ellison: Oracle co-founder who overtook Musk as world's richest person",
+      "skildring": "Medgrunnleggjar og styreleiar/CTO i Oracle. Formue ~200 mrd. dollar (tidvis verdas rikaste). Oracle hevdar å ha profilar på 5 mrd. menneske. Har offentleg teke til orde for AI-masseovervaking. Trump-alliert.",
+      "merknad": "Medgrunnleggjar og styreleiar/CTO i Oracle. Formue ~200 mrd. dollar (tidvis verdas rikaste). Oracle hevdar å ha profilar på 5 mrd. menneske. Har offentleg teke til orde for AI-masseovervaking. Trump-alliert."
+    },
+    {
+      "id": "c6afb486-8eef-48a3-9074-326a5b3a7786",
+      "label": "Clearview AI",
+      "type": "Organisasjon",
+      "lag": "Datainfrastruktur",
+      "color": "#06b6d4",
+      "sektor": "Privat næring",
+      "orgType": "Privat",
+      "status": "Aktiv",
+      "kjeldeUrl": "https://en.wikipedia.org/wiki/Clearview_AI",
+      "kjeldeTittel": "Wikipedia: Clearview AI",
+      "skildring": "Amerikansk ansiktsgjenkjenningsselskap som har skrapa milliardar av bilete frå nettet utan samtykke og sel teknologien til politi og styresmakter. Peter Thiel var tidleg investor.",
+      "merknad": "NRK dokumenterte i 2020 at fleire norske polititilsette oppretta brukarar, og at ein Kripos-tilsett gjorde kring 30 søk med bilete frå norske overgrepssaker. Politidirektoratet avviser at appen er i operativ bruk hjå norsk politi.",
+      "geografi": "USA"
+    },
+    {
+      "id": "34b7dd6f-d232-457f-803e-01091df930a8",
+      "label": "Dun & Bradstreet (Bisnode)",
+      "type": "Organisasjon",
+      "lag": "Datainfrastruktur",
+      "color": "#06b6d4",
+      "sektor": "Privat næring",
+      "orgType": "Privat",
+      "status": "Aktiv",
+      "kjeldeUrl": "https://www.dnb.com/no/",
+      "kjeldeTittel": "Dun & Bradstreet Noreg",
+      "skildring": "Internasjonal datamæglar (tidlegare Bisnode i Norden) som sel norske foretaks-, forbruks- og kredittdata, og marknadsfører datasamlingane til KI-arbeidsflytar.",
+      "merknad": "Den fremste kommersielle motparten til dei offentlege registra i kartet. Konkrete kantar til norske datakjøparar (bankar, daglegvare) kan leggjast til seinare.",
+      "geografi": "Noreg / Norden"
+    },
+    {
+      "id": "6cd4d133-8e7a-42a4-9d4a-4ba019088c46",
+      "label": "Palantir Technologies Norway AS",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "kjeldeUrl": "https://e24.no/naeringsliv/i/e8kJwy/peter-thiels-hemmelighetsfulle-selskap-tjente-12-millioner-i-norge",
+      "kjeldeTittel": "Peter Thiels hemmelighetsfulle selskap tjente 12 millioner i Norge – E24",
+      "skildring": "Norsk dotterselskap registrert 2017. Inntekter 12,7 mill. kr i 2017. Leverer Gotham-baserte system til norsk politi og Tolletaten.",
+      "merknad": "Norsk dotterselskap registrert 2017. Inntekter 12,7 mill. kr i 2017. Leverer Gotham-baserte system til norsk politi og Tolletaten."
+    },
+    {
+      "id": "2de79f33-ca3c-4d37-92c0-2fa4d501de79",
+      "label": "Detec AS",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "kjeldeUrl": "https://detec.no/nb/collections/detec-next-anpr",
+      "kjeldeTittel": "Detec Next ANPR – Detec AS",
+      "skildring": "Norsk leverandør av ANPR-programvare (Detec Next ANPR). Statens vegvesen lyste ut rammeavtale for ANPR-kamera på Doffin (2025). Spesifikk etatskontrakt ikkje fullt stadfesta her.",
+      "merknad": "Norsk leverandør av ANPR-programvare (Detec Next ANPR). Statens vegvesen lyste ut rammeavtale for ANPR-kamera på Doffin (2025). Spesifikk etatskontrakt ikkje fullt stadfesta her."
+    },
+    {
+      "id": "5d81eba9-8978-4596-a144-24af738ec951",
+      "label": "Skjult kameraovervaking – lovforslag 2026",
+      "type": "Lovheimel",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "kjeldeUrl": "https://www.regjeringen.no/no/aktuelt/regjeringen-styrker-politiets-adgang-til-skjult-kameraovervaking/id3154895/",
+      "kjeldeTittel": "Regjeringen styrker politiets adgang til skjult kameraovervaking – regjeringen.no",
+      "skildring": "Justis- og beredskapsdept. (Aas-Hansen) la 27.3.2026 fram forslag om klare lovheimlar for skjult kameraovervaking, m.a. med droner, håndhaldne kamera og kjuretøymonterte kamera, for politiet og PST.",
+      "merknad": "Justis- og beredskapsdept. (Aas-Hansen) la 27.3.2026 fram forslag om klare lovheimlar for skjult kameraovervaking, m.a. med droner, håndhaldne kamera og kjuretøymonterte kamera, for politiet og PST."
+    },
+    {
+      "id": "eccb8a6e-8658-4cdb-84fb-d2616a827efd",
+      "label": "Marie Benedicte Bjørnland",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "kjeldeUrl": "https://www.regjeringen.no/no/aktuelt/marie-benedicte-bjornland-utnemnd-som-tolldirektor/id3120289/",
+      "kjeldeTittel": "Marie Benedicte Bjørnland utnemnd som tolldirektør",
+      "skildring": "Svingdør: PST-sjef 2012-2019, politidirektør 2019-2025, no tolldirektør (frå 2025). Same person på toppen av tre overvakingsorgan etter kvarandre.",
+      "merknad": "Svingdør: PST-sjef 2012-2019, politidirektør 2019-2025, no tolldirektør (frå 2025). Same person på toppen av tre overvakingsorgan etter kvarandre."
+    },
+    {
+      "id": "6a476cff-4968-4ce0-9d78-b96db1c48a91",
+      "label": "Håkon Skulstad",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "kjeldeUrl": "https://www.vg.no/tag/benedicte-bjoernland",
+      "kjeldeTittel": "Håkon Skulstad utnevnt til ny politidirektør",
+      "skildring": "Utnemnd til politidirektør etter Benedicte Bjørnland; leiar Politidirektoratet (POD).",
+      "merknad": "Utnemnd til politidirektør etter Benedicte Bjørnland; leiar Politidirektoratet (POD)."
+    },
+    {
+      "id": "8bb5555e-54c4-4873-ac62-e19744c658c3",
+      "label": "Jørn Sigurd Maurud",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "kjeldeUrl": "https://www.riksadvokaten.no/person/forstestatsadvokatembetsleder-jorn-sigurd-maurud/",
+      "kjeldeTittel": "Riksadvokat Jørn Sigurd Maurud",
+      "skildring": "Riksadvokat frå 1. november 2019. Øvste leiar for påtalemakta; styrer bruken av skjulte tvangsmiddel.",
+      "merknad": "Riksadvokat frå 1. november 2019. Øvste leiar for påtalemakta; styrer bruken av skjulte tvangsmiddel."
+    },
+    {
+      "id": "bd1483a1-d819-45ec-acef-c4895839ef3f",
+      "label": "Tore O. Sandvik",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "kjeldeUrl": "https://www.regjeringen.no/no/dep/fd/id380/",
+      "kjeldeTittel": "Forsvarsdepartementet – regjeringen.no",
+      "skildring": "Forsvarsminister (Ap) frå 4. februar 2025. Konstitusjonelt ansvar for Etterretningstenesta.",
+      "merknad": "Forsvarsminister (Ap) frå 4. februar 2025. Konstitusjonelt ansvar for Etterretningstenesta."
+    },
+    {
+      "id": "853926b7-fd7f-438d-a4a8-0886e697b107",
+      "label": "Anders Anundsen",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "kjeldeUrl": "https://www.vg.no/nyheter/i/021QA/regjeringen-aapner-for-aa-registrere-alle-flypassasjerer",
+      "kjeldeTittel": "VG: Regjeringa opnar for PNR-registrering av flypassasjerar",
+      "skildring": "Justis- og beredskapsminister (Frp) 2013-2016. Fremja lovframlegg om skjulte tvangsmiddel og opna for norsk PNR-registrering.",
+      "merknad": "Justis- og beredskapsminister (Frp) 2013-2016. Fremja Prop. 68 L om skjulte tvangsmiddel/dataavlesing og opna for norsk PNR-registrering av flypassasjerar."
+    },
+    {
+      "id": "1e18e193-d6e3-4cb8-a5ed-9bbe8ea48cf8",
+      "label": "Grenselova §16a (PNR / passasjerlister)",
+      "type": "Lovheimel",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "kjeldeUrl": "https://www.stortinget.no/no/Saker-og-publikasjoner/Publikasjoner/Innstillinger/Stortinget/2021-2022/inns-202122-161l/?all=true",
+      "skildring": "Prop. 229 L (2020-2021), Justis- og beredskapsdepartementet. Etablerer nasjonalt PNR-system for innsamling av passasjerlister; følgjer EUs PNR-direktiv 2016/681. Anders Anundsen (Frp) opna for norsk PNR alt i 2016.",
+      "merknad": "Prop. 229 L (2020-2021), Justis- og beredskapsdepartementet. Etablerer nasjonalt PNR-system for innsamling av passasjerlister; følgjer EUs PNR-direktiv 2016/681. Anders Anundsen (Frp) opna for norsk PNR alt i 2016."
+    },
+    {
+      "id": "ef129552-fe75-414f-862e-57770945310d",
+      "label": "Straffeprosesslova – skjulte tvangsmiddel (dataavlesing)",
+      "type": "Lovheimel",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "kjeldeUrl": "https://www.stortinget.no/no/Saker-og-publikasjoner/Saker/Sak/?p=65017",
+      "skildring": "Prop. 68 L (2015-2016), vedteke 17.6.2016. Gav politiet utvida tilgang til skjulte tvangsmiddel: dataavlesing (nytt), romavlytting, kommunikasjonskontroll og kameraoveråking i etterforsking og førebygging.",
+      "merknad": "Prop. 68 L (2015-2016), vedteke 17.6.2016. Gav politiet utvida tilgang til skjulte tvangsmiddel: dataavlesing (nytt), romavlytting, kommunikasjonskontroll og kameraoveråking i etterforsking og førebygging."
+    },
+    {
+      "id": "34af4f50-0d71-4336-85e4-c01d63d7364e",
+      "label": "Etterretningstenestelova (kap. 7-8, tilrettelagt innhenting)",
+      "type": "Lovheimel",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "kjeldeUrl": "https://www.stortinget.no/no/Saker-og-publikasjoner/Saker/Sak/?p=79451",
+      "skildring": "Prop. 80 L (2019-2020), vedteke 19.6.2020. Kap. 7-8 opnar for masseinnhenting og lagring av grensekryssande metadata. Støtta av H, Ap, Frp, KrF, Sp; SV, V, MDG og Rødt stemte imot kap. 7-8.",
+      "merknad": "Prop. 80 L (2019-2020), vedteke 19.6.2020. Kap. 7-8 opnar for masseinnhenting og lagring av grensekryssande metadata. Støtta av H, Ap, Frp, KrF, Sp; SV, V, MDG og Rødt stemte imot kap. 7-8."
+    },
+    {
+      "id": "7b3eeeb7-6b48-4662-85a4-6d8bb06e7425",
+      "label": "Datalagringsdirektivet (DLD)",
+      "type": "Lovheimel",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "kjeldeUrl": "https://www.vg.no/nyheter/i/KdPmE/hoeyre-og-arbeiderpartiet-er-enige-om-datalagringsdirektivet",
+      "skildring": "Prop. 49 L (2010-2011). Vedteke 2011 gjennom forlik mellom Arbeidarpartiet og Høgre (6 mnd lagring). Kjent ugyldig av EU-domstolen i 2014; aldri sett i full kraft i Noreg.",
+      "merknad": "Prop. 49 L (2010-2011). Vedteke 2011 gjennom forlik mellom Arbeidarpartiet og Høgre (6 mnd lagring). Kjent ugyldig av EU-domstolen i 2014; aldri sett i full kraft i Noreg."
+    },
+    {
+      "id": "eadd3634-a3b5-48d4-949a-befd9af2ede0",
+      "label": "Frank Bakke-Jensen",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "kjeldeUrl": "https://nn.wikipedia.org/wiki/Frank_Bakke-Jensen",
+      "kjeldeTittel": "Wikipedia: Frank Bakke-Jensen",
+      "skildring": "Forsvarsminister (Høgre) 2017-2021. Ansvarleg statsråd for den nye etterretningstenestelova med tilrettelagd innhenting.",
+      "merknad": "Forsvarsminister (Høgre) 2017-2021 i regjeringa Solberg. Ansvarleg statsråd for Prop. 80 L og den nye etterretningstenestelova med tilrettelagt innhenting."
+    },
+    {
+      "id": "be5caeba-d0e1-431e-b0ff-8f512eb05a94",
+      "label": "Vakt- og næringskamera (Avarn)",
+      "type": "System",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "kjeldeUrl": "https://www.avarnsecurity.no/",
+      "skildring": "Kameraovervåking drifta for næringsbygg, kjøpesenter og offentlege kundar i Oslo.",
+      "merknad": "Kameraovervåking drifta for næringsbygg, kjøpesenter og offentlege kundar i Oslo.",
+      "geografi": "Oslo",
+      "verdiTekst": "Uteljt; tusenvis av kamera på næringsbygg og offentlege oppdrag"
+    },
+    {
+      "id": "5c51c386-d717-4e1e-bdf2-a5b5e74872cf",
+      "label": "Avarn Security",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "kjeldeUrl": "https://www.avarnsecurity.no/",
+      "kjeldeTittel": "Avarn Security",
+      "skildring": "Leiande nordisk vaktselskap (om lag 16 000 tilsette). Leverer kameraovervaking til offentlege og private verksemder.",
+      "merknad": "Leiande nordisk vaktselskap (~16 000 tilsette). Leverer kameraovervåking til offentlege og private verksemder; vakthald på 43 norske flyplassar.",
+      "geografi": "Oslo / Norden"
+    },
+    {
+      "id": "6ccfc2b4-5f8a-4ae2-8540-4feef1dd002a",
+      "label": "Alex Karp",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "kjeldeUrl": "https://www.morgenbladet.no/samfunn/oljefondet-er-europas-storste-investor-i-palantir/10254641",
+      "kjeldeTittel": "Morgenbladet: Oljefondet og Palantir",
+      "skildring": "Medgrunnleggjar og administrerande direktør i Palantir. Eig om lag 3-4 prosent med uforholdsmessig stor stemmemakt.",
+      "merknad": "Medgrunnleggjar og administrerande direktør i Palantir. Eig ~3-4% med uforholdsmessig stor stemmemakt. Har selt aksjar for over 20 mrd. kroner sidan 2024."
+    },
+    {
+      "id": "6ea66d8d-8d8f-49c2-ac61-ff378a9f6602",
+      "label": "Stephen Cohen",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "kjeldeUrl": "https://www.forbes.com/profile/stephen-cohen/",
+      "kjeldeTittel": "Forbes: Stephen Cohen",
+      "skildring": "Medgrunnleggjar og president i Palantir; protesjé av Peter Thiel. Formue bygd på om lag 1,5 prosent eigardel.",
+      "merknad": "Medgrunnleggjar og president i Palantir. Formue bygd på ~1,5% eigardel; milliardær. Protesjé av Peter Thiel."
+    },
+    {
+      "id": "7c9f55c2-eeb0-409a-bffa-eca98359d80a",
+      "label": "Joe Lonsdale",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "kjeldeUrl": "https://en.wikipedia.org/wiki/Joe_Lonsdale",
+      "kjeldeTittel": "Wikipedia: Joe Lonsdale",
+      "skildring": "Medgrunnleggjar av Palantir (forlot 2009) og managing partner i venturefondet 8VC.",
+      "merknad": "Medgrunnleggjar av Palantir (forlot 2009). Managing partner i venturefondet 8VC (~6 mrd. dollar). Formue ~2,9 mrd. dollar."
+    },
+    {
+      "id": "bdae09d9-3f13-4528-a0b7-d44faaf3703d",
+      "label": "Peter Thiel",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "kjeldeUrl": "https://en.wikipedia.org/wiki/Peter_Thiel",
+      "kjeldeTittel": "Wikipedia: Peter Thiel",
+      "skildring": "Medgrunnleggjar og styreleiar i Palantir, grunnla Founders Fund. Sentral aktanst i det teknologiske høgre i USA.",
+      "merknad": "Medgrunnleggjar og styreleiar i Palantir. Grunnla Founders Fund. Formue ~22-27 mrd. dollar. Tett alliert med Trump-administrasjonen; sentral i den autoritaere tech-høgre."
+    },
+    {
+      "id": "04603db7-0a8e-4139-bd33-e16280a0ca44",
+      "label": "Founders Fund",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "kjeldeUrl": "https://foundersfund.com/team/peter-thiel/",
+      "kjeldeTittel": "Founders Fund: Peter Thiel",
+      "skildring": "Peter Thiels venturefond i Silicon Valley. Tidleg finansiering av Palantir; del av PayPal-mafiaen sitt investeringsnettverk."
+    },
+    {
+      "id": "e664f698-3ecb-43c6-aa36-c1df1dca789a",
+      "label": "Forskrift om kameraovervaking §5b (utlevering til politiet)",
+      "type": "Lovheimel",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "kjeldeUrl": "https://lovdata.no/dokument/SF/forskrift/2018-07-02-1107",
+      "kjeldeTittel": "Lovdata: Forskrift om kameraovervaking i virksomhet §5",
+      "skildring": "Tillet at private kameraopptak vert utleverte til politiet ved etterforsking av straffbare handlingar/ulykker. Den rettslege svingdøra for kamera.",
+      "merknad": "Tillet at private kameraopptak vert utleverte til politiet ved etterforsking av straffbare handlingar/ulykker. Den rettslege svingdøra for kamera."
+    },
+    {
+      "id": "115f1f3e-7e4b-4c73-b1c8-5dccfaecb3ff",
+      "label": "Nicolai Tangen",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "kjeldeUrl": "https://www.nbim.no/en/about-us/leader-group/leadergroup-persons/nicolai-tangen/",
+      "kjeldeTittel": "NBIM: Nicolai Tangen",
+      "skildring": "Sjef for NBIM (Oljefondet) sidan 2020 og grunnleggjar av AKO Capital. Markert AI-entusiast; relevant for fondet si investering i Palantir.",
+      "merknad": "Sjef NBIM (Oljefondet) sidan 1. sept 2020; grunnleggjar AKO Capital. Markert AI-entusiast."
+    },
+    {
+      "id": "4fbb5c50-2cd4-44a3-a20d-6f87b406b426",
+      "label": "Oljefondet (SPU / NBIM)",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "kjeldeUrl": "https://www.morgenbladet.no/samfunn/oljefondet-er-europas-storste-investor-i-palantir/10254641",
+      "kjeldeTittel": "Morgenbladet: Oljefondet er Europas største investor i Palantir",
+      "skildring": "Statens pensjonsfond utland, forvalta av NBIM. Europas største direkte investor i Palantir.",
+      "merknad": "Eigardel i Palantir ~1,4% (auka frå 0,35% i 2023; verdi ~$5,15 mrd, 12-dobling). Europas største direkte investor."
+    },
+    {
+      "id": "c39353cd-2219-4cab-8a6d-40f05f622130",
+      "label": "Nokas (vaktselskap)",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "kjeldeUrl": "https://www.securityworldmarket.com/no/Nyhetsarkiv/olav-thon-gruppen-forlenger-med-nokas1",
+      "kjeldeTittel": "SecurityWorldMarket",
+      "skildring": "Stort nordisk vaktselskap. Driftar alarm- og kameraovervaking, mellom anna for Olav Thon Gruppen (om lag 4500 kamera).",
+      "merknad": "Driftar alarm- og kameraovervaking for Olav Thon Gruppen (~4500 kamera)."
+    },
+    {
+      "id": "a0033973-9518-4783-ad23-62bbb4df8ecc",
+      "label": "Vekterkamera Oslo S (Bane NOR)",
+      "type": "System",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "kjeldeUrl": "https://www.aftenposten.no/oslo/i/JQKP/her-overvaakes-150000-mennesker-hver-dag",
+      "kjeldeTittel": "Aftenposten: Her overvåkes 150.000 mennesker hver dag",
+      "skildring": "Stasjonsdekkande vekterkamera (minst éi vekes lagring). Skild frå politiets eigne 6-8 kamera på Oslo S.",
+      "merknad": "Stasjonsdekkande vekterkamera (minst éi vekes lagring). Skild frå politiets eigne 6-8 kamera på Oslo S.",
+      "verdiTekst": "≈150 000 overvaka dagleg"
+    },
+    {
+      "id": "adf93cf5-bca3-44f0-9d39-e90ca4192316",
+      "label": "Kjøpesenter- og hotellkamera (Olav Thon)",
+      "type": "System",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "kjeldeUrl": "https://www.securityworldmarket.com/no/Nyhetsarkiv/olav-thon-gruppen-forlenger-med-nokas1",
+      "kjeldeTittel": "SecurityWorldMarket (Nokas-avtale)",
+      "skildring": "≈4500 kamera drifta på tvers av Thon-sentre og hotell; mange i Oslo (t.d. Storo, Paleet 48 kamera). Politiet kan krevje utlevering.",
+      "merknad": "≈4500 kamera drifta på tvers av Thon-sentre og hotell; mange i Oslo (t.d. Storo, Paleet 48 kamera). Politiet kan krevje utlevering.",
+      "verdiTekst": "≈4500 kamera"
+    },
+    {
+      "id": "0f247155-7294-434a-b88d-63039c0adef5",
+      "label": "Olav Thon Gruppen",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "kjeldeUrl": "https://www.securityworldmarket.com/no/Nyhetsarkiv/olav-thon-gruppen-forlenger-med-nokas1",
+      "kjeldeTittel": "SecurityWorldMarket: Olav Thon gruppen forlenger med Nokas",
+      "skildring": "Eig og forvaltar om lag 80 kjøpesenter og 500 næringseigedomar; om lag 4500 overvakingskamera drifta via Nokas.",
+      "merknad": "Eig/forvaltar ~80 kjøpesentre og ~500 næringseigedomar; ~4500 overvakingskamera drifta (via Nokas)."
+    },
+    {
+      "id": "a85f0b2f-00b4-409c-b005-b12739a0e440",
+      "label": "Nils Andreas Stensønes",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://nsm.no/kurs-og-konferanser/sikkerhetskonferansen/alle-foredragsholdere/nils-andreas-stensones",
+      "kjeldeTittel": "NSM: Nils Andreas Stensønes, sjef Etterretningstenesta",
+      "skildring": "Sjef for Etterretningstenesta sidan 2020, tidlegare sjef for Sjøforsvaret. Skal etter planen gå av i 2026.",
+      "merknad": "Sjef for Etterretningstenesta (E-tenesta) frå 3.11.2020. Tidlegare sjef Sjøforsvaret. Skal etter planen gå av i 2026.",
+      "geografi": "Noreg"
+    },
+    {
+      "id": "c0578c11-a9ab-41c9-bce5-3251a8d3bc8d",
+      "label": "Astri Aas-Hansen",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://no.wikipedia.org/wiki/Astri_Aas-Hansen",
+      "kjeldeTittel": "Wikipedia/regjeringen.no: Astri Aas-Hansen, justisminister",
+      "skildring": "Justis- og beredskapsminister frå 2025; tidlegare leiar for EOS-utvalet (2021-2025). Døme på svingdør mellom tilsyn og styring av dei hemmelege tenestene.",
+      "merknad": "DOKUMENTERT SVINGDØR: Leiar for EOS-utvalet (tilsynet med dei hemmelege tenestene) 2021–2025, deretter justis- og beredskapsminister frå 4.2.2025 – dvs. statsråden som styrer dei same tenestene ho før førte kontroll med.",
+      "geografi": "Noreg"
+    },
+    {
+      "id": "eb333c43-65c1-4263-be8d-67272daecfed",
+      "label": "Beate Gangås",
+      "type": "Person",
+      "lag": "Personar og roller",
+      "color": "#92400e",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://no.wikipedia.org/wiki/Beate_Gang%C3%A5s",
+      "kjeldeTittel": "Wikipedia/PST: Beate Gangås, sjef PST",
+      "skildring": "Sjef for PST sidan 2022, tidlegare politimeister i Oslo og avdelingsdirektør i PST.",
+      "merknad": "Sjef for PST frå 1.12.2022 (åremal 6 år). Tidlegare politimeister i Oslo og avdelingsdirektør i PST.",
+      "geografi": "Noreg"
+    },
+    {
+      "id": "5878cb86-59c4-4b61-887c-cc9155d18384",
+      "label": "NATO-allierte",
+      "type": "Organisasjon",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "kjeldeUrl": "https://www.nato.int",
+      "kjeldeTittel": "NATO",
+      "skildring": "Den nordatlantiske forsvarsalliansen og dei allierte landa. Ramme for etterretnings- og tryggleikssamarbeid som Noreg deltek i."
+    },
+    {
+      "id": "68fa35b6-194f-4aa8-a164-8e51a6ab037a",
+      "label": "EU (Europol/PNR)",
+      "type": "Organisasjon",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "kjeldeUrl": "https://www.europol.europa.eu",
+      "kjeldeTittel": "Europol",
+      "skildring": "EUs politisamarbeidsbyrå Europol og PNR-regimet for flypassasjerdata. Ramme for kryssnasjonal deling av reise- og personopplysningar."
+    },
+    {
+      "id": "265fcfcb-3ed3-42bf-9c4f-6a99b599f951",
+      "label": "USA (FBI/DHS)",
+      "type": "Organisasjon",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "kjeldeUrl": "https://www.dhs.gov",
+      "kjeldeTittel": "U.S. Department of Homeland Security",
+      "skildring": "Amerikanske føderale tryggleiks- og etterforskingsorgan (Department of Homeland Security og FBI). Partnar i internasjonal etterretnings- og datadeling."
+    },
+    {
+      "id": "d49d3f79-bb07-431f-903e-1ac67293a96c",
+      "label": "Ice",
+      "type": "Organisasjon",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "kjeldeUrl": "https://www.proff.no/selskap/ice-communication-norge-as/stavanger/-/IFF0K3J0000",
+      "kjeldeTittel": "Proff: Ice Communication Norge AS",
+      "skildring": "Tredje største mobiloperatør i Noreg, eigd av Lyse. Lagrar IP- og trafikkdata og kan påleggjast utlevering."
+    },
+    {
+      "id": "c1902954-dfcf-48b8-b38f-121fe4267340",
+      "label": "Telia",
+      "type": "Organisasjon",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "kjeldeUrl": "https://www.proff.no/selskap/telia-norge-as/-/detaljhandel/IG8M5B310MN",
+      "kjeldeTittel": "Proff: Telia Norge AS",
+      "skildring": "Nest største teleselskap i Noreg (tidlegare NetCom), eigd av svenske Telia Company. Lagrar IP- og trafikkdata og kan påleggjast utlevering."
+    },
+    {
+      "id": "35c0dfc9-578e-4fc9-9a8c-117f9648256b",
+      "label": "Telenor",
+      "type": "Organisasjon",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "kjeldeUrl": "https://www.proff.no/selskap/telenor-asa/fornebu/telekommunikasjon/IG8XLUU01PE",
+      "kjeldeTittel": "Proff: Telenor ASA",
+      "skildring": "Største norske teleselskap. Lagrar IP- og trafikkdata etter ekomlova og kan påleggjast å utlevere opplysningar til politiet."
+    },
+    {
+      "id": "bdb074c5-d810-4e7e-a6e2-1981053d2b95",
+      "label": "Avinor-kamera (omfang)",
+      "type": "Forsking",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Open",
+      "prioritet": "Høg"
+    },
+    {
+      "id": "33bda830-8bed-4869-8157-8dfd49dcb771",
+      "label": "Offentlege register (samla)",
+      "type": "Forsking",
+      "lag": "Register og biometri",
+      "color": "#8b5cf6",
+      "status": "Open",
+      "prioritet": "Middels"
+    },
+    {
+      "id": "1b86891e-0c61-4caf-b628-29196fc29be7",
+      "label": "AIS (skipssporing)",
+      "type": "Forsking",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Open",
+      "prioritet": "Låg"
+    },
+    {
+      "id": "bcfa0e47-0f31-4c06-b337-c8ecc233f728",
+      "label": "Bomstasjonar (AutoPASS)",
+      "type": "Forsking",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Open",
+      "prioritet": "Høg"
+    },
+    {
+      "id": "622da9df-2c1a-4756-b9b1-a205d3bf222f",
+      "label": "ADS-B (flysporing)",
+      "type": "Forsking",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Open",
+      "prioritet": "Låg"
+    },
+    {
+      "id": "943234e6-6198-491d-8ed8-9750854dd834",
+      "label": "Kjøpesenter CCTV",
+      "type": "Forsking",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Open",
+      "prioritet": "Middels"
+    },
+    {
+      "id": "98bfabb4-a151-44a7-bcfb-6778dee0ded5",
+      "label": "KI-system (analyse)",
+      "type": "Forsking",
+      "lag": "Datainfrastruktur",
+      "color": "#06b6d4",
+      "status": "Open",
+      "prioritet": "Høg"
+    },
+    {
+      "id": "70e18faf-0130-4a72-9368-8b90300123da",
+      "label": "Mobilmaster (lokalisering)",
+      "type": "Forsking",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "status": "Open",
+      "prioritet": "Middels"
+    },
+    {
+      "id": "928ad005-c360-445d-b3ee-6e5ec0f41ada",
+      "label": "FN-register",
+      "type": "Forsking",
+      "lag": "Register og biometri",
+      "color": "#8b5cf6",
+      "status": "Open",
+      "prioritet": "Låg"
+    },
+    {
+      "id": "c61c94ee-9a41-4f17-a027-b311de1aef55",
+      "label": "Register-samkøyring",
+      "type": "Forsking",
+      "lag": "Register og biometri",
+      "color": "#8b5cf6",
+      "status": "Open",
+      "prioritet": "Høg"
+    },
+    {
+      "id": "74896e3e-fb74-4000-acb4-c45ac6019006",
+      "label": "Ruter-kamera (omfang)",
+      "type": "Forsking",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Open",
+      "prioritet": "Høg"
+    },
+    {
+      "id": "3033a99c-1a9f-426b-ba7b-4ff16d556157",
+      "label": "Biometri-system (samla)",
+      "type": "Forsking",
+      "lag": "Register og biometri",
+      "color": "#8b5cf6",
+      "status": "Open",
+      "prioritet": "Middels"
+    },
+    {
+      "id": "f27a6880-21ee-4bc8-ba75-de57eeec49e3",
+      "label": "Bane NOR-kamera (omfang)",
+      "type": "Forsking",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Open",
+      "prioritet": "Høg"
+    },
+    {
+      "id": "1a04e31a-1511-4a33-a41c-78270f5b38ea",
+      "label": "Vy-kamera (omfang)",
+      "type": "Forsking",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Open",
+      "prioritet": "Høg"
+    },
+    {
+      "id": "c69c929d-58ec-4e07-9b75-e610ba8ab366",
+      "label": "Ansiktsgjenkjenning",
+      "type": "Forsking",
+      "lag": "Register og biometri",
+      "color": "#8b5cf6",
+      "status": "Open",
+      "prioritet": "Høg"
+    },
+    {
+      "id": "7d1897f6-730e-48ca-bf87-0eea1ff357d7",
+      "label": "Datasenter (infrastruktur)",
+      "type": "Forsking",
+      "lag": "Datainfrastruktur",
+      "color": "#06b6d4",
+      "status": "Open",
+      "prioritet": "Middels"
+    },
+    {
+      "id": "64600872-7977-4aba-9729-f71e90cd0f05",
+      "label": "Drosjekamera (kartlegging)",
+      "type": "Forsking",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Open",
+      "prioritet": "Middels"
+    },
+    {
+      "id": "21a4d372-80b7-4935-8b68-ce86a40978e1",
+      "label": "Busskamera (kartlegging)",
+      "type": "Forsking",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Open",
+      "prioritet": "Høg"
+    },
+    {
+      "id": "6ac8023d-4644-4cbf-9a3f-689a21151bb7",
+      "label": "Tinius-søksmålet",
+      "type": "Sak",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "skildring": "Staten vann i første instans; avgjerda er anka.",
+      "merknad": "Staten vann i første instans; avgjerda er anka."
+    },
+    {
+      "id": "8ec9fde7-522d-4bbb-888f-71c9f4ee873d",
+      "label": "EOS-funn: ulovleg PNR-tilgang",
+      "type": "Sak",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "skildring": "EOS-utvalet avdekte ulovleg tilgang til PNR-data (PST/Aust politidistrikt). Om lag 1 mill. oppslag.",
+      "merknad": "EOS-utvalet avdekte ulovleg tilgang til PNR-data (PST/Aust politidistrikt). Om lag 1 mill. oppslag."
+    },
+    {
+      "id": "56f92721-d16b-4a9e-ae12-e72d0b99f592",
+      "label": "Brumunddal-saka",
+      "type": "Sak",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "skildring": "Datatilsynet kravde stopp i kommunal kameraovervaking.",
+      "merknad": "Datatilsynet kravde stopp i kommunal kameraovervaking."
+    },
+    {
+      "id": "f597f7ae-ae0d-4a21-8117-f22cdeaffa0b",
+      "label": "Straffeprosesslova §216o",
+      "type": "Lovheimel",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "skildring": "Heimel for dataavlesing.",
+      "merknad": "Heimel for dataavlesing."
+    },
+    {
+      "id": "fe5af18f-8b3b-475e-bf27-b7dd8e19187f",
+      "label": "Straffeprosesslova §216m",
+      "type": "Lovheimel",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "skildring": "Heimel for romavlytting.",
+      "merknad": "Heimel for romavlytting."
+    },
+    {
+      "id": "ad94a771-ee85-4b5c-baca-92530f6c2aff",
+      "label": "Straffeprosesslova §216a-b",
+      "type": "Lovheimel",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "skildring": "Heimel for kommunikasjonskontroll.",
+      "merknad": "Heimel for kommunikasjonskontroll."
+    },
+    {
+      "id": "218a0615-e54f-40a1-8e92-2543e026191c",
+      "label": "Ekomlova §3-13",
+      "type": "Lovheimel",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "skildring": "Lagringsplikt for IP-adresser (12 mnd).",
+      "merknad": "Lagringsplikt for IP-adresser (12 mnd)."
+    },
+    {
+      "id": "e9c48468-81df-4a90-80f3-3e70235965a9",
+      "label": "Kvitvaskingslova §§25-28",
+      "type": "Lovheimel",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "skildring": "Rapporteringsplikt for finansielle føretak (MT-rapportar).",
+      "merknad": "Rapporteringsplikt for finansielle føretak (MT-rapportar)."
+    },
+    {
+      "id": "46af6bc2-f98d-4e18-9013-f19e04f45dc6",
+      "label": "Etterretningstenestelova kap. 7",
+      "type": "Lovheimel",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "skildring": "Heimel for tilrettelagt innhenting (TI).",
+      "merknad": "Heimel for tilrettelagt innhenting (TI)."
+    },
+    {
+      "id": "ff798b33-5014-477a-94d0-96273c516663",
+      "label": "Vareørselslova §7-16 / §8-9",
+      "type": "Lovheimel",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "skildring": "Heimel for Tolletaten sin ANPR-bruk.",
+      "merknad": "Heimel for Tolletaten sin ANPR-bruk."
+    },
+    {
+      "id": "d38d8333-160a-4db1-804d-82c86ce646b5",
+      "label": "Grenselova §16a",
+      "type": "Lovheimel",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "skildring": "Heimel for PNR / flypassasjerdata.",
+      "merknad": "Heimel for PNR / flypassasjerdata."
+    },
+    {
+      "id": "b5a9d72c-0750-499a-ba86-cabfbe3a1e44",
+      "label": "Politilova §6a",
+      "type": "Lovheimel",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "skildring": "Heimel for politiet si kameraovervaking på offentleg stad.",
+      "merknad": "Heimel for politiet si kameraovervaking på offentleg stad."
+    },
+    {
+      "id": "8a79c9bd-5b2b-4522-9031-e87aaa8ebbd9",
+      "label": "Datatilsynet",
+      "type": "Tilsyn",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "sektor": "Tilsyn",
+      "orgType": "Offentleg"
+    },
+    {
+      "id": "6f9f9332-487e-41b8-a9c8-92546e94fbce",
+      "label": "KK-utvalet",
+      "type": "Tilsyn",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "sektor": "Tilsyn",
+      "orgType": "Offentleg",
+      "skildring": "Kontrollutval for kommunikasjonskontroll.",
+      "merknad": "Kontrollutval for kommunikasjonskontroll."
+    },
+    {
+      "id": "d85ae0e2-a6ad-410d-890f-b0caa1069d19",
+      "label": "EOS-utvalet",
+      "type": "Tilsyn",
+      "lag": "Politikk og styring",
+      "color": "#10b981",
+      "sektor": "Tilsyn",
+      "orgType": "Offentleg",
+      "skildring": "Kontrollerer EOS-tenestene; rapporterer til Stortinget.",
+      "merknad": "Kontrollerer EOS-tenestene; rapporterer til Stortinget.",
+      "metrics": [
+        {
+          "id": "759a3c62-7b55-4e17-818a-13b806d44da1",
+          "metrikkType": "Klager",
+          "verdi": 29,
+          "verdiTekst": "29 klager til behandling",
+          "eining": "klager",
+          "aar": 2024,
+          "kjeldeUrl": "https://eos-utvalget.no/wp-content/uploads/2025/06/EOS-utvalgets-arsmelding-2024-UU-v2.pdf",
+          "kjeldeTittel": "EOS-utvalet, årsmelding 2024"
+        },
+        {
+          "id": "884ce581-3183-40b9-a157-66ccdeda4281",
+          "metrikkType": "Saker",
+          "verdi": 24,
+          "verdiTekst": "24 saker av eige tiltak",
+          "eining": "saker",
+          "aar": 2024,
+          "kjeldeUrl": "https://eos-utvalget.no/wp-content/uploads/2025/06/EOS-utvalgets-arsmelding-2024-UU-v2.pdf",
+          "kjeldeTittel": "EOS-utvalet, årsmelding 2024"
+        },
+        {
+          "id": "e6f3c154-2269-439d-acce-18708b4026bb",
+          "metrikkType": "Inspeksjonar",
+          "verdi": 21,
+          "verdiTekst": "21 inspeksjonar",
+          "eining": "inspeksjonar",
+          "aar": 2024,
+          "kjeldeUrl": "https://eos-utvalget.no/wp-content/uploads/2025/06/EOS-utvalgets-arsmelding-2024-UU-v2.pdf",
+          "kjeldeTittel": "EOS-utvalet, årsmelding 2024"
+        }
+      ]
+    },
+    {
+      "id": "c481c009-3fd6-4fdf-8d39-5f1b2a5d5e81",
+      "label": "E-tenesta (Etterretningstenesta)",
+      "type": "Organisasjon",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "sektor": "Statleg",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://www.etterretningstjenesten.no",
+      "kjeldeTittel": "Etterretningstenesta",
+      "skildring": "Noregs utanlands militære etterretningsteneste. Driv tilrettelagd innhenting (TI) av grenseoverskridande elektronisk kommunikasjon.",
+      "metrics": [
+        {
+          "id": "91f97c94-847e-4b39-9511-80718fe5aa2b",
+          "metrikkType": "Kostnad (NOK)",
+          "verdi": 691000000,
+          "verdiTekst": "691 mill. kr",
+          "eining": "NOK/år",
+          "aar": 2005,
+          "kjeldeUrl": "https://www.nrk.no/tromsogfinnmark/etterretningstjenesten-styrkes-igjen-_-budsjetter-mer-enn-tredoblet-de-siste-15-arene-1.15192192",
+          "kjeldeTittel": "NRK: E-tjenestens budsjett tredoblet",
+          "merknad": "Samanlikningsgrunnlag: budsjettet er meir enn tredobla frå 2005 til 2025."
+        },
+        {
+          "id": "b9d81f57-76b7-447a-b5c0-5aa770217891",
+          "metrikkType": "Kostnad (NOK)",
+          "verdi": 4000000000,
+          "verdiTekst": "over 4 mrd. kr",
+          "eining": "NOK/år",
+          "aar": 2025,
+          "kjeldeUrl": "https://www.nordnorskdebatt.no/stortinget-ma-ta-styringen-av-etterretningstjenesten/o/5-124-328296",
+          "kjeldeTittel": "Nordnorsk debatt: budsjettforslag over fire milliardar",
+          "merknad": "Ope budsjettforslag for E-tenesta; dekkjer m.a. tilrettelagt innhenting (TI). Tredobla sidan 2005."
+        },
+        {
+          "id": "fa63506e-e397-4fd3-a90a-cfcb1f32a219",
+          "metrikkType": "Kostnad (NOK)",
+          "verdi": 1300000000,
+          "verdiTekst": "1,3 mrd. kr (kostnadsramme)",
+          "eining": "NOK",
+          "aar": 2025,
+          "kjeldeUrl": "https://filternyheter.no/ulovlig-overvaking-e-tjenesten-lagret-emnefeltet-til-e-poster-som-krysset-landegrensen/",
+          "kjeldeTittel": "Filter Nyheter: kostnadsramme på 1,3 mrd. for TI (brev frå E-sjefen til EOS-utvalet)",
+          "merknad": "Kostnadsramme for sjålve TI-verktøyet (tilrettelagt innhenting / digitalt grenseforsvar), stadfesta av E-sjef Stensønes i brev til EOS-utvalet (nov. 2025). Kjem i tillegg til E-tenesta sitt årlege driftsbudsjett på over 4 mrd."
+        }
+      ]
+    },
+    {
+      "id": "bfd26b45-160a-4dbd-80bd-a88d539abfee",
+      "label": "Økokrim",
+      "type": "Organisasjon",
+      "lag": "Justis og kontroll",
+      "color": "#1f2937",
+      "sektor": "Justis/politi",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://www.okokrim.no",
+      "kjeldeTittel": "Økokrim",
+      "skildring": "Den sentrale eininga for etterforsking og påtale av økonomisk kriminalitet og miljøkriminalitet. Husar Eininga for finansiell etterretning (EFE) som tek imot MT-rapportar."
+    },
+    {
+      "id": "12d0fb88-3ee3-4d2b-9f01-e3b05e24ad17",
+      "label": "Statens vegvesen",
+      "type": "Organisasjon",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "sektor": "Statleg",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://www.vegvesen.no/fag/fokusomrader/trafikksikkerhet/skiltleser/",
+      "kjeldeTittel": "Statens vegvesen: Automatisk skiltgjenkjenning (ANPR)",
+      "skildring": "Statleg etat med ansvar for riksvegnettet og køyretøykontroll. Systemeigar for automatisk skiltgjenkjenning (ANPR) og driv trafikk- og vegkamera.",
+      "metrics": [
+        {
+          "id": "ad093303-1c43-4732-839a-4a3b2278c138",
+          "metrikkType": "Tal kamera",
+          "verdi": 450,
+          "verdiTekst": "≈ 450 webkamera (130 i 2012)",
+          "eining": "kamera",
+          "aar": 2024,
+          "kjeldeUrl": "https://www.nrk.no/norge/130-webkamera-viser-trafikken-1.8225063",
+          "kjeldeTittel": "NRK: 130 webkamera viser trafikken (2012); livetraffic.eu listar ≈449 i dag",
+          "merknad": "SVV hadde ≈130 webkamera i 2012 og talet er utvida sidan; tredjepartsteneste listar ≈449 norske trafikkamera i dag. Eksakt dagstal ikkje offisielt publisert."
+        },
+        {
+          "id": "d7bfcb7c-9947-4510-8bc4-4f962a96b76b",
+          "metrikkType": "Tal kamera",
+          "verdi": 75,
+          "verdiTekst": "75 ANPR-kamera (2021)",
+          "eining": "kamera",
+          "aar": 2021,
+          "kjeldeUrl": "https://www.marusfritrafikk.no/nyheter/skiltskannere-luker-ut-trafikkfarlige-kjoretoy/",
+          "kjeldeTittel": "MA – Rusfri trafikk: 75 spesialkamera kopla mot kjøretøyregisteret",
+          "merknad": "75 ANPR-kamera kopla direkte mot kjøretøyregisteret; les registreringsnummeret til alle som passerer."
+        }
+      ]
+    },
+    {
+      "id": "1a4321ef-555f-4619-89ba-e52c56a352c5",
+      "label": "Tolletaten",
+      "type": "Organisasjon",
+      "lag": "Justis og kontroll",
+      "color": "#1f2937",
+      "sektor": "Statleg",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://www.toll.no/no/verktoy/regelverk/handboker/vareforselshandboken/8-9",
+      "kjeldeTittel": "Tolletaten: Skiltgjenkjenningssystem (ANPR)",
+      "skildring": "Statleg etat for vare- og grensekontroll. Overvakar grensekryssande trafikk med skiltgjenkjenning (ANPR) og analyserer reise- og transportdata."
+    },
+    {
+      "id": "45264ba9-495b-4166-a0f2-347260617228",
+      "label": "PST",
+      "type": "Organisasjon",
+      "lag": "Justis og kontroll",
+      "color": "#1f2937",
+      "sektor": "Justis/politi",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://www.pst.no",
+      "kjeldeTittel": "PST",
+      "skildring": "Politiets tryggingsteneste, den nasjonale innanlands etterretnings- og tryggingstenesta. Førebyggjer og etterforskar trugslar mot rikets tryggleik."
+    },
+    {
+      "id": "ec986906-b7af-4447-b7cb-bd798bd3bfd0",
+      "label": "Kripos",
+      "type": "Organisasjon",
+      "lag": "Justis og kontroll",
+      "color": "#1f2937",
+      "sektor": "Justis/politi",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://www.politiet.no/om-politiet/organisasjonen/sarorganene/kripos",
+      "kjeldeTittel": "Politiet: Kripos",
+      "skildring": "Den nasjonale eininga for kamp mot organisert og anna alvorleg kriminalitet. Behandlingsansvarleg for DNA-, fingeravtrykk- og fotoregisteret og nasjonalt kontaktpunkt mot Europol og Interpol."
+    },
+    {
+      "id": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "label": "Politiet",
+      "type": "Organisasjon",
+      "lag": "Justis og kontroll",
+      "color": "#1f2937",
+      "sektor": "Justis/politi",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://www.politiet.no",
+      "kjeldeTittel": "Politiet",
+      "skildring": "Den norske politi- og lensmannsetaten. Forvaltar straffesaksregister, driv kameraovervaking og kan nytte skjulte tvangsmiddel etter rettsordre."
+    },
+    {
+      "id": "d9bb663c-ffdd-450a-ae0d-fce9c27f564b",
+      "label": "Sjukehus / helseføretak",
+      "type": "Organisasjon",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "sektor": "Helse",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://www.regjeringen.no/no/tema/helse-og-omsorg/sykehus/innsikt/de-regionale-helseforetakene/id528110/",
+      "kjeldeTittel": "Regjeringa: Dei regionale helseføretaka",
+      "skildring": "Dei regionale helseføretaka og sjukehusa. Driv kameraovervaking av inngangar, akuttmottak og fellesareal.",
+      "metrics": [
+        {
+          "id": "8b347472-7cd8-42e3-a176-7c9dccacfedf",
+          "metrikkType": "Tal kamera",
+          "verdi": 25,
+          "verdiTekst": "25 kamera (berre Aker)",
+          "eining": "kamera",
+          "kjeldeUrl": "https://automatikk-service.no/referanser/oslo-universitetssykehus-aker/",
+          "kjeldeTittel": "Automatikk-Service: 25 kamera på Aker sjukehus",
+          "merknad": "Berre Aker (eitt av OUS sine fire sjukehuskompleks med til saman 325 bygningar). Samla sjukehuskameratal ikkje publisert."
+        }
+      ]
+    },
+    {
+      "id": "34293c31-b8e2-4062-bb38-dc008dc00dcc",
+      "label": "Norske kommunar",
+      "type": "Organisasjon",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "sektor": "Kommune",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://www.ks.no",
+      "kjeldeTittel": "KS – kommunesektorens organisasjon",
+      "skildring": "Kommunane driv kameraovervaking av byrom, torg og kommunale bygg. KS er interesseorganisasjonen til kommunesektoren."
+    },
+    {
+      "id": "d522363f-1ddd-402b-b82f-f04fdde4b831",
+      "label": "Sporveien",
+      "type": "Organisasjon",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "sektor": "Kollektiv",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://www.sporveien.no",
+      "kjeldeTittel": "Sporveien",
+      "skildring": "Noregs største kollektivselskap (eigd av Oslo kommune). Driv T-bane, trikk og buss, og kameraovervaking av vogner og infrastruktur."
+    },
+    {
+      "id": "8c0bb97f-6084-4a9f-8b82-7f125051957a",
+      "label": "Ruter",
+      "type": "Organisasjon",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "sektor": "Kollektiv",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://ruter.no",
+      "kjeldeTittel": "Ruter",
+      "skildring": "Administrasjonsselskap for kollektivtrafikken i Oslo og Akershus. Eig ofte ikkje kameraa sjølv; operatørar som Unibuss driv kameraovervaking på vegner av Ruter.",
+      "merknad": "Eig ofte ikkje kamera sjølv; operatørar (Unibuss m.fl.) gjer det."
+    },
+    {
+      "id": "11babdf7-43d1-4907-9a2c-097ef05f32a3",
+      "label": "Avinor",
+      "type": "Organisasjon",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "sektor": "Luftfart",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://avinor.no",
+      "kjeldeTittel": "Avinor",
+      "skildring": "Statleg aksjeselskap som eig og driv dei fleste norske lufthamnene og den norske flysikringstenesta. Driv omfattande kamera- og tryggleiksovervaking i terminalane.",
+      "metrics": [
+        {
+          "id": "7b2729e8-5296-4458-86a0-29edb17c27d2",
+          "metrikkType": "Tal kamera",
+          "verdi": 500,
+          "verdiTekst": "≈ 500 kamera berre på hovudflyplassen",
+          "eining": "kamera",
+          "aar": 2008,
+          "kjeldeUrl": "https://www.tu.no/artikler/overvaker-ulovlig-straffes-ikke/323232",
+          "kjeldeTittel": "Teknisk Ukeblad: rundt 500 overvåkingskamera på Gardermoen",
+          "merknad": "Tal frå 2008 (Oslo lufthavn Gardermoen). Truleg fleire i dag; gjeld éin av Avinor sine 43 lufthamner."
+        }
+      ]
+    },
+    {
+      "id": "4dbcd031-8558-4025-9d7b-b9ff84da360c",
+      "label": "Vy",
+      "type": "Organisasjon",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "sektor": "Transport",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://www.vy.no/vilkar-og-personvern/personvern",
+      "kjeldeTittel": "Vy: Personvern",
+      "skildring": "Statleg transportkonsern (tog og buss). Kameraopptak blir som hovudregel sletta innan sju dagar, men kan utleverast til politiet.",
+      "merknad": "Opptak sletta som hovudregel innan 7 dagar; lengre ved konkret mistanke; utlevering ved politiet sin førespurnad."
+    },
+    {
+      "id": "3c841378-1d3a-471d-a2fd-24bbb4f3a4ff",
+      "label": "Bane NOR",
+      "type": "Organisasjon",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "sektor": "Transport",
+      "orgType": "Offentleg",
+      "kjeldeUrl": "https://www.banenor.no",
+      "kjeldeTittel": "Bane NOR",
+      "skildring": "Statsføretak med ansvar for den norske jernbaneinfrastrukturen. Driv kameraovervaking på stasjonar, plattformer og planovergangar."
+    },
+    {
+      "id": "d69821c8-452c-4153-a9f8-aa4ae5e08061",
+      "label": "NorgesGruppen",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "sektor": "Daglegvare",
+      "orgType": "Privat",
+      "kjeldeUrl": "https://www.proff.no/selskap/norgesgruppen-asa/oslo/butikkhandel/IDK1OQI10MC",
+      "kjeldeTittel": "Proff: NorgesGruppen ASA",
+      "skildring": "Det største daglegvarekonsernet i Noreg (KIWI, MENY, SPAR med fleire). Driv kameraovervaking i butikkane sine."
+    },
+    {
+      "id": "d768447b-4f4e-443b-852a-8c9270e504b3",
+      "label": "Palantir",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "sektor": "Privat næring",
+      "orgType": "Privat",
+      "kjeldeUrl": "https://www.palantir.com",
+      "kjeldeTittel": "Palantir Technologies",
+      "skildring": "Amerikansk programvareselskap for dataanalyse (Gotham). Leverandør til Omnia (Politiet) og Treff (Tolletaten). Ein sentral aktør, ikkje eit eige overvakingsnivå.",
+      "merknad": "Programvareselskap (analyse). Leverandør til Omnia (Politiet) og Treff (Tolletaten). Er ein node/aktør, ikkje eit eige overvakingsnivå."
+    },
+    {
+      "id": "a9d83c32-698d-4aed-95ee-8087abc21b3b",
+      "label": "Rema 1000",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "sektor": "Daglegvare",
+      "orgType": "Privat",
+      "kjeldeUrl": "https://www.proff.no/selskap/rema-1000-norge-as/oslo/utleie-og-leasing/IG8T4I401TD",
+      "kjeldeTittel": "Proff: REMA 1000 Norge AS",
+      "skildring": "Norsk daglegvarekjede (Reitan Retail). Driv kameraovervaking i butikkane sine."
+    },
+    {
+      "id": "68da5386-c173-4b44-8a62-9869ac042e09",
+      "label": "Coop",
+      "type": "Organisasjon",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "sektor": "Daglegvare",
+      "orgType": "Privat",
+      "kjeldeUrl": "https://www.proff.no/selskap/coop-norge-sa/oslo/m%C3%B8bler-husholdningsvarer-og-jernvarer-agentur/IFHLQJK10JT",
+      "kjeldeTittel": "Proff: Coop Norge SA",
+      "skildring": "Norsk samvirkebasert daglegvarekonsern. Driv kameraovervaking (CCTV) i butikkane sine."
+    },
+    {
+      "id": "96a159fd-7630-4e5d-b58d-454621a6988b",
+      "label": "Sjukehuskamera",
+      "type": "System",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Aktiv",
+      "kategori": "Kamera",
+      "kjeldeUrl": "https://www.datatilsynet.no/personvern-pa-ulike-omrader/overvaking-og-sporing/kameraovervaking/",
+      "kjeldeTittel": "Datatilsynet: Kameraovervaking",
+      "skildring": "Kameraovervaking ved sjukehus og helseføretak (inngangar, akuttmottak, fellesareal) av omsyn til tryggleik.",
+      "geografi": "Helseføretak",
+      "metrics": [
+        {
+          "id": "8b347472-7cd8-42e3-a176-7c9dccacfedf",
+          "metrikkType": "Tal kamera",
+          "verdi": 25,
+          "verdiTekst": "25 kamera (berre Aker)",
+          "eining": "kamera",
+          "kjeldeUrl": "https://automatikk-service.no/referanser/oslo-universitetssykehus-aker/",
+          "kjeldeTittel": "Automatikk-Service: 25 kamera på Aker sjukehus",
+          "merknad": "Berre Aker (eitt av OUS sine fire sjukehuskompleks med til saman 325 bygningar). Samla sjukehuskameratal ikkje publisert."
+        }
+      ]
+    },
+    {
+      "id": "534baccd-cd13-4f7a-b699-0f84e30b04c4",
+      "label": "Kommunale byromskamera",
+      "type": "System",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Aktiv",
+      "kategori": "Kamera",
+      "kjeldeUrl": "https://www.datatilsynet.no/personvern-pa-ulike-omrader/overvaking-og-sporing/kameraovervaking/",
+      "kjeldeTittel": "Datatilsynet: Kameraovervaking",
+      "skildring": "Kommunal kameraovervaking av byrom, torg og offentlege stader. Regulert av personvernregelverket.",
+      "geografi": "Kommunar"
+    },
+    {
+      "id": "aeb1a75b-59e6-4ad1-8a98-2e3d1c996e04",
+      "label": "Lufthamnkamera (Avinor)",
+      "type": "System",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Aktiv",
+      "kategori": "Kamera",
+      "kjeldeUrl": "https://www.avinor.no/en/practical-info/privacy/privacy-avinor/",
+      "kjeldeTittel": "Avinor: Personvern",
+      "skildring": "Kameraovervaking i Avinor sine lufthamner, av omsyn til tryggleik og tryggleikskontroll av passasjerar og areal.",
+      "geografi": "Avinor-lufthamner",
+      "metrics": [
+        {
+          "id": "7b2729e8-5296-4458-86a0-29edb17c27d2",
+          "metrikkType": "Tal kamera",
+          "verdi": 500,
+          "verdiTekst": "≈ 500 kamera berre på hovudflyplassen",
+          "eining": "kamera",
+          "aar": 2008,
+          "kjeldeUrl": "https://www.tu.no/artikler/overvaker-ulovlig-straffes-ikke/323232",
+          "kjeldeTittel": "Teknisk Ukeblad: rundt 500 overvåkingskamera på Gardermoen",
+          "merknad": "Tal frå 2008 (Oslo lufthavn Gardermoen). Truleg fleire i dag; gjeld éin av Avinor sine 43 lufthamner."
+        }
+      ]
+    },
+    {
+      "id": "f9330a85-447c-4c57-942a-3023dc341468",
+      "label": "Kollektivkamera",
+      "type": "System",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Aktiv",
+      "kategori": "Kamera",
+      "kjeldeUrl": "https://www.datatilsynet.no/personvern-pa-ulike-omrader/overvaking-og-sporing/kameraovervaking/",
+      "kjeldeTittel": "Datatilsynet: Kameraovervaking",
+      "skildring": "Kameraovervaking i kollektivtransport (buss, trikk, T-bane) for tryggleik og førebygging av vald og hærverk.",
+      "geografi": "Nasjonalt"
+    },
+    {
+      "id": "52a996ef-8e3d-43e8-b856-43c7da8c07cf",
+      "label": "Butikkamera (daglegvare CCTV)",
+      "type": "System",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Aktiv",
+      "kategori": "Kamera",
+      "kjeldeUrl": "https://www.datatilsynet.no/personvern-pa-ulike-omrader/overvaking-og-sporing/kameraovervaking/",
+      "kjeldeTittel": "Datatilsynet: Kameraovervaking",
+      "skildring": "Kameraovervaking (CCTV) i daglegvarebutikkar. Regulert av personvernregelverket og forskrift om kameraovervaking i verksemd.",
+      "geografi": "Nasjonalt"
+    },
+    {
+      "id": "9ee6f3e1-720c-443a-847f-590b84286f1b",
+      "label": "Treff (analysesystem)",
+      "type": "System",
+      "lag": "Datainfrastruktur",
+      "color": "#06b6d4",
+      "status": "Aktiv",
+      "kategori": "Analyse",
+      "kjeldeUrl": "https://www.toll.no",
+      "kjeldeTittel": "Tolletaten",
+      "skildring": "Tolletaten si analysesatsing for kontroll og risikovurdering. Palantir har vore leverandør. Treng kjeldeverifisering.",
+      "merknad": "Tolletaten si analysesatsing; leverandør Palantir.",
+      "geografi": "Tolletaten",
+      "metrics": [
+        {
+          "id": "3e34478f-d515-4e8e-8090-5504c3802ff1",
+          "metrikkType": "Kostnad (NOK)",
+          "verdi": 300000000,
+          "verdiTekst": "300 mill. kr (opphavleg kontrakt)",
+          "eining": "NOK",
+          "aar": 2024,
+          "kjeldeUrl": "https://www.aftenposten.no/norge/i/6nkkX0/naa-skal-algoritmer-og-analyser-av-big-data-avgjoere-hvem-som-blir-sjekket-ekstra-noeye-i-tollen",
+          "kjeldeTittel": "Aftenposten (2018): Tolletaten og Palantir",
+          "merknad": "Opphavleg Palantir-kontrakt 2017 på 300 mill. kr; ramma har sidan auka (sjå Treff-ramme)."
+        },
+        {
+          "id": "17cad722-0a31-4840-853a-c0af7dc0f0cd",
+          "metrikkType": "Kostnad (NOK)",
+          "verdi": 594500000,
+          "verdiTekst": "594,5 mill. kr (ramme, 2024)",
+          "eining": "NOK (ramme)",
+          "aar": 2026,
+          "kjeldeUrl": "https://www.toll.no/files/52e70f6ce94b2752e3bb9e6aacf81224894d3407.pdf",
+          "kjeldeTittel": "Tolletaten – årsrapport (Treff-prosjektet)"
+        }
+      ]
+    },
+    {
+      "id": "2e169940-769c-41b3-91eb-1bba45f5f88c",
+      "label": "Omnia (analysesystem)",
+      "type": "System",
+      "lag": "Datainfrastruktur",
+      "color": "#06b6d4",
+      "status": "Avvikla",
+      "kategori": "Analyse",
+      "kjeldeUrl": "https://www.politiforum.no/kripos-nyhet-palantir/brastopp-for-prestisjeprosjekt/158144",
+      "kjeldeTittel": "Politiforum: Omnia og Palantir i politiet",
+      "skildring": "Politiet sitt analyse- og saksbehandlingssystem for internasjonalt politiarbeid. Leverandør Palantir; avtalen avslutta i 2020.",
+      "merknad": "Leverandør Palantir. Avtale avslutta 2020 grunna forseinkingar og personvernutfordringar.",
+      "geografi": "Politiet",
+      "metrics": [
+        {
+          "id": "981ccfba-98d6-4872-a045-7a3500d89c4c",
+          "metrikkType": "Kostnad (NOK)",
+          "verdi": 81000000,
+          "verdiTekst": "81 mill. kr (Palantir-kontrakt, politiet)",
+          "eining": "NOK",
+          "aar": 2021,
+          "kjeldeUrl": "https://e24.no/naeringsliv/i/e8kJwy/peter-thiels-hemmelighetsfulle-selskap-tjente-12-millioner-i-norge",
+          "kjeldeTittel": "E24: Palantir sine norske kontraktar",
+          "merknad": "Politiet sin Palantir-kontrakt (Omnia/Gotham) ≈ 81 mill. kr. Politiet har sidan avslutta samarbeidet."
+        }
+      ]
+    },
+    {
+      "id": "d5aba32d-35d1-4bbb-8fef-9bbb572fdc6d",
+      "label": "Planovergang-kamera (Bane NOR)",
+      "type": "System",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Aktiv",
+      "kategori": "Kamera",
+      "kjeldeUrl": "https://www.banenor.no/nyheter-og-aktuelt/nyheter/2025/kamera-pa-planovergang-gir-okt-sikkerhet/",
+      "kjeldeTittel": "Bane NOR: Kamera på planovergang gir auka tryggleik",
+      "skildring": "Bane NOR sin bruk av kamera og hinderdeteksjon på planovergangar for å oppdage køyretøy i sporet og hindre ulykker.",
+      "geografi": "Nasjonalt (planovergangar)",
+      "metrics": [
+        {
+          "id": "d476bf48-c625-4536-a18b-0139fd7bfd23",
+          "metrikkType": "Tal kamera",
+          "verdi": 64,
+          "verdiTekst": "64 planovergangar med KI-kamera (39 + 25)",
+          "eining": "planovergangar",
+          "aar": 2024,
+          "kjeldeUrl": "https://www.nrk.no/vestfoldogtelemark/kunstig-intelligens-skal-forhindre-ulykker-pa-planoverganger-1.16993577",
+          "kjeldeTittel": "NRK: KI skal forhindre ulykker på planoverganger",
+          "merknad": "39 mest utsette planovergangar fekk KI-kamera, +25 mot vinteren 2025. Bane NOR har i tillegg kameraovervaking på mange stasjonar."
+        }
+      ]
+    },
+    {
+      "id": "b352d0f8-f35a-4009-81cf-d1c59edf8d7e",
+      "label": "Vegkamera (trafikkbilete)",
+      "type": "System",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Aktiv",
+      "kategori": "Sporing",
+      "kjeldeUrl": "https://www.vegvesen.no/trafikk/",
+      "kjeldeTittel": "Statens vegvesen: Trafikk og vegkamera",
+      "skildring": "Statens vegvesen sine trafikk- og vegkamera som viser trafikkbilete og tilstand på vegnettet.",
+      "geografi": "Vegnettet",
+      "metrics": [
+        {
+          "id": "cfac1a95-fa3b-4f94-831f-4ed7e74a2570",
+          "metrikkType": "Passeringar/døgn",
+          "verdi": 820000,
+          "verdiTekst": "les alle passerande kjøretøy",
+          "eining": "avlesingar/døgn",
+          "aar": 2025,
+          "kjeldeUrl": "https://www.vegvesen.no/fag/fokusomrader/trafikksikkerhet/skiltleser/",
+          "kjeldeTittel": "Statens vegvesen: Automatisk skiltgjenkjenning (ANPR)",
+          "merknad": "ANPR les og samanliknar registreringsnummeret til kvart passerande kjøretøy, ikkje berre treff. Ingen samla offentleg døgnstatistikk er publisert."
+        }
+      ]
+    },
+    {
+      "id": "fc58e081-056d-4ea6-8e10-8299ca0b5ef3",
+      "label": "Fotoregisteret",
+      "type": "System",
+      "lag": "Register og biometri",
+      "color": "#8b5cf6",
+      "status": "Aktiv",
+      "kategori": "Biometri/register",
+      "kjeldeUrl": "https://lovdata.no/forskrift/2013-09-20-1097/kap46",
+      "kjeldeTittel": "Lovdata: Politiregisterforskrifta kap. 46 (foto og fingeravtrykk)",
+      "skildring": "Register for foto innhenta etter straffeprosesslova § 160. Kripos er behandlingsansvarleg; grunnlag for ansiktsgjenkjenning.",
+      "metrics": [
+        {
+          "id": "8228ef3d-e2a3-4a63-99a2-a085f99b315e",
+          "metrikkType": "Personar omfatta",
+          "verdi": 169000,
+          "verdiTekst": "Ikkje offentleg publisert",
+          "eining": "personar",
+          "aar": 2026,
+          "kjeldeTittel": "Kripos estimat",
+          "merknad": "Politiets fotoregister vert brukt i Kripos sitt Ansiktssøk saman med pass- og ID-kortregisteret; frå 2026 har over 100 etterforskarar tilgang. Talet på registrerte personar i fotoregisteret er ikkje offentleg publisert."
+        }
+      ]
+    },
+    {
+      "id": "5382e3a4-bee0-4a05-93b2-c0c42875048e",
+      "label": "DNA-registeret",
+      "type": "System",
+      "lag": "Register og biometri",
+      "color": "#8b5cf6",
+      "status": "Aktiv",
+      "kategori": "Biometri/register",
+      "kjeldeUrl": "https://lovdata.no/dokument/LTI/forskrift/2013-09-20-1097/KAPITTEL_11-2",
+      "kjeldeTittel": "Lovdata: Politiregisterforskrifta (DNA-registeret)",
+      "skildring": "Sentralt DNA-register under Kripos, delt i spor-, etterforskings- og identitetsregister. Brukt i etterforsking av alvorleg kriminalitet.",
+      "metrics": [
+        {
+          "id": "a0459414-56c8-41b2-8819-211ad587eba6",
+          "metrikkType": "Personar omfatta",
+          "verdi": 132329,
+          "verdiTekst": "132 329 i identitetsregisteret",
+          "eining": "personar",
+          "aar": 2026,
+          "kjeldeUrl": "https://bioteknologiradet.no/wp-content/uploads/2026/01/Moderne-DNA-analyser-i-politiarbeid-%E2%80%93-ny-innsikt-fra-biologiske-spor.UU_.pdf",
+          "kjeldeTittel": "Bioteknologirådet (2026): Moderne DNA-analyser i politiarbeid",
+          "merknad": "Per sept. 2025: 132 329 i identitetsregisteret, 3 804 i etterforskingsregisteret, 13 969 sporprofilar."
+        }
+      ]
+    },
+    {
+      "id": "fcbee69b-a2da-478c-97d2-00186a2a4086",
+      "label": "Fingeravtrykkregisteret",
+      "type": "System",
+      "lag": "Register og biometri",
+      "color": "#8b5cf6",
+      "status": "Aktiv",
+      "kategori": "Biometri/register",
+      "kjeldeUrl": "https://lovdata.no/forskrift/2013-09-20-1097/kap46",
+      "kjeldeTittel": "Lovdata: Politiregisterforskrifta kap. 46 (foto og fingeravtrykk)",
+      "skildring": "Register for fingeravtrykk innhenta etter straffeprosesslova § 160. Kripos er behandlingsansvarleg.",
+      "metrics": [
+        {
+          "id": "b94f5af5-c9ad-4a5f-9c5a-fcee3e45c5ca",
+          "metrikkType": "Personar omfatta",
+          "verdi": 400000,
+          "verdiTekst": "≈ 400 000 personar",
+          "eining": "personar",
+          "aar": 2026,
+          "kjeldeUrl": "https://www.nrk.no/norge/slik-skal-kripos-identifisere-lovbrytere-raskere-1.12724904",
+          "kjeldeTittel": "NRK: Kripos sitt fingeravtrykkregister",
+          "merknad": "Om lag 400 000 registrerte personar (Kripos AFIS)."
+        }
+      ]
+    },
+    {
+      "id": "7fd4fb66-8b3c-4606-a06e-b6d61e9244a4",
+      "label": "MT-rapportering (kvitvasking)",
+      "type": "System",
+      "lag": "Kapital og eigarskap",
+      "color": "#f59e0b",
+      "status": "Aktiv",
+      "kategori": "Finansiell",
+      "kjeldeUrl": "https://www.okokrim.no/hva-er-mt-rapporter-hva-gjoer-efe.6233505-411472.html",
+      "kjeldeTittel": "Økokrim: MT-rapportar og EFE",
+      "skildring": "Rapportering av mistenkjelege transaksjonar til Eininga for finansiell etterretning (EFE) i Økokrim etter kvitvaskingslova.",
+      "heimel": "Kvitvaskingslova §§25-28",
+      "metrics": [
+        {
+          "id": "1ba3c720-4db9-415a-8763-67be1a20803a",
+          "metrikkType": "Rapportar/år",
+          "verdi": 23586,
+          "verdiTekst": "23 424 frå bankar",
+          "eining": "rapportar (bankar)",
+          "aar": 2025,
+          "merknad": "Bankane stod for den klart største delen av dei 33 313 rapportane i 2025. Til samanlikning kom berre 25 rapportar frå advokatar. Kjelde: Økokrim."
+        },
+        {
+          "id": "ce725296-a848-4733-be89-18da573f469b",
+          "metrikkType": "Kostnad (NOK)",
+          "verdi": 90000000,
+          "verdiTekst": "Ikkje separat publisert",
+          "eining": "NOK",
+          "aar": 2025,
+          "merknad": "EFE/FIU sitt eige driftsbudsjett er ikkje skilt ut offentleg. Kontekst: statsbudsjettet for 2025 sette av om lag 90 mill. kr til styrkt innsats mot hvitvasking og korrupsjon i politiet/Økokrim, og privat sektor brukar i underkant av 400 årsverk berre på MT-overvaking og rapportering."
+        },
+        {
+          "id": "0728d65b-54ed-4b37-b48c-7c87a4f68532",
+          "metrikkType": "Rapportar/år",
+          "verdi": 33311,
+          "verdiTekst": "33 313 MT-rapportar",
+          "eining": "rapportar",
+          "aar": 2025,
+          "merknad": "Samla tal i 2025, jamn auke frå 30 659 i 2024 og meir enn ei dobling sidan 2020 (12 703). Kjelde: Økokrim / årsrapport FIU 2025."
+        },
+        {
+          "id": "ff6f0738-a891-4020-aa74-e3d43ada6ea2",
+          "metrikkType": "Rapportar/år",
+          "verdi": 30659,
+          "verdiTekst": "30 659 MT-rapportar",
+          "eining": "rapportar",
+          "aar": 2024,
+          "merknad": "Samla tal på MT-/MF-rapportar til Økokrim/FIU i 2024, opp frå 23 703 i 2023. Kjelde: Økokrim sin offentlege MT-statistikk."
+        },
+        {
+          "id": "0551ebc9-2115-441d-8f0c-5e90593c2774",
+          "metrikkType": "Rapportar/år",
+          "verdi": 23500,
+          "verdiTekst": "over 23 500 rapportar",
+          "eining": "rapportar",
+          "aar": 2023,
+          "kjeldeUrl": "https://osloeconomics.no/wp-content/uploads/2024/05/OE-rapport-2024-25-Politiets-bruk-av-finansiell-etterretning.pdf",
+          "kjeldeTittel": "Oslo Economics – Evaluering av politiets finansielle etterretning",
+          "merknad": "EFE mottok over 23 500 MT-rapportar i 2023 (meir enn dobling sidan 2019)."
+        },
+        {
+          "id": "33479832-9915-44b0-a797-9e27e285b218",
+          "metrikkType": "Rapportar/år",
+          "verdi": 19782,
+          "verdiTekst": "19 782 rapportar",
+          "eining": "rapportar",
+          "aar": 2022,
+          "kjeldeUrl": "https://www.okokrim.no/statistikk-mt-rapporter.549327.no.html",
+          "kjeldeTittel": "Økokrim – statistikk MF/MT-rapportar"
+        },
+        {
+          "id": "da2157d2-f75a-439d-adae-d4eb8be5bd15",
+          "metrikkType": "Rapportar/år",
+          "verdi": 16513,
+          "verdiTekst": "16 513 rapportar",
+          "eining": "rapportar",
+          "aar": 2021,
+          "kjeldeUrl": "https://www.okokrim.no/statistikk-mt-rapporter.549327.no.html",
+          "kjeldeTittel": "Økokrim – statistikk MF/MT-rapportar"
+        }
+      ]
+    },
+    {
+      "id": "cf96e62a-a4f8-4316-aadd-fe59fcce9c49",
+      "label": "PNR (flypassasjerdata)",
+      "type": "System",
+      "lag": "Register og biometri",
+      "color": "#8b5cf6",
+      "status": "Aktiv",
+      "kategori": "Reise/PNR",
+      "kjeldeUrl": "https://lovdata.no/dokument/SF/forskrift/2013-09-20-1097/KAPITTEL_11-17",
+      "kjeldeTittel": "Lovdata: Passasjerlisteregisteret (PNR-registeret)",
+      "skildring": "Register over flypassasjerdata (PNR) for å førebyggje, avdekkje og etterforske terror og alvorleg kriminalitet.",
+      "heimel": "Grenselova §16a",
+      "geografi": "Nasjonalt",
+      "metrics": [
+        {
+          "id": "869d438a-f25e-4354-947e-8fb50cca7a78",
+          "metrikkType": "Lagringstid",
+          "verdi": 60,
+          "verdiTekst": "60 mnd (5 år)",
+          "eining": "mnd",
+          "kjeldeUrl": "https://www.regjeringen.no/no/dokumenter/prop.-229-l-20202021/id2869910/?ch=4",
+          "kjeldeTittel": "Prop. 229 L (2020–2021) – PNR-direktivet art. 12"
+        }
+      ]
+    },
+    {
+      "id": "01a62148-b0d1-4176-b37e-23d4b46bbbb3",
+      "label": "IP-lagring (lagringsplikt)",
+      "type": "System",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "status": "Aktiv",
+      "kategori": "Datalagring",
+      "kjeldeUrl": "https://lovdata.no/lov/2021-06-18-131",
+      "kjeldeTittel": "Lovdata: Lagring av IP-adresser (endring i ekomlova)",
+      "skildring": "Plikt for ekomtilbydarar til å lagre offentlege IP-adresser i tolv månader til bruk i etterforsking av alvorleg kriminalitet.",
+      "heimel": "Ekomlova §3-13",
+      "metrics": [
+        {
+          "id": "b50aaf3d-7aa3-4a7f-a49e-c99366b8f560",
+          "metrikkType": "Lagringstid",
+          "verdi": 12,
+          "verdiTekst": "12 mnd",
+          "eining": "mnd",
+          "kjeldeUrl": "https://lovdata.no/lov/2021-06-18-131",
+          "kjeldeTittel": "Lov om endringar i ekomlova (lagring av IP-adresser), §2-8a"
+        }
+      ]
+    },
+    {
+      "id": "bda5603f-3a3a-44fc-8b3e-cf1d5d478718",
+      "label": "Dataavlesing",
+      "type": "System",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "status": "Aktiv",
+      "kategori": "Tvangsmiddel",
+      "kjeldeUrl": "https://lovdata.no/lov/1981-05-22-25/§216o",
+      "kjeldeTittel": "Lovdata: Straffeprosesslova § 216 o",
+      "skildring": "Skjult tvangsmiddel der retten kan gi politiet løyve til å lese ikkje offentleg tilgjengelege opplysningar i eit datasystem.",
+      "heimel": "Straffeprosesslova §216o",
+      "metrics": [
+        {
+          "id": "88b2e922-e5e9-4bfc-9cc6-e8d474dd461c",
+          "metrikkType": "Saker",
+          "verdi": 9,
+          "verdiTekst": "9 saker",
+          "eining": "saker",
+          "aar": 2023,
+          "kjeldeUrl": "https://www.kk-utvalget.no/arsrapport-2024",
+          "kjeldeTittel": "KK-utvalet, årsrapport 2024 (tal frå Riksadvokaten)"
+        },
+        {
+          "id": "0dda4f83-d11a-4602-ae05-8ccf24594fc4",
+          "metrikkType": "Saker",
+          "verdi": 14,
+          "verdiTekst": "14 saker",
+          "eining": "saker",
+          "aar": 2024,
+          "kjeldeUrl": "https://www.kk-utvalget.no/arsrapport-2024",
+          "kjeldeTittel": "KK-utvalet, årsrapport 2024 (tal frå Riksadvokaten)"
+        }
+      ]
+    },
+    {
+      "id": "d2413486-5f72-45d6-8d7e-7e04ff0d0a78",
+      "label": "Romavlytting",
+      "type": "System",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "status": "Aktiv",
+      "kategori": "Tvangsmiddel",
+      "kjeldeUrl": "https://lovdata.no/lov/1981-05-22-25/§216m",
+      "kjeldeTittel": "Lovdata: Straffeprosesslova § 216 m",
+      "skildring": "Skjult tvangsmiddel der retten kan gi politiet løyve til hemmeleg avlytting av samtalar ved tekniske middel (romavlytting).",
+      "heimel": "Straffeprosesslova §216m",
+      "metrics": [
+        {
+          "id": "556701a3-d213-4ce2-8073-a9375cab093d",
+          "metrikkType": "Saker",
+          "verdi": 16,
+          "verdiTekst": "16 saker (33 mistenkte)",
+          "eining": "saker",
+          "aar": 2024,
+          "kjeldeUrl": "https://www.kk-utvalget.no/arsrapport-2024",
+          "kjeldeTittel": "KK-utvalet: Årsrapport 2024",
+          "merknad": "Romavlytting nytta i 16 saker i 2024, med 33 mistenkte. Kjelde: Kontrollutvalet for kommunikasjonskontroll (KK-utvalet)."
+        }
+      ]
+    },
+    {
+      "id": "2b528188-edf1-46b8-a53c-109922f6cb30",
+      "label": "Kommunikasjonskontroll",
+      "type": "System",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "status": "Aktiv",
+      "kategori": "Tvangsmiddel",
+      "kjeldeUrl": "https://lovdata.no/lov/1981-05-22-25/§216a",
+      "kjeldeTittel": "Lovdata: Straffeprosesslova § 216 a",
+      "skildring": "Skjult tvangsmiddel der retten kan gi politiet løyve til kommunikasjonsavlytting ved skjellig grunn til mistanke om alvorleg kriminalitet.",
+      "heimel": "Straffeprosesslova §216a-b",
+      "metrics": [
+        {
+          "id": "0aaa8842-d26f-492e-adc7-ea894b5f4dad",
+          "metrikkType": "Anlegg",
+          "verdi": 608,
+          "verdiTekst": "608 kommunikasjonsanlegg",
+          "eining": "anlegg",
+          "aar": 2024,
+          "kjeldeUrl": "https://www.kk-utvalget.no/arsrapport-2024",
+          "kjeldeTittel": "KK-utvalet, årsrapport 2024 (tal frå Riksadvokaten)",
+          "merknad": "596 telefonnummer, 12 datakommunikasjonsanlegg; 128 saker, 247 personar (2024)."
+        },
+        {
+          "id": "35f82f49-f342-4c42-964e-7cb3b8011ade",
+          "metrikkType": "Anlegg",
+          "verdi": 604,
+          "verdiTekst": "604 kommunikasjonsanlegg",
+          "eining": "anlegg",
+          "aar": 2023,
+          "kjeldeUrl": "https://www.kk-utvalget.no/arsrapport-2024",
+          "kjeldeTittel": "KK-utvalet, årsrapport 2024 (tal frå Riksadvokaten)"
+        }
+      ]
+    },
+    {
+      "id": "92686829-67e3-4c5d-89a6-8c3783e66e63",
+      "label": "ANPR (Politiet)",
+      "type": "System",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Aktiv",
+      "kategori": "ANPR",
+      "kjeldeUrl": "https://www.politiet.no",
+      "kjeldeTittel": "Politiet",
+      "skildring": "Politiet sin bruk av automatisk skiltgjenkjenning (ANPR) til å lese registreringsnummer og varsle om etterlyste eller mistenkjelege køyretøy.",
+      "geografi": "Nasjonalt",
+      "metrics": [
+        {
+          "id": "f3ed29a5-563b-4296-a45c-64b57a124dfc",
+          "metrikkType": "Einingar",
+          "verdi": 70,
+          "verdiTekst": "70 einingar",
+          "eining": "einingar",
+          "aar": 2026,
+          "kjeldeUrl": "https://www.politiforum.no/frp-bekymret-over-utvikling-antallet-er-altfor-lavt/295234",
+          "kjeldeTittel": "Politiforum: Frp bekymra over utvikling i ANPR-talet",
+          "merknad": "Nedgang frå 74 (2023) til 70 einingar."
+        },
+        {
+          "id": "5ab1b6a6-45ad-470d-a3f2-5c83e595ab3f",
+          "metrikkType": "Einingar",
+          "verdi": 74,
+          "verdiTekst": "74 ANPR-sett",
+          "eining": "einingar",
+          "aar": 2023,
+          "kjeldeUrl": "https://www.stortinget.no/no/Saker-og-publikasjoner/Sporsmal/Skriftlige-sporsmal-og-svar/Skriftlig-sporsmal/?qnid=81492",
+          "kjeldeTittel": "Stortinget – skriftleg spørsmål til justisministeren (POD-tal)",
+          "merknad": "POD oppgav 74 ANPR-sett, 16 i fast drift."
+        }
+      ]
+    },
+    {
+      "id": "232f35ca-8426-44f1-bd8a-82eb39dd8e8c",
+      "label": "Tilrettelagt innhenting (TI)",
+      "type": "System",
+      "lag": "Kommunikasjon og etterretning",
+      "color": "#ef4444",
+      "status": "Aktiv",
+      "kategori": "Etterretning",
+      "kjeldeUrl": "https://www.etterretningstjenesten.no/aktuelt/aktuelt/hva-er-tilrettelagt-innhenting-ti",
+      "kjeldeTittel": "Etterretningstenesta: Tilrettelagd innhenting (TI)",
+      "skildring": "Etterretningstenesta si innhenting og bulklagring av metadata om grenseoverskridande elektronisk kommunikasjon (digitalt grenseforsvar).",
+      "heimel": "Etterretningstenestelova kap. 7",
+      "geografi": "Nasjonalt",
+      "metrics": [
+        {
+          "id": "fa63506e-e397-4fd3-a90a-cfcb1f32a219",
+          "metrikkType": "Kostnad (NOK)",
+          "verdi": 1300000000,
+          "verdiTekst": "1,3 mrd. kr (kostnadsramme)",
+          "eining": "NOK",
+          "aar": 2025,
+          "kjeldeUrl": "https://filternyheter.no/ulovlig-overvaking-e-tjenesten-lagret-emnefeltet-til-e-poster-som-krysset-landegrensen/",
+          "kjeldeTittel": "Filter Nyheter: kostnadsramme på 1,3 mrd. for TI (brev frå E-sjefen til EOS-utvalet)",
+          "merknad": "Kostnadsramme for sjålve TI-verktøyet (tilrettelagt innhenting / digitalt grenseforsvar), stadfesta av E-sjef Stensønes i brev til EOS-utvalet (nov. 2025). Kjem i tillegg til E-tenesta sitt årlege driftsbudsjett på over 4 mrd."
+        },
+        {
+          "id": "4342916c-7b2d-48f5-9bea-6ee776419129",
+          "metrikkType": "Lagringstid",
+          "verdi": 18,
+          "verdiTekst": "18 månader",
+          "eining": "mnd",
+          "merknad": "E-tenesta kan, etter løyve frå Oslo tingrett, spegle og lagre metadata frå grensekryssande trafikk i bulk i opptil 18 månader (etterretningstenestelova kap. 7). Innhaldsdata er langt strengare regulert. Kjelde: etterretningstjenesten.no."
+        }
+      ]
+    },
+    {
+      "id": "ed30cad9-3a97-453a-be3c-4cc78a9938b9",
+      "label": "ANPR (Statens vegvesen)",
+      "type": "System",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Aktiv",
+      "kategori": "ANPR",
+      "kjeldeUrl": "https://www.vegvesen.no/fag/fokusomrader/trafikksikkerhet/skiltleser/",
+      "kjeldeTittel": "Statens vegvesen: Automatisk skiltgjenkjenning (ANPR)",
+      "skildring": "Statens vegvesen sitt kamerasystem for skiltgjenkjenning, brukt til å målrette kontroll av køyretøy (forsikring, EU-kontroll, bruksforbod).",
+      "heimel": "Vegtrafikklova",
+      "geografi": "Vegnettet",
+      "metrics": [
+        {
+          "id": "d7bfcb7c-9947-4510-8bc4-4f962a96b76b",
+          "metrikkType": "Tal kamera",
+          "verdi": 75,
+          "verdiTekst": "75 ANPR-kamera (2021)",
+          "eining": "kamera",
+          "aar": 2021,
+          "kjeldeUrl": "https://www.marusfritrafikk.no/nyheter/skiltskannere-luker-ut-trafikkfarlige-kjoretoy/",
+          "kjeldeTittel": "MA – Rusfri trafikk: 75 spesialkamera kopla mot kjøretøyregisteret",
+          "merknad": "75 ANPR-kamera kopla direkte mot kjøretøyregisteret; les registreringsnummeret til alle som passerer."
+        },
+        {
+          "id": "20cfaf65-3f5b-4689-8a00-b751ae0b3ccd",
+          "metrikkType": "Passeringar/døgn",
+          "verdi": 170000,
+          "verdiTekst": "Les alle passerande kjøretøy (ingen offentleg døgnstatistikk)",
+          "eining": "avlesingar/døgn",
+          "aar": 2025,
+          "merknad": "Statens vegvesen har om lag 75 ANPR-kamera kopla direkte mot kjøretøyregisteret; dei les registreringsnummeret til alle som passerer. Talet på daglege avlesingar er ikkje offentleg publisert. Berre talet på utvalde kontrollar (titusenvis i året) er kjent."
+        }
+      ]
+    },
+    {
+      "id": "5b3544da-3521-40ca-8d98-a553551efd8c",
+      "label": "ANPR (Tolletaten)",
+      "type": "System",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Aktiv",
+      "kategori": "ANPR",
+      "kjeldeUrl": "https://www.toll.no/no/verktoy/regelverk/handboker/vareforselshandboken/8-9",
+      "kjeldeTittel": "Tolletaten: Skiltgjenkjenningssystem (ANPR), § 8-9",
+      "skildring": "Tolletaten sin bruk av skiltgjenkjenning til å overvake grensekryssande trafikk; opplysningar kan lagrast i inntil seks månader.",
+      "heimel": "Vareørselslova §7-16 / §8-9",
+      "geografi": "Grenseovergangar",
+      "metrics": [
+        {
+          "id": "0ecdc223-5ff1-4ccc-b533-8ad401370b31",
+          "metrikkType": "Lagringstid",
+          "verdi": 6,
+          "verdiTekst": "6 månader",
+          "eining": "mnd",
+          "merknad": "Lagringstida for Tolletaten sine ANPR-opplysningar vart i 2016 utvida frå 1 time til 6 månader, slik at data kan brukast til å planleggje framtidige kontrollar og velje ut kontrollobjekt. Kjelde: Prop. 1 LS (2016-2017)."
+        },
+        {
+          "id": "6921e432-e138-4c7a-8e58-dc2448ccb46c",
+          "metrikkType": "Passeringar/døgn",
+          "verdi": 650000,
+          "verdiTekst": "Les all grensekryssande trafikk (ingen offentleg døgnstatistikk)",
+          "eining": "avlesingar/døgn",
+          "aar": 2025,
+          "merknad": "Tolletaten brukar ANPR til å overvake grensekryssande vegtrafikk og ferjeterminalar med utanlandsløp (vareførselslova §8-9). Talet på daglege avlesingar er ikkje offentleg publisert."
+        }
+      ]
+    },
+    {
+      "id": "38c1973f-7014-49e3-a65e-756e17ee8cd1",
+      "label": "Politikamera (Oslo S)",
+      "type": "System",
+      "lag": "Kamera og sensorar",
+      "color": "#3b82f6",
+      "status": "Aktiv",
+      "kategori": "Kamera",
+      "kjeldeUrl": "https://www.politiforum.no/nyheter/oslo-seks-politikameraer/112206",
+      "kjeldeTittel": "Politiforum 2013",
+      "heimel": "Politilova §6a",
+      "geografi": "Oslo S",
+      "metrics": [
+        {
+          "id": "7ee5890d-d1c5-44a6-9cf3-ba86b387c864",
+          "metrikkType": "Lagringstid",
+          "verdi": 0.25,
+          "verdiTekst": "1 veke (7 dagar)",
+          "eining": "mnd (~1 veke)",
+          "merknad": "Politiet sine kameraopptak slettast som hovudregel éi veke etter opptak; slettefristen gjeld ikkje opptak som vert overført til ei straffesak. Heimel: politilova §6a / politiregisterforskrifta. Kjelde: politiet.no (Oslo politidistrikt)."
+        },
+        {
+          "id": "fc8edac7-788e-4787-9b1e-f33909ac31c0",
+          "metrikkType": "Tal kamera",
+          "verdi": 8,
+          "verdiTekst": "8 politikamera rundt Oslo S (2011)",
+          "eining": "kamera",
+          "aar": 2011,
+          "kjeldeUrl": "https://www.vg.no/nyheter/i/lBMdk/bare-ett-av-aatte-politikameraer-i-oslo-fungerer",
+          "kjeldeTittel": "VG: Bare ett av åtte politikameraer i Oslo fungerer",
+          "merknad": "Politiet sine EIGNE kamera rundt Oslo S er få; i 2011 fungerte berre eitt av åtte. Dette er kjernen i «6 kamera»-poenget: det låge eigartalet skjuler tilgangen til alle andre sine kamera."
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "162cee0b-4226-4b12-8d8c-9ff479ca11e0",
+      "source": "79905271-494d-477e-bb48-6054c2fd5950",
+      "target": "01a62148-b0d1-4176-b37e-23d4b46bbbb3",
+      "relasjonstype": "Driftar",
+      "kind": "tilgang",
+      "merknad": "Som ekomtilbydar er Lyse/Altibox underlagt den generelle plikta til å lagre IP-adresser; konkret kontraktsdetalj er ikkje verifisert per node.",
+      "lag": "Kommunikasjon og etterretning"
+    },
+    {
+      "id": "3872d272-c188-4306-90d9-664dcd064aa2",
+      "source": "d768447b-4f4e-443b-852a-8c9270e504b3",
+      "target": "a932ee81-da73-48d1-9eb7-d03eee827719",
+      "relasjonstype": "Partnar",
+      "kind": "tilgang",
+      "kjeldeUrl": "https://www.attac.no/2025/11/12",
+      "kjeldeTittel": "Attac 2025",
+      "merknad": "Strategisk partnarskap inngått januar 2024 for teknologileveransar til israelsk forsvar.",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "a684cecf-3904-4e74-9abd-b4dab9d3172f",
+      "source": "d768447b-4f4e-443b-852a-8c9270e504b3",
+      "target": "198a073f-c361-44dc-b87b-5319b598cf99",
+      "relasjonstype": "Leverandør / kontrakt",
+      "kind": "tilgang",
+      "kjeldeUrl": "https://www.adressa.no",
+      "kjeldeTittel": "Adresseavisen 2025",
+      "merknad": "Army Enterprise Agreement som samlar inntil 75 forsvarskontraktar under ein tiårig rammeavtale.",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "84ba1c71-8b8c-4124-b829-6af8afd3c201",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "d68898a7-8ed0-4cc3-87e1-6b6d833733d9",
+      "relasjonstype": "Driftar",
+      "kind": "tilgang",
+      "mekanisme": "Drift",
+      "kjeldeUrl": "https://nrkbeta.no/2021/04/23/signal-grunnlegger-hacket-analyseverktoy-brukt-av-norsk-politi/",
+      "kjeldeTittel": "NRKbeta: analyseverktøy brukt av norsk politi",
+      "lag": "Justis og kontroll"
+    },
+    {
+      "id": "d9033903-af48-4265-8069-fe56085a461d",
+      "source": "c1902954-dfcf-48b8-b38f-121fe4267340",
+      "target": "0a0f63c9-4021-4077-ac77-202739a96bb2",
+      "relasjonstype": "Partnar",
+      "kind": "datadeling",
+      "kjeldeUrl": "https://nrkbeta.no/2019/10/11/telia-og-telenor-selger-analyser-av-hvor-mobilbrukere-befinner-seg/",
+      "kjeldeTittel": "NRKbeta: Telia og Telenor sel analysar av kvar kundane er",
+      "lag": "Datainfrastruktur"
+    },
+    {
+      "id": "c3d759e2-342b-47b3-9052-db9bbe7d8007",
+      "source": "ec986906-b7af-4447-b7cb-bd798bd3bfd0",
+      "target": "9191bcbc-4555-4657-ab77-d12b0be5f80e",
+      "relasjonstype": "Driftar",
+      "kind": "tilgang",
+      "mekanisme": "Drift",
+      "kjeldeUrl": "https://www.digi.no/artikler/det-norske-ki-verktoyet-som-svensk-politi-savner/568560",
+      "kjeldeTittel": "Digi: KI-verktøyet rulla ut i alle politidistrikt",
+      "lag": "Register og biometri"
+    },
+    {
+      "id": "d2e85880-c7db-4a4d-859c-effb43fe6c34",
+      "source": "b7a5b061-60c5-43d3-b9df-5352c7674334",
+      "target": "265fcfcb-3ed3-42bf-9c4f-6a99b599f951",
+      "relasjonstype": "Utleverer regelmessig",
+      "kind": "tilgang",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "570dc055-920a-439d-8dfe-4007b05c93d3",
+      "source": "e73117a9-6f9c-4e15-b966-7d56c59c3dcb",
+      "target": "265fcfcb-3ed3-42bf-9c4f-6a99b599f951",
+      "relasjonstype": "Utleverer regelmessig",
+      "kind": "tilgang",
+      "merknad": "Sel andletsgjenkjenning til amerikanske politi- og styresmaktsorgan.",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "7d7ac445-4c4d-4d59-bf33-aa087f3d87c2",
+      "source": "a67456d7-48b9-43e2-a84a-fadcf1348bea",
+      "target": "e73117a9-6f9c-4e15-b966-7d56c59c3dcb",
+      "relasjonstype": "Styremedlem",
+      "kind": "tilgang",
+      "merknad": "Medgrunnleggjar og CEO.",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "592839db-4734-428e-bc02-19d28b988596",
+      "source": "4afe4959-ed58-4de0-8f75-9e0fb293bbd5",
+      "target": "776aa4fd-5d03-40aa-93b0-d821a89cc2cf",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "merknad": "Største aksjonær og styreleiar/CTO.",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "52fa64a0-15b3-4a74-bdf4-dbf255a2ed0b",
+      "source": "bdae09d9-3f13-4528-a0b7-d44faaf3703d",
+      "target": "c6afb486-8eef-48a3-9074-326a5b3a7786",
+      "relasjonstype": "Finansierer",
+      "kind": "tilgang",
+      "kjeldeUrl": "https://en.wikipedia.org/wiki/Clearview_AI",
+      "kjeldeTittel": "Wikipedia: Clearview AI",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "7514362c-1757-4ee9-865b-5677c52ce8f6",
+      "source": "5d81eba9-8978-4596-a144-24af738ec951",
+      "target": "45264ba9-495b-4166-a0f2-347260617228",
+      "relasjonstype": "Direkte tilgang",
+      "kind": "tilgang",
+      "lag": "Politikk og styring"
+    },
+    {
+      "id": "4d0ccb58-a0c5-432c-9169-be5268ebf12b",
+      "source": "5d81eba9-8978-4596-a144-24af738ec951",
+      "target": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "relasjonstype": "Direkte tilgang",
+      "kind": "tilgang",
+      "merknad": "Heimlar skjult kameraovervaking med droner, håndhaldne og kjuretøymonterte kamera.",
+      "lag": "Politikk og styring"
+    },
+    {
+      "id": "ef9e9e5d-3a10-4d2b-869a-6900f687b61b",
+      "source": "c0578c11-a9ab-41c9-bce5-3251a8d3bc8d",
+      "target": "5d81eba9-8978-4596-a144-24af738ec951",
+      "relasjonstype": "Fremja / vedtok",
+      "kind": "tilgang",
+      "merknad": "La fram forslaget 27.3.2026 som justisminister.",
+      "lag": "Politikk og styring"
+    },
+    {
+      "id": "58f73e7c-f6a3-4313-9d47-4fd06c679409",
+      "source": "2de79f33-ca3c-4d37-92c0-2fa4d501de79",
+      "target": "ed30cad9-3a97-453a-be3c-4cc78a9938b9",
+      "relasjonstype": "Leverandør / kontrakt",
+      "kind": "tilgang",
+      "merknad": "Norsk ANPR-programvare (Detec Next). Statens vegvesen lyste ut rammeavtale for ANPR-kamera 2025; spesifikk leverandørtildeling ikkje fullt stadfesta her.",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "9db3fde9-3f77-4729-b91f-8a7f7486ce01",
+      "source": "c1902954-dfcf-48b8-b38f-121fe4267340",
+      "target": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "relasjonstype": "Utleverer regelmessig",
+      "kind": "tilgang",
+      "merknad": "Utleverer trafikkdata på rettsleg grunnlag. Hadde i 2026 ein sårbarheit som lét kundar sporast via samtalar (Nkom/Datatilsynet opna tilsyn).",
+      "lag": "Datainfrastruktur"
+    },
+    {
+      "id": "f3efbec9-4bfb-457e-bedd-9953225ce88a",
+      "source": "6cd4d133-8e7a-42a4-9d4a-4ba019088c46",
+      "target": "1a4321ef-555f-4619-89ba-e52c56a352c5",
+      "relasjonstype": "Leverandør / kontrakt",
+      "kind": "tilgang",
+      "merknad": "TREFF-systemet, i bruk sidan 2021. Tolletaten har vurdert scenario der amerikanske styresmakter krev utlevering av norske data.",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "ad402e06-1b87-4810-aa7e-1065fb96b5cb",
+      "source": "d768447b-4f4e-443b-852a-8c9270e504b3",
+      "target": "6cd4d133-8e7a-42a4-9d4a-4ba019088c46",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "8deb8648-bb20-4453-be6d-814740146c9c",
+      "source": "6cd4d133-8e7a-42a4-9d4a-4ba019088c46",
+      "target": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "relasjonstype": "Leverandør / kontrakt",
+      "kind": "tilgang",
+      "merknad": "Omnia-prosjektet; kobla saman 19 politiregister. Politiet fornyar ikkje kontrakten når han går ut i 2027.",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "1ac7fd8d-1ee2-4f78-82cb-1b5e1bf45939",
+      "source": "35c0dfc9-578e-4fc9-9a8c-117f9648256b",
+      "target": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "relasjonstype": "Leverandør / kontrakt",
+      "kind": "tilgang",
+      "merknad": "Telenor leverer det lukka datanettet som knyter politiets lokasjonar saman.",
+      "lag": "Datainfrastruktur"
+    },
+    {
+      "id": "d52f0af6-8221-4588-857b-acb5f3c026d6",
+      "source": "35c0dfc9-578e-4fc9-9a8c-117f9648256b",
+      "target": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "relasjonstype": "Utleverer regelmessig",
+      "kind": "tilgang",
+      "merknad": "Utleverer trafikkdata/metadata på rettsleg grunnlag; mange tusen førepurnader årleg.",
+      "lag": "Datainfrastruktur"
+    },
+    {
+      "id": "4e385e3a-e9fe-4f2d-9d63-f7ab87aa59ac",
+      "source": "c0578c11-a9ab-41c9-bce5-3251a8d3bc8d",
+      "target": "d85ae0e2-a6ad-410d-890f-b0caa1069d19",
+      "relasjonstype": "Personplassering (svingdør)",
+      "kind": "tilgang",
+      "merknad": "Leiar for EOS-utvalet (kontrollorganet) 2021-2025, deretter justisminister med ansvar for dei same tenestene ho før kontrollerte.",
+      "lag": "Personar og roller"
+    },
+    {
+      "id": "deff3c34-8bbc-48ef-b218-dc6705e422f2",
+      "source": "c0578c11-a9ab-41c9-bce5-3251a8d3bc8d",
+      "target": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "relasjonstype": "Driftar",
+      "kind": "tilgang",
+      "merknad": "Justisminister frå feb 2025; konstitusjonelt ansvar for politi, PST og påtalemakt.",
+      "lag": "Personar og roller"
+    },
+    {
+      "id": "8bac462a-144c-456f-b960-0b4df896fb9c",
+      "source": "6a476cff-4968-4ce0-9d78-b96db1c48a91",
+      "target": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "relasjonstype": "Utnemnd",
+      "kind": "tilgang",
+      "merknad": "Leiar Politidirektoratet (POD).",
+      "lag": "Personar og roller"
+    },
+    {
+      "id": "e84f1dd3-fc85-4fd0-ab1e-0ee7a50effef",
+      "source": "8bb5555e-54c4-4873-ac62-e19744c658c3",
+      "target": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "relasjonstype": "Driftar",
+      "kind": "tilgang",
+      "merknad": "Riksadvokat; øvste påtalemakt som styrer bruken av skjulte tvangsmiddel.",
+      "lag": "Personar og roller"
+    },
+    {
+      "id": "f153a151-9e6f-472c-9d97-c2673c2a69b1",
+      "source": "eccb8a6e-8658-4cdb-84fb-d2616a827efd",
+      "target": "1a4321ef-555f-4619-89ba-e52c56a352c5",
+      "relasjonstype": "Personplassering (svingdør)",
+      "kind": "tilgang",
+      "merknad": "PST-sjef 2012-2019 → politidirektør 2019-2025 → tolldirektør 2025. Tre overvakingsorgan på rad.",
+      "lag": "Personar og roller"
+    },
+    {
+      "id": "91c6cadb-1dfe-43e5-8eb2-f193fb5a0bd0",
+      "source": "bd1483a1-d819-45ec-acef-c4895839ef3f",
+      "target": "c481c009-3fd6-4fdf-8d39-5f1b2a5d5e81",
+      "relasjonstype": "Driftar",
+      "kind": "tilgang",
+      "merknad": "Konstitusjonelt ansvar for Etterretningstenesta som forsvarsminister.",
+      "lag": "Personar og roller"
+    },
+    {
+      "id": "2babe0ec-9dfe-4328-887b-e17b262db076",
+      "source": "7b3eeeb7-6b48-4662-85a4-6d8bb06e7425",
+      "target": "01a62148-b0d1-4176-b37e-23d4b46bbbb3",
+      "relasjonstype": "Direkte tilgang",
+      "kind": "tilgang",
+      "merknad": "Pliktig lagring av tele-/internettdata; kjent ugyldig av EU-domstolen 2014.",
+      "lag": "Politikk og styring"
+    },
+    {
+      "id": "57dfb2e7-a8e3-4690-8089-8d3d97bc0431",
+      "source": "1e18e193-d6e3-4cb8-a5ed-9bbe8ea48cf8",
+      "target": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "relasjonstype": "Direkte tilgang",
+      "kind": "tilgang",
+      "merknad": "Etablerer PNR-eining i politiet for passasjerlister.",
+      "lag": "Politikk og styring"
+    },
+    {
+      "id": "a41aa1d1-9e2b-41c1-a049-b1b3b8cbc000",
+      "source": "ef129552-fe75-414f-862e-57770945310d",
+      "target": "45264ba9-495b-4166-a0f2-347260617228",
+      "relasjonstype": "Direkte tilgang",
+      "kind": "tilgang",
+      "lag": "Politikk og styring"
+    },
+    {
+      "id": "6e75ede0-d58b-48d4-9ecf-c9156fb71e09",
+      "source": "34af4f50-0d71-4336-85e4-c01d63d7364e",
+      "target": "c481c009-3fd6-4fdf-8d39-5f1b2a5d5e81",
+      "relasjonstype": "Direkte tilgang",
+      "kind": "tilgang",
+      "merknad": "Kap. 7-8 gir E-tenesta heimel til tilrettelagt innhenting av grensekryssande metadata.",
+      "lag": "Politikk og styring"
+    },
+    {
+      "id": "958fed6b-b415-4541-ac7d-4af047b93d52",
+      "source": "eadd3634-a3b5-48d4-949a-befd9af2ede0",
+      "target": "34af4f50-0d71-4336-85e4-c01d63d7364e",
+      "relasjonstype": "Fremja / vedtok",
+      "kind": "tilgang",
+      "lag": "Politikk og styring"
+    },
+    {
+      "id": "0d50d651-9f90-4a5e-a849-b1b9f176053f",
+      "source": "853926b7-fd7f-438d-a4a8-0886e697b107",
+      "target": "ef129552-fe75-414f-862e-57770945310d",
+      "relasjonstype": "Fremja / vedtok",
+      "kind": "tilgang",
+      "lag": "Politikk og styring"
+    },
+    {
+      "id": "ae0642c4-df5a-40a2-a9e8-b8534aa0b9c1",
+      "source": "853926b7-fd7f-438d-a4a8-0886e697b107",
+      "target": "1e18e193-d6e3-4cb8-a5ed-9bbe8ea48cf8",
+      "relasjonstype": "Fremja / vedtok",
+      "kind": "tilgang",
+      "merknad": "Anundsen opna for norsk PNR i 2016; sjølve lova (Prop. 229 L) vart fremja seinare under same departement.",
+      "lag": "Politikk og styring"
+    },
+    {
+      "id": "76869f52-f0d0-47c0-9d25-429391cd524c",
+      "source": "ef129552-fe75-414f-862e-57770945310d",
+      "target": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "relasjonstype": "Direkte tilgang",
+      "kind": "tilgang",
+      "merknad": "Heimlar dataavlesing, romavlytting og kommunikasjonskontroll.",
+      "lag": "Politikk og styring"
+    },
+    {
+      "id": "67f3f880-da68-469b-ba93-e0953a23a6f6",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "be5caeba-d0e1-431e-b0ff-8f512eb05a94",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "490e21c4-6bc5-4ef1-ace4-5bdd439d62e4",
+      "source": "5c51c386-d717-4e1e-bdf2-a5b5e74872cf",
+      "target": "be5caeba-d0e1-431e-b0ff-8f512eb05a94",
+      "relasjonstype": "Driftar",
+      "kind": "tilgang",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "d76b4e6c-4644-4676-af5d-ff106da1bf00",
+      "source": "04603db7-0a8e-4139-bd33-e16280a0ca44",
+      "target": "d768447b-4f4e-443b-852a-8c9270e504b3",
+      "relasjonstype": "Finansierer",
+      "kind": "tilgang",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "c43086a4-5c53-4f2b-9105-7230c82ea9ff",
+      "source": "bdae09d9-3f13-4528-a0b7-d44faaf3703d",
+      "target": "04603db7-0a8e-4139-bd33-e16280a0ca44",
+      "relasjonstype": "Partnar",
+      "kind": "tilgang",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "387ddc17-3af3-44ca-8c7c-ebf94d03146f",
+      "source": "6ea66d8d-8d8f-49c2-ac61-ff378a9f6602",
+      "target": "d768447b-4f4e-443b-852a-8c9270e504b3",
+      "relasjonstype": "Styremedlem",
+      "kind": "tilgang",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "f1cd4190-0c60-4d23-a9ad-8140fa041bdf",
+      "source": "7c9f55c2-eeb0-409a-bffa-eca98359d80a",
+      "target": "d768447b-4f4e-443b-852a-8c9270e504b3",
+      "relasjonstype": "Partnar",
+      "kind": "tilgang",
+      "merknad": "Medgrunnleggjar; forlot Palantir 2009.",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "ff23a9dc-17cb-47aa-b5d5-f72d3a10333d",
+      "source": "bdae09d9-3f13-4528-a0b7-d44faaf3703d",
+      "target": "d768447b-4f4e-443b-852a-8c9270e504b3",
+      "relasjonstype": "Styremedlem",
+      "kind": "tilgang",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "2ba909e9-c8d5-4f18-9d5e-c38c4680e5c5",
+      "source": "6ccfc2b4-5f8a-4ae2-8540-4feef1dd002a",
+      "target": "d768447b-4f4e-443b-852a-8c9270e504b3",
+      "relasjonstype": "Styremedlem",
+      "kind": "tilgang",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "94644a1a-27bc-4574-aa3a-f08fe314f696",
+      "source": "115f1f3e-7e4b-4c73-b1c8-5dccfaecb3ff",
+      "target": "4fbb5c50-2cd4-44a3-a20d-6f87b406b426",
+      "relasjonstype": "Utnemnd",
+      "kind": "tilgang",
+      "merknad": "Sjef NBIM sidan 2020.",
+      "lag": "Personar og roller"
+    },
+    {
+      "id": "dcdc2af4-2742-4c90-8719-d33d7e291702",
+      "source": "4fbb5c50-2cd4-44a3-a20d-6f87b406b426",
+      "target": "d768447b-4f4e-443b-852a-8c9270e504b3",
+      "relasjonstype": "Finansierer",
+      "kind": "tilgang",
+      "kjeldeUrl": "https://www.morgenbladet.no/samfunn/oljefondet-er-europas-storste-investor-i-palantir/10254641",
+      "merknad": "Europas største direkte investor i Palantir; eigardel auka kraftig frå 0,35% (2023).",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "82947099-33a5-4619-b376-de7f4f7db22f",
+      "source": "e664f698-3ecb-43c6-aa36-c1df1dca789a",
+      "target": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "merknad": "Forskrifta er den rettslege svingdøra som koplar politiet til alle private kamera.",
+      "lag": "Politikk og styring"
+    },
+    {
+      "id": "eaf63765-19cb-476e-9e82-e0caf4400296",
+      "source": "c39353cd-2219-4cab-8a6d-40f05f622130",
+      "target": "adf93cf5-bca3-44f0-9d39-e90ca4192316",
+      "relasjonstype": "Driftar",
+      "kind": "tilgang",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "60baeabc-a4af-40a1-8c9c-8717ac7e1edd",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "a0033973-9518-4783-ad23-62bbb4df8ecc",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "512193a4-3d1b-4f5e-812b-fbe314d25198",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "adf93cf5-bca3-44f0-9d39-e90ca4192316",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "merknad": "Indirekte tilgang: politiet eig ikkje kamera, men kan krevje utlevering av opptak.",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "4255482b-b09b-4ee5-8a7d-e3c148468e14",
+      "source": "3c841378-1d3a-471d-a2fd-24bbb4f3a4ff",
+      "target": "a0033973-9518-4783-ad23-62bbb4df8ecc",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "ed987b40-773b-478c-ad70-9c5a2d1164bd",
+      "source": "0f247155-7294-434a-b88d-63039c0adef5",
+      "target": "adf93cf5-bca3-44f0-9d39-e90ca4192316",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "d670357d-21f7-40e3-9934-9884aee4b289",
+      "source": "a85f0b2f-00b4-409c-b005-b12739a0e440",
+      "target": "c481c009-3fd6-4fdf-8d39-5f1b2a5d5e81",
+      "relasjonstype": "Utnemnd",
+      "kind": "tilgang",
+      "kjeldeUrl": "https://nsm.no/kurs-og-konferanser/sikkerhetskonferansen/alle-foredragsholdere/nils-andreas-stensones",
+      "merknad": "Utnemnd som sjef Etterretningstenesta 2020.",
+      "lag": "Personar og roller"
+    },
+    {
+      "id": "78fa1dd0-2137-4ac6-87fb-9c494fcddab6",
+      "source": "eb333c43-65c1-4263-be8d-67272daecfed",
+      "target": "45264ba9-495b-4166-a0f2-347260617228",
+      "relasjonstype": "Utnemnd",
+      "kind": "tilgang",
+      "kjeldeUrl": "https://no.wikipedia.org/wiki/Beate_Gang%C3%A5s",
+      "merknad": "Utnemnd som sjef PST 2022 (åremal 6 år).",
+      "lag": "Personar og roller"
+    },
+    {
+      "id": "79fbf89a-ca95-4bfb-b052-1647dfe5c9b4",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "ed30cad9-3a97-453a-be3c-4cc78a9938b9",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "mekanisme": "Kan krevje utlevering",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "ae7a8c39-0119-4aef-a3b7-0a00297750ee",
+      "source": "12d0fb88-3ee3-4d2b-9f01-e3b05e24ad17",
+      "target": "b352d0f8-f35a-4009-81cf-d1c59edf8d7e",
+      "relasjonstype": "Driftar",
+      "kind": "tilgang",
+      "mekanisme": "Drift",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "84cc6a3b-cb09-406f-84bc-f99fdfc66d8e",
+      "source": "d9bb663c-ffdd-450a-ae0d-fce9c27f564b",
+      "target": "96a159fd-7630-4e5d-b58d-454621a6988b",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "755decd3-67fd-43e4-9817-d79003ce943a",
+      "source": "34293c31-b8e2-4062-bb38-dc008dc00dcc",
+      "target": "534baccd-cd13-4f7a-b699-0f84e30b04c4",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "94339336-c9f8-47ed-94b9-ce641e4d5c55",
+      "source": "11babdf7-43d1-4907-9a2c-097ef05f32a3",
+      "target": "aeb1a75b-59e6-4ad1-8a98-2e3d1c996e04",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "d0b11eeb-58b7-4a64-94a6-85b6bb3527b9",
+      "source": "4dbcd031-8558-4025-9d7b-b9ff84da360c",
+      "target": "f9330a85-447c-4c57-942a-3023dc341468",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "c9a8c70e-b1c5-4287-a385-2d0de3edca4d",
+      "source": "d522363f-1ddd-402b-b82f-f04fdde4b831",
+      "target": "f9330a85-447c-4c57-942a-3023dc341468",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "d3c0829e-d44f-48c6-babd-0459e9527853",
+      "source": "8c0bb97f-6084-4a9f-8b82-7f125051957a",
+      "target": "f9330a85-447c-4c57-942a-3023dc341468",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "dcb765ff-2ea2-455d-bdf1-8316c5f9bee3",
+      "source": "a9d83c32-698d-4aed-95ee-8087abc21b3b",
+      "target": "52a996ef-8e3d-43e8-b856-43c7da8c07cf",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "ddf079b1-f14d-46d0-a50a-c6bf2a4f2a23",
+      "source": "d69821c8-452c-4153-a9f8-aa4ae5e08061",
+      "target": "52a996ef-8e3d-43e8-b856-43c7da8c07cf",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "f824ca41-2dc5-444d-b7d3-d5ee4d5e3331",
+      "source": "68da5386-c173-4b44-8a62-9869ac042e09",
+      "target": "52a996ef-8e3d-43e8-b856-43c7da8c07cf",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "b8c18316-fc14-46dd-b02d-ee08cf335a77",
+      "source": "d49d3f79-bb07-431f-903e-1ac67293a96c",
+      "target": "01a62148-b0d1-4176-b37e-23d4b46bbbb3",
+      "relasjonstype": "Driftar",
+      "kind": "tilgang",
+      "mekanisme": "Drift",
+      "lag": "Kommunikasjon og etterretning"
+    },
+    {
+      "id": "533fc2ed-8d84-4af0-bf7b-1bc990b3e012",
+      "source": "35c0dfc9-578e-4fc9-9a8c-117f9648256b",
+      "target": "01a62148-b0d1-4176-b37e-23d4b46bbbb3",
+      "relasjonstype": "Driftar",
+      "kind": "tilgang",
+      "mekanisme": "Drift",
+      "lag": "Kommunikasjon og etterretning"
+    },
+    {
+      "id": "509458f7-bef8-4e34-a70b-2c75cf65a746",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "d49d3f79-bb07-431f-903e-1ac67293a96c",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "mekanisme": "Kan krevje utlevering",
+      "lag": "Kommunikasjon og etterretning"
+    },
+    {
+      "id": "0a80ccb4-1a87-404f-8152-72d721aa0c3e",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "35c0dfc9-578e-4fc9-9a8c-117f9648256b",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "mekanisme": "Kan krevje utlevering",
+      "lag": "Kommunikasjon og etterretning"
+    },
+    {
+      "id": "46d65635-122e-4512-89ca-c310e12cd5c5",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "c1902954-dfcf-48b8-b38f-121fe4267340",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "mekanisme": "Kan krevje utlevering",
+      "lag": "Kommunikasjon og etterretning"
+    },
+    {
+      "id": "6cdfdf3f-9c04-41f5-b06a-7ee86f736e15",
+      "source": "c1902954-dfcf-48b8-b38f-121fe4267340",
+      "target": "01a62148-b0d1-4176-b37e-23d4b46bbbb3",
+      "relasjonstype": "Driftar",
+      "kind": "tilgang",
+      "mekanisme": "Drift",
+      "lag": "Kommunikasjon og etterretning"
+    },
+    {
+      "id": "12d16b2b-b2c0-465b-9c27-bafd4a9227c8",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "68fa35b6-194f-4aa8-a164-8e51a6ab037a",
+      "relasjonstype": "Partnar",
+      "kind": "datadeling",
+      "merknad": "Avtale om flypassasjerdata; signert 22.09.2025.",
+      "geografi": "EU",
+      "lag": "Register og biometri"
+    },
+    {
+      "id": "fdf3f96c-bfc6-4b4e-90f4-626068bc356e",
+      "source": "c481c009-3fd6-4fdf-8d39-5f1b2a5d5e81",
+      "target": "5878cb86-59c4-4b61-887c-cc9155d18384",
+      "relasjonstype": "Partnar",
+      "kind": "datadeling",
+      "merknad": "Delvis deling av metadata; omfang delvis uklart.",
+      "geografi": "NATO",
+      "lag": "Kommunikasjon og etterretning"
+    },
+    {
+      "id": "124f31db-0703-4179-ba1b-260b1809d73d",
+      "source": "ec986906-b7af-4447-b7cb-bd798bd3bfd0",
+      "target": "265fcfcb-3ed3-42bf-9c4f-6a99b599f951",
+      "relasjonstype": "Partnar",
+      "kind": "datadeling",
+      "merknad": "Deling av biometriske data med USA.",
+      "geografi": "USA",
+      "lag": "Register og biometri"
+    },
+    {
+      "id": "404a4719-3bef-4c9a-8641-5a02227d8496",
+      "source": "ec986906-b7af-4447-b7cb-bd798bd3bfd0",
+      "target": "68fa35b6-194f-4aa8-a164-8e51a6ab037a",
+      "relasjonstype": "Partnar",
+      "kind": "datadeling",
+      "merknad": "Deling av fingeravtrykk og DNA mellom europeiske statar.",
+      "geografi": "EU",
+      "lag": "Register og biometri"
+    },
+    {
+      "id": "89a6d1b0-c1e9-4ed1-a755-5fabd098c0b4",
+      "source": "1a4321ef-555f-4619-89ba-e52c56a352c5",
+      "target": "9ee6f3e1-720c-443a-847f-590b84286f1b",
+      "relasjonstype": "Driftar",
+      "kind": "tilgang",
+      "mekanisme": "Drift",
+      "tilgangsniva": 3,
+      "praksis": "Ingen indikasjon",
+      "lag": "Datainfrastruktur"
+    },
+    {
+      "id": "fa76099e-059a-45ac-b835-b55dee9d0005",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "2e169940-769c-41b3-91eb-1bba45f5f88c",
+      "relasjonstype": "Driftar",
+      "kind": "tilgang",
+      "mekanisme": "Drift",
+      "tilgangsniva": 3,
+      "praksis": "Ingen indikasjon",
+      "merknad": "Avtale avslutta 2020.",
+      "lag": "Datainfrastruktur"
+    },
+    {
+      "id": "944b205a-8d49-4c4b-be27-51b7668bac97",
+      "source": "ec986906-b7af-4447-b7cb-bd798bd3bfd0",
+      "target": "fc58e081-056d-4ea6-8e10-8299ca0b5ef3",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "tilgangsniva": 4,
+      "praksis": "Regelmessig",
+      "lag": "Register og biometri"
+    },
+    {
+      "id": "23dbf9d7-ca93-4e9c-9c8f-3211e31675ad",
+      "source": "ec986906-b7af-4447-b7cb-bd798bd3bfd0",
+      "target": "5382e3a4-bee0-4a05-93b2-c0c42875048e",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "tilgangsniva": 4,
+      "praksis": "Regelmessig",
+      "lag": "Register og biometri"
+    },
+    {
+      "id": "b6072778-5510-4fbb-85e4-470b4a1fd3b8",
+      "source": "ec986906-b7af-4447-b7cb-bd798bd3bfd0",
+      "target": "fcbee69b-a2da-478c-97d2-00186a2a4086",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "tilgangsniva": 4,
+      "praksis": "Regelmessig",
+      "lag": "Register og biometri"
+    },
+    {
+      "id": "b2c5a646-6af4-49cc-bccd-bfcd5ef70ae0",
+      "source": "bfd26b45-160a-4dbd-80bd-a88d539abfee",
+      "target": "7fd4fb66-8b3c-4606-a06e-b6d61e9244a4",
+      "relasjonstype": "Direkte tilgang",
+      "kind": "tilgang",
+      "mekanisme": "Direkte tilgang",
+      "tilgangsniva": 3,
+      "praksis": "Regelmessig",
+      "lag": "Kapital og eigarskap"
+    },
+    {
+      "id": "cc8741b2-a8bd-4b87-91db-6dae6b2a56e8",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "01a62148-b0d1-4176-b37e-23d4b46bbbb3",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "mekanisme": "Kan krevje utlevering",
+      "tilgangsniva": 2,
+      "praksis": "Regelmessig",
+      "lag": "Kommunikasjon og etterretning"
+    },
+    {
+      "id": "2267b197-d694-442e-9414-de48f88a25f4",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "bda5603f-3a3a-44fc-8b3e-cf1d5d478718",
+      "relasjonstype": "Rettsordre",
+      "kind": "tilgang",
+      "mekanisme": "Rettsordre",
+      "tilgangsniva": 1,
+      "praksis": "Av og til",
+      "lag": "Kommunikasjon og etterretning"
+    },
+    {
+      "id": "aa57c3af-79f1-42e8-a98f-fcea977b6cc8",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "2b528188-edf1-46b8-a53c-109922f6cb30",
+      "relasjonstype": "Rettsordre",
+      "kind": "tilgang",
+      "mekanisme": "Rettsordre",
+      "tilgangsniva": 1,
+      "praksis": "Regelmessig",
+      "lag": "Kommunikasjon og etterretning"
+    },
+    {
+      "id": "f4e950e2-fc6b-40db-8452-b27be353ec37",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "d2413486-5f72-45d6-8d7e-7e04ff0d0a78",
+      "relasjonstype": "Rettsordre",
+      "kind": "tilgang",
+      "mekanisme": "Rettsordre",
+      "tilgangsniva": 1,
+      "praksis": "Av og til",
+      "lag": "Kommunikasjon og etterretning"
+    },
+    {
+      "id": "113a5545-f854-4c51-87e4-e0aae91226fa",
+      "source": "c481c009-3fd6-4fdf-8d39-5f1b2a5d5e81",
+      "target": "232f35ca-8426-44f1-bd8a-82eb39dd8e8c",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "tilgangsniva": 4,
+      "praksis": "Regelmessig",
+      "lag": "Kommunikasjon og etterretning"
+    },
+    {
+      "id": "81ba4431-c161-4511-8cd2-1e4916665b05",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "cf96e62a-a4f8-4316-aadd-fe59fcce9c49",
+      "relasjonstype": "Direkte tilgang",
+      "kind": "tilgang",
+      "mekanisme": "Direkte tilgang",
+      "tilgangsniva": 3,
+      "praksis": "Regelmessig",
+      "lag": "Register og biometri"
+    },
+    {
+      "id": "2c2b50bb-8717-4d9c-b53e-858fa7bbdf17",
+      "source": "1a4321ef-555f-4619-89ba-e52c56a352c5",
+      "target": "5b3544da-3521-40ca-8d98-a553551efd8c",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "tilgangsniva": 4,
+      "praksis": "Regelmessig",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "025faab8-ccc0-4863-884e-a27a7a5776a1",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "92686829-67e3-4c5d-89a6-8c3783e66e63",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "tilgangsniva": 4,
+      "praksis": "Regelmessig",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "653767ee-d64a-4bd8-b947-8e104ea03573",
+      "source": "12d0fb88-3ee3-4d2b-9f01-e3b05e24ad17",
+      "target": "ed30cad9-3a97-453a-be3c-4cc78a9938b9",
+      "relasjonstype": "Driftar",
+      "kind": "tilgang",
+      "mekanisme": "Drift",
+      "tilgangsniva": 3,
+      "praksis": "Av og til",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "50c395dc-d1cd-41c1-b207-1abb83fcb047",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "38c1973f-7014-49e3-a65e-756e17ee8cd1",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "tilgangsniva": 4,
+      "praksis": "Regelmessig",
+      "merknad": "Berre 6 kamera eigd direkte (2013) – kontrast til titusenvis tilgjengelege private kamera.",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "0b32f1e5-7c08-42d5-b974-1c6f7d25a0df",
+      "source": "3c841378-1d3a-471d-a2fd-24bbb4f3a4ff",
+      "target": "d5aba32d-35d1-4bbb-8fef-9bbb572fdc6d",
+      "relasjonstype": "Eig",
+      "kind": "tilgang",
+      "mekanisme": "Eigarskap",
+      "tilgangsniva": 4,
+      "praksis": "Ingen indikasjon",
+      "merknad": "Bane NOR eig; inga klar indikasjon på regelmessig utlevering til politiet.",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "692f2c62-1160-4463-81ae-7d25f9be6329",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "d9bb663c-ffdd-450a-ae0d-fce9c27f564b",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "mekanisme": "Kan krevje utlevering",
+      "tilgangsniva": 2,
+      "praksis": "Av og til",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "47a4ec20-b9eb-4826-8e31-f082480df091",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "11babdf7-43d1-4907-9a2c-097ef05f32a3",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "mekanisme": "Kan krevje utlevering",
+      "tilgangsniva": 2,
+      "praksis": "Av og til",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "b60e3dfa-1e8e-4e03-9814-212dbe301885",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "d522363f-1ddd-402b-b82f-f04fdde4b831",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "mekanisme": "Kan krevje utlevering",
+      "tilgangsniva": 2,
+      "praksis": "Av og til",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "430d82cf-f61d-45b4-b125-bcd533d2fe9b",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "34293c31-b8e2-4062-bb38-dc008dc00dcc",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "mekanisme": "Kan krevje utlevering",
+      "tilgangsniva": 2,
+      "praksis": "Av og til",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "912f04ba-a4d1-435b-b6f0-f95fe7549f96",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "8c0bb97f-6084-4a9f-8b82-7f125051957a",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "mekanisme": "Kan krevje utlevering",
+      "tilgangsniva": 2,
+      "praksis": "Av og til",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "c07afcc5-e72e-44c7-8267-a4b79b7f673f",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "d69821c8-452c-4153-a9f8-aa4ae5e08061",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "mekanisme": "Kan krevje utlevering",
+      "tilgangsniva": 2,
+      "praksis": "Av og til",
+      "merknad": "Eigd av kjeda; politiet kan krevje utlevering ved konkret sak.",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "70c14e20-a4d9-4c16-bc2d-22fe30085fa0",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "68da5386-c173-4b44-8a62-9869ac042e09",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "mekanisme": "Kan krevje utlevering",
+      "tilgangsniva": 2,
+      "praksis": "Av og til",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "b76a93bf-6b57-426a-a5eb-041fd03a6394",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "a9d83c32-698d-4aed-95ee-8087abc21b3b",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "mekanisme": "Kan krevje utlevering",
+      "tilgangsniva": 2,
+      "praksis": "Av og til",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "778f69a7-4be6-4149-b0f6-d7884e056b7b",
+      "source": "f34c2277-96d0-42df-ab32-66e05522d718",
+      "target": "4dbcd031-8558-4025-9d7b-b9ff84da360c",
+      "relasjonstype": "Kan krevje utlevering",
+      "kind": "tilgang",
+      "mekanisme": "Kan krevje utlevering",
+      "tilgangsniva": 2,
+      "praksis": "Av og til",
+      "kjeldeUrl": "https://www.vy.no/vilkar-og-personvern/personvern",
+      "lag": "Kamera og sensorar"
+    },
+    {
+      "id": "942eb03c-4ae7-4c18-8bb1-a445d4d3e5f8-knytt-0",
+      "source": "942eb03c-4ae7-4c18-8bb1-a445d4d3e5f8",
+      "target": "c1902954-dfcf-48b8-b38f-121fe4267340",
+      "relasjonstype": "Gjeld",
+      "kind": "sak"
+    },
+    {
+      "id": "942eb03c-4ae7-4c18-8bb1-a445d4d3e5f8-knytt-1",
+      "source": "942eb03c-4ae7-4c18-8bb1-a445d4d3e5f8",
+      "target": "ac274714-d9af-4398-acaa-87272e272ee2",
+      "relasjonstype": "Gjeld",
+      "kind": "sak"
+    },
+    {
+      "id": "942eb03c-4ae7-4c18-8bb1-a445d4d3e5f8-knytt-2",
+      "source": "942eb03c-4ae7-4c18-8bb1-a445d4d3e5f8",
+      "target": "8a79c9bd-5b2b-4522-9031-e87aaa8ebbd9",
+      "relasjonstype": "Gjeld",
+      "kind": "sak"
+    },
+    {
+      "id": "2c10c159-7c2e-4317-be31-3444768d1684-knytt-0",
+      "source": "2c10c159-7c2e-4317-be31-3444768d1684",
+      "target": "d768447b-4f4e-443b-852a-8c9270e504b3",
+      "relasjonstype": "Gjeld",
+      "kind": "sak"
+    },
+    {
+      "id": "2c10c159-7c2e-4317-be31-3444768d1684-knytt-1",
+      "source": "2c10c159-7c2e-4317-be31-3444768d1684",
+      "target": "4fbb5c50-2cd4-44a3-a20d-6f87b406b426",
+      "relasjonstype": "Gjeld",
+      "kind": "sak"
+    },
+    {
+      "id": "bac5400c-9ff5-499d-bcbd-a43564e54f25-knytt-0",
+      "source": "bac5400c-9ff5-499d-bcbd-a43564e54f25",
+      "target": "8103a019-5ecf-47e1-b146-ed41f7d488a5",
+      "relasjonstype": "Gjeld",
+      "kind": "sak"
+    },
+    {
+      "id": "bdb074c5-d810-4e7e-a6e2-1981053d2b95-knytt-0",
+      "source": "bdb074c5-d810-4e7e-a6e2-1981053d2b95",
+      "target": "11babdf7-43d1-4907-9a2c-097ef05f32a3",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "bdb074c5-d810-4e7e-a6e2-1981053d2b95-knytt-1",
+      "source": "bdb074c5-d810-4e7e-a6e2-1981053d2b95",
+      "target": "aeb1a75b-59e6-4ad1-8a98-2e3d1c996e04",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "bcfa0e47-0f31-4c06-b337-c8ecc233f728-knytt-0",
+      "source": "bcfa0e47-0f31-4c06-b337-c8ecc233f728",
+      "target": "b352d0f8-f35a-4009-81cf-d1c59edf8d7e",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "622da9df-2c1a-4756-b9b1-a205d3bf222f-knytt-0",
+      "source": "622da9df-2c1a-4756-b9b1-a205d3bf222f",
+      "target": "aeb1a75b-59e6-4ad1-8a98-2e3d1c996e04",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "943234e6-6198-491d-8ed8-9750854dd834-knytt-0",
+      "source": "943234e6-6198-491d-8ed8-9750854dd834",
+      "target": "52a996ef-8e3d-43e8-b856-43c7da8c07cf",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "98bfabb4-a151-44a7-bcfb-6778dee0ded5-knytt-0",
+      "source": "98bfabb4-a151-44a7-bcfb-6778dee0ded5",
+      "target": "d768447b-4f4e-443b-852a-8c9270e504b3",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "70e18faf-0130-4a72-9368-8b90300123da-knytt-0",
+      "source": "70e18faf-0130-4a72-9368-8b90300123da",
+      "target": "01a62148-b0d1-4176-b37e-23d4b46bbbb3",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "74896e3e-fb74-4000-acb4-c45ac6019006-knytt-0",
+      "source": "74896e3e-fb74-4000-acb4-c45ac6019006",
+      "target": "8c0bb97f-6084-4a9f-8b82-7f125051957a",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "74896e3e-fb74-4000-acb4-c45ac6019006-knytt-1",
+      "source": "74896e3e-fb74-4000-acb4-c45ac6019006",
+      "target": "f9330a85-447c-4c57-942a-3023dc341468",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "3033a99c-1a9f-426b-ba7b-4ff16d556157-knytt-0",
+      "source": "3033a99c-1a9f-426b-ba7b-4ff16d556157",
+      "target": "fcbee69b-a2da-478c-97d2-00186a2a4086",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "f27a6880-21ee-4bc8-ba75-de57eeec49e3-knytt-0",
+      "source": "f27a6880-21ee-4bc8-ba75-de57eeec49e3",
+      "target": "3c841378-1d3a-471d-a2fd-24bbb4f3a4ff",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "f27a6880-21ee-4bc8-ba75-de57eeec49e3-knytt-1",
+      "source": "f27a6880-21ee-4bc8-ba75-de57eeec49e3",
+      "target": "d5aba32d-35d1-4bbb-8fef-9bbb572fdc6d",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "1a04e31a-1511-4a33-a41c-78270f5b38ea-knytt-0",
+      "source": "1a04e31a-1511-4a33-a41c-78270f5b38ea",
+      "target": "4dbcd031-8558-4025-9d7b-b9ff84da360c",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "1a04e31a-1511-4a33-a41c-78270f5b38ea-knytt-1",
+      "source": "1a04e31a-1511-4a33-a41c-78270f5b38ea",
+      "target": "f9330a85-447c-4c57-942a-3023dc341468",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "c69c929d-58ec-4e07-9b75-e610ba8ab366-knytt-0",
+      "source": "c69c929d-58ec-4e07-9b75-e610ba8ab366",
+      "target": "fc58e081-056d-4ea6-8e10-8299ca0b5ef3",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "64600872-7977-4aba-9729-f71e90cd0f05-knytt-0",
+      "source": "64600872-7977-4aba-9729-f71e90cd0f05",
+      "target": "f9330a85-447c-4c57-942a-3023dc341468",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "21a4d372-80b7-4935-8b68-ce86a40978e1-knytt-0",
+      "source": "21a4d372-80b7-4935-8b68-ce86a40978e1",
+      "target": "f9330a85-447c-4c57-942a-3023dc341468",
+      "relasjonstype": "Gjeld",
+      "kind": "forsking"
+    },
+    {
+      "id": "6ac8023d-4644-4cbf-9a3f-689a21151bb7-knytt-0",
+      "source": "6ac8023d-4644-4cbf-9a3f-689a21151bb7",
+      "target": "8a79c9bd-5b2b-4522-9031-e87aaa8ebbd9",
+      "relasjonstype": "Gjeld",
+      "kind": "sak"
+    },
+    {
+      "id": "8ec9fde7-522d-4bbb-888f-71c9f4ee873d-knytt-0",
+      "source": "8ec9fde7-522d-4bbb-888f-71c9f4ee873d",
+      "target": "cf96e62a-a4f8-4316-aadd-fe59fcce9c49",
+      "relasjonstype": "Gjeld",
+      "kind": "sak"
+    },
+    {
+      "id": "8ec9fde7-522d-4bbb-888f-71c9f4ee873d-knytt-1",
+      "source": "8ec9fde7-522d-4bbb-888f-71c9f4ee873d",
+      "target": "d85ae0e2-a6ad-410d-890f-b0caa1069d19",
+      "relasjonstype": "Gjeld",
+      "kind": "sak"
+    },
+    {
+      "id": "8ec9fde7-522d-4bbb-888f-71c9f4ee873d-knytt-2",
+      "source": "8ec9fde7-522d-4bbb-888f-71c9f4ee873d",
+      "target": "45264ba9-495b-4166-a0f2-347260617228",
+      "relasjonstype": "Gjeld",
+      "kind": "sak"
+    },
+    {
+      "id": "56f92721-d16b-4a9e-ae12-e72d0b99f592-knytt-0",
+      "source": "56f92721-d16b-4a9e-ae12-e72d0b99f592",
+      "target": "534baccd-cd13-4f7a-b699-0f84e30b04c4",
+      "relasjonstype": "Gjeld",
+      "kind": "sak"
+    },
+    {
+      "id": "56f92721-d16b-4a9e-ae12-e72d0b99f592-knytt-1",
+      "source": "56f92721-d16b-4a9e-ae12-e72d0b99f592",
+      "target": "8a79c9bd-5b2b-4522-9031-e87aaa8ebbd9",
+      "relasjonstype": "Gjeld",
+      "kind": "sak"
+    }
+  ]
+}

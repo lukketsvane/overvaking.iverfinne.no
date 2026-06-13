@@ -1,0 +1,6 @@
+Vercel CLI 48.2.9
+Retrieving project…
+> Running Dev Command “vite --port $PORT”
+> Ready! Available at http://localhost:5173
+Error: Cannot read properties of undefined (reading 'startsWith')
+Error: Function `api/graph.ts` failed with exit code 1

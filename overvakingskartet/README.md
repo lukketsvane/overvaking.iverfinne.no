@@ -4,44 +4,41 @@ Open data-kart over overvakingsinfrastruktur i Noreg.
 
 ## Flyt
 
-Notion er kjeldesanninga. GitHub Actions synkar databasen til `data/graph.json`, og nettsida les berre denne fila.
+Notion er kjeldesanninga. Nettsida les berre `/api/graph`, og dette endepunktet hentar tekstblokker, nodar, kantar, lag, fargar og filternamn direkte frå Notion. Det finst ikkje runtime-fallback til `graph.json`.
 
 ```mermaid
 flowchart LR
-  A["Notion (fasit)"] -->|"sync cron"| B["graph.json i git"]
-  B -->|"auto-deploy"| C["Vercel nettside"]
+  A["Notion data source"] -->|"Vercel Function /api/graph"| B["React/Vite nettside"]
   D["GitHub Issue/PR"] -.->|"redaktør fører inn"| A
   E["Notion-redaktør"] --> A
 ```
 
+## Notion-innhald
+
+Same Notion-kjelde kan styre både teksten og grafen.
+
+Tekstrader kan ha `Type` lik `Tekst`, `Essay`, `Intro`, `Avsnitt`, `Sitat`, `Punkt` eller `Overskrift`. Bruk gjerne eigenskapane `Seksjon`, `Variant`, `Tekst`, `Lenkje`, `Lenketekst` og `Rekkefølgje`.
+
+Graf-rader brukar `Type` for entity-typane `System`, `Organisasjon`, `Lovheimel`, `Tilsyn`, `Sak` og `Person`, og edge-typane `Tilgang` og `Datadeling`.
+
 ## Datakontrakt
 
-`data/graph.json` er einaste grensesnitt mellom Notion-synken og frontend.
+`/api/graph` returnerer:
 
 ```ts
-export type GraphNode = {
-  id: string
-  label: string
-  type: string
-  lag?: string
-  sektor?: string
-  orgType?: string
-  status?: string
-  kategori?: string
-  kjeldeUrl?: string
+export type Graph = {
+  meta?: {
+    kjelde?: string
+    nodar?: number
+    kantar?: number
+    lagFargar?: Record<string, string>
+  }
+  content?: {
+    blocks: ContentBlock[]
+  }
+  nodes: GraphNode[]
+  edges: GraphEdge[]
 }
-
-export type GraphEdge = {
-  id: string
-  source: string
-  target: string
-  relasjonstype: string
-  mekanisme?: string
-  tilgangsniva?: number
-  praksis?: string
-}
-
-export type Graph = { nodes: GraphNode[]; edges: GraphEdge[] }
 ```
 
 ## Lokal køyring
@@ -51,21 +48,18 @@ npm i
 npm run dev
 ```
 
-## Synk frå Notion
+`npm run dev` startar Vite på port `5173`. Sidan appen ikkje har statisk data-fallback, må `/api/graph` kome frå Vercel Function for at nodar skal visast. Viss Notion-env manglar i Vercel, skal appen vise feil i staden for gamle data.
 
-1. Regenerer Notion-tokenet dersom det nokon gong har vore delt utanfor GitHub secrets.
-2. Legg inn desse GitHub Actions-secrets i repoet:
-   - `NOTION_TOKEN`
-   - `NOTION_DB_ID`
-3. Del Notion-databasen med integrasjonen `overvaking.iverfinne.no`.
-4. Køyr `Actions → sync-notion → Run workflow`.
+## Vercel-miljøvariablar
 
-Manuelt lokalt:
+Legg desse i Vercel Project Settings:
 
-```bash
-NOTION_TOKEN=... NOTION_DB_ID=... npm run sync:notion
-```
+- `NOTION_TOKEN`
+- `NOTION_DATA_SOURCE_ID` eller `NOTION_DB_ID`
+- `NOTION_CONTENT_PAGE_ID` dersom intro/essay ligg som eiga Notion-side
+
+Del Notion-datakjelda med integrasjonen `overvaking.iverfinne.no`.
 
 ## Bidrag
 
-Dataforslag kjem inn som GitHub Issues. Godkjende forslag blir førte inn i Notion, og synken oppdaterer grafen.
+Dataforslag kjem inn som GitHub Issues. Godkjende forslag blir førte inn i Notion, og nettsida hentar dei frå Notion på neste kall til `/api/graph`.

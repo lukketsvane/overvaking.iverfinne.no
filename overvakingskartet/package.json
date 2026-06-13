@@ -5,19 +5,21 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "tsc -b && vite build && tsx scripts/copy-static-data.ts",
-    "preview": "vite preview",
-    "sync:notion": "tsx scripts/sync-notion.ts"
+    "dev:vite": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@notionhq/client": "latest",
+    "@types/d3-force": "^3.0.10",
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
-    "typescript": "latest",
-    "tsx": "latest",
+    "d3-force": "^3.0.0",
     "react": "latest",
     "react-dom": "latest",
-    "react-force-graph-2d": "latest"
+    "react-force-graph-2d": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "vite": "latest"
   },
   "devDependencies": {
     "@types/node": "latest",

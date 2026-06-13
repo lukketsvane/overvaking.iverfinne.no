@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react"
+import { forceCollide, forceX, forceY } from "d3-force"
 import ForceGraph2D, { type ForceGraphMethods } from "react-force-graph-2d"
-import type { Graph, GraphEdge, GraphNode } from "./types"
+import type { ContentBlock, Graph, GraphEdge, GraphNode, Metric } from "./types"
 
 const minGraphZoom = 0.58
 
@@ -12,6 +13,7 @@ const fallbackNodePalette = new Map<string, string>([
   ["Datainfrastruktur", "#9aa4b2"],
   ["Kapital og eigarskap", "#40b66b"],
   ["Politikk og styring", "#e8c341"],
+  ["Personar og roller", "#92400e"],
   ["Media", "#ff7bd5"],
 ])
 
@@ -30,6 +32,7 @@ const emptyGraph: Graph = { nodes: [], edges: [] }
 
 type RawGraph = {
   meta?: Graph["meta"]
+  content?: Graph["content"]
   nodes?: Array<GraphNode & { layer?: string; name?: string }>
   edges?: Array<Partial<GraphEdge> & { from?: string; to?: string; label?: string; relation?: string }>
   links?: Array<Partial<GraphEdge> & { from?: string; to?: string; label?: string; relation?: string }>
@@ -66,15 +69,164 @@ function normalizeGraph(raw: RawGraph): Graph {
         relasjonstype: edge.relasjonstype ?? edge.relation ?? edge.label ?? "Relasjon",
       }
 
+      if (edge.kind) normalized.kind = edge.kind
       if (edge.mekanisme) normalized.mekanisme = edge.mekanisme
       if (typeof edge.tilgangsniva === "number") normalized.tilgangsniva = edge.tilgangsniva
       if (edge.praksis) normalized.praksis = edge.praksis
+      if (edge.kjeldeUrl) normalized.kjeldeUrl = edge.kjeldeUrl
+      if (edge.kjeldeTittel) normalized.kjeldeTittel = edge.kjeldeTittel
+      if (edge.merknad) normalized.merknad = edge.merknad
+      if (edge.geografi) normalized.geografi = edge.geografi
 
       return normalized
     })
     .filter((edge): edge is GraphEdge => edge !== null)
 
-  return { meta: raw.meta, nodes, edges }
+  return { meta: raw.meta, content: raw.content, nodes, edges }
+}
+
+function normalizeContent(blocks: ContentBlock[] | undefined) {
+  return (blocks ?? []).slice().sort((a, b) => a.order - b.order)
+}
+
+function blocksFor(blocks: ContentBlock[], section: string) {
+  return blocks.filter((block) => block.section === section)
+}
+
+function headingFor(blocks: ContentBlock[]) {
+  return blocks.find((block) => block.kind === "heading")?.body
+}
+
+function bodyBlocks(blocks: ContentBlock[]) {
+  return blocks.filter((block) => block.kind !== "heading")
+}
+
+function layerClusterCenters(layers: string[]) {
+  const centers = new Map<string, { x: number; y: number }>()
+  const count = Math.max(layers.length, 1)
+  const radius = count <= 1 ? 0 : Math.min(380, 150 + count * 24)
+
+  layers.forEach((layer, index) => {
+    const angle = -Math.PI / 2 + (index / count) * Math.PI * 2
+    centers.set(layer, {
+      x: Math.cos(angle) * radius,
+      y: Math.sin(angle) * radius,
+    })
+  })
+
+  return centers
+}
+
+function layerCounts(nodes: GraphNode[]) {
+  const counts = new Map<string, number>()
+  nodes.forEach((node) => {
+    const layer = node.lag ?? "Utan lag"
+    counts.set(layer, (counts.get(layer) ?? 0) + 1)
+  })
+  return counts
+}
+
+function drawLayerClusters(
+  ctx: CanvasRenderingContext2D,
+  globalScale: number,
+  centers: Map<string, { x: number; y: number }>,
+  counts: Map<string, number>,
+  layerColors: Map<string, string>,
+) {
+  ctx.save()
+
+  for (const [layer, center] of centers) {
+    const count = counts.get(layer) ?? 0
+    if (count === 0) continue
+
+    const color = layerColors.get(layer) ?? colorFromText(layer)
+    const radius = Math.max(92, Math.min(190, 54 + Math.sqrt(count) * 30))
+
+    ctx.globalAlpha = 0.08
+    ctx.fillStyle = color
+    ctx.beginPath()
+    ctx.arc(center.x, center.y, radius, 0, Math.PI * 2)
+    ctx.fill()
+
+    ctx.globalAlpha = 0.22
+    ctx.strokeStyle = color
+    ctx.lineWidth = 1.3 / globalScale
+    ctx.stroke()
+
+    ctx.globalAlpha = 0.72
+    ctx.fillStyle = "#6f675b"
+    ctx.font = `${12 / globalScale}px Inter, system-ui, sans-serif`
+    ctx.textAlign = "center"
+    ctx.textBaseline = "bottom"
+    ctx.fillText(layer, center.x, center.y - radius - 10 / globalScale)
+  }
+
+  ctx.restore()
+}
+
+function renderLinkedBody(block: ContentBlock) {
+  if (!block.href) return block.body
+  const linkText = block.linkText && block.body.includes(block.linkText) ? block.linkText : undefined
+
+  if (!linkText) {
+    return (
+      <>
+        {block.body}{" "}
+        <a href={block.href} target="_blank" rel="noopener noreferrer">
+          {block.linkText ?? "Kjelde"}
+        </a>
+      </>
+    )
+  }
+
+  const [before, after] = block.body.split(linkText)
+  return (
+    <>
+      {before}
+      <a href={block.href} target="_blank" rel="noopener noreferrer">
+        {linkText}
+      </a>
+      {after}
+    </>
+  )
+}
+
+function ContentParagraph({ block }: { block: ContentBlock }) {
+  return (
+    <p>
+      {block.title && <strong>{block.title}: </strong>}
+      {renderLinkedBody(block)}
+    </p>
+  )
+}
+
+function ContentBlocks({ blocks }: { blocks: ContentBlock[] }) {
+  const prose = blocks.filter((block) => block.kind !== "list")
+  const list = blocks.filter((block) => block.kind === "list")
+
+  return (
+    <>
+      {prose.map((block) =>
+        block.kind === "quote" ? (
+          <blockquote key={block.id}>
+            <ContentParagraph block={block} />
+          </blockquote>
+        ) : (
+          <ContentParagraph block={block} key={block.id} />
+        ),
+      )}
+      {list.length > 0 && (
+        <ul className="lead-list">
+          {list.map((block) => (
+            <li key={block.id}>
+              {block.title && <strong>{block.title}: </strong>}
+              {renderLinkedBody(block)}
+            </li>
+          ))}
+        </ul>
+      )}
+    </>
+  )
 }
 
 function colorFromText(value: string | undefined, fallback = "#8a8170") {
@@ -97,10 +249,58 @@ function edgeWidth(edge: GraphEdge) {
   return Math.max(1, Math.min(5, level + 1))
 }
 
+const accessLabels: Record<number, string> = {
+  0: "0 · ingen",
+  1: "1 · rettsordre",
+  2: "2 · kan krevje utlevering",
+  3: "3 · direkte tilgang / drift",
+  4: "4 · eigarskap",
+}
+
+function accessLabel(level: number | undefined) {
+  if (typeof level !== "number") return undefined
+  return accessLabels[level] ?? `${level}`
+}
+
+function metricText(metric: Metric) {
+  if (metric.verdiTekst) return metric.verdiTekst
+  if (typeof metric.verdi === "number") {
+    return `${metric.verdi.toLocaleString("nn")}${metric.eining ? ` ${metric.eining}` : ""}`
+  }
+  return metric.eining ?? "—"
+}
+
 type EdgeWithNodes = GraphEdge & { source: string | GraphNode; target: string | GraphNode }
 
 function edgeEndId(value: string | GraphNode): string {
   return typeof value === "string" ? value : value.id
+}
+
+async function fetchStaticFallback(): Promise<RawGraph> {
+  const res = await fetch("/data/graph.json", { cache: "no-store" })
+  if (!res.ok) throw new Error(`Kunne ikkje lese statisk fallback (${res.status})`)
+  return (await res.json()) as RawGraph
+}
+
+async function fetchGraphData(): Promise<RawGraph> {
+  // Primær: live frå Notion. Fell tilbake til statisk snapshot om API-et feilar.
+  try {
+    const res = await fetch("/api/graph", { cache: "no-store" })
+    if (res.ok) return (await res.json()) as RawGraph
+    const body = await res.json().catch(() => null)
+    if (typeof body?.error === "string") throw new Error(body.error)
+    throw new Error(`status ${res.status}`)
+  } catch (liveError) {
+    try {
+      return await fetchStaticFallback()
+    } catch {
+      throw new Error(
+        liveError instanceof Error
+          ? `Kunne ikkje hente grafdata frå Notion: ${liveError.message}`
+          : "Kunne ikkje hente grafdata frå Notion",
+      )
+    }
+  }
 }
 
 export default function App() {
@@ -113,18 +313,42 @@ export default function App() {
   const [selected, setSelected] = useState<GraphNode | null>(null)
 
   useEffect(() => {
-    fetch("/data/graph.json", { cache: "no-store" })
-      .then((res) => {
-        if (!res.ok) throw new Error(`Kunne ikkje lese data/graph.json (${res.status})`)
-        return res.json() as Promise<RawGraph>
-      })
+    fetchGraphData()
       .then((data) => setGraph(normalizeGraph(data)))
       .catch((err: unknown) => setError(err instanceof Error ? err.message : "Ukjend feil"))
       .finally(() => setLoading(false))
   }, [])
 
+  const contentBlocks = useMemo(() => normalizeContent(graph.content?.blocks), [graph.content?.blocks])
+  const heroBlocks = blocksFor(contentBlocks, "hero")
+  const heroHeadings = heroBlocks.filter((block) => block.kind === "heading")
+  const heroEyebrow =
+    heroHeadings.find((block) => block.title?.toLowerCase() === "eyebrow")?.body ??
+    heroBlocks.find((block) => block.id === "hero-eyebrow")?.body ??
+    ""
+  const heroTitle =
+    heroHeadings.find((block) => block.title?.toLowerCase() === "title")?.body ??
+    heroHeadings.find((block) => block.body !== heroEyebrow)?.body ??
+    ""
+  const heroLede = heroBlocks.find((block) => block.kind === "paragraph")?.body ?? ""
+  const articleSections = useMemo(() => {
+    const sectionOrder = new Map<string, number>()
+
+    contentBlocks.forEach((block) => {
+      if (["hero", "map", "footer"].includes(block.section)) return
+      const current = sectionOrder.get(block.section)
+      if (current === undefined || block.order < current) sectionOrder.set(block.section, block.order)
+    })
+
+    return Array.from(sectionOrder.keys())
+      .sort((a, b) => (sectionOrder.get(a) ?? 0) - (sectionOrder.get(b) ?? 0))
+      .map((section) => ({ section, blocks: blocksFor(contentBlocks, section) }))
+  }, [contentBlocks])
+  const mapBlocks = blocksFor(contentBlocks, "map")
+  const footerBlocks = blocksFor(contentBlocks, "footer")
   const types = useMemo(() => textSet(graph.nodes.map((node) => node.type)), [graph.nodes])
-  const lags = useMemo(() => textSet(graph.nodes.map((node) => node.lag)), [graph.nodes])
+  const lags = useMemo(() => textSet(graph.nodes.map((node) => node.lag ?? "Utan lag")), [graph.nodes])
+  const clusterCenters = useMemo(() => layerClusterCenters(lags), [lags])
   const layerColors = useMemo(() => {
     const colors = new Map(fallbackNodePalette)
     for (const [lag, color] of Object.entries(graph.meta?.lagFargar ?? {})) colors.set(lag, color)
@@ -136,14 +360,16 @@ export default function App() {
 
   const visibleGraph = useMemo(() => {
     const nodes = graph.nodes.filter((node) => {
+      const nodeLayer = node.lag ?? "Utan lag"
       const typeOk = typeFilter === "Alle" || node.type === typeFilter
-      const lagOk = lagFilter === "Alle" || node.lag === lagFilter
+      const lagOk = lagFilter === "Alle" || nodeLayer === lagFilter
       return typeOk && lagOk
     })
     const nodeIds = new Set(nodes.map((node) => node.id))
     const edges = graph.edges.filter((edge) => nodeIds.has(edge.source) && nodeIds.has(edge.target))
     return { nodes, edges }
   }, [graph, typeFilter, lagFilter])
+  const visibleLayerCounts = useMemo(() => layerCounts(visibleGraph.nodes), [visibleGraph.nodes])
 
   const nodeById = useMemo(() => new Map(graph.nodes.map((node) => [node.id, node])), [graph.nodes])
 
@@ -163,14 +389,30 @@ export default function App() {
   }, [selected, graph.edges, nodeById])
 
   useEffect(() => {
-    graphRef.current?.d3Force("charge")?.strength(-150)
-    graphRef.current?.d3Force("link")?.distance(90)
-  }, [visibleGraph])
+    const forceGraph = graphRef.current
+    if (!forceGraph) return
+
+    forceGraph.d3Force("charge")?.strength(-310)
+    const linkForce = forceGraph.d3Force("link")
+    linkForce?.distance?.(118)
+    linkForce?.strength?.(0.32)
+    forceGraph.d3Force("collide", forceCollide<GraphNode>().radius(24).strength(0.86))
+    forceGraph.d3Force(
+      "x",
+      forceX<GraphNode>((node) => clusterCenters.get(node.lag ?? "Utan lag")?.x ?? 0).strength(0.16),
+    )
+    forceGraph.d3Force(
+      "y",
+      forceY<GraphNode>((node) => clusterCenters.get(node.lag ?? "Utan lag")?.y ?? 0).strength(0.16),
+    )
+    forceGraph.d3ReheatSimulation()
+  }, [clusterCenters, visibleGraph])
 
   const stats = [
     { label: "Nodar", value: graph.nodes.length },
     { label: "Kantar", value: graph.edges.length },
     { label: "Synlege", value: visibleGraph.nodes.length },
+    { label: "Kjelde", value: graph.meta?.kjelde ?? "Notion API" },
   ]
 
   const handleZoom = (factor: number) => {
@@ -181,137 +423,38 @@ export default function App() {
   return (
     <main>
       <header className="hero">
-        <p className="eyebrow">Opendata · Noreg</p>
-        <h1>Overvakingskartet</h1>
-        <p className="lede">
-          Eit ope, relasjonelt kart over statleg og kommersiell overvaking i Noreg. Prosjektet sporar kven som
-          kan sjå, registrere og kople saman opplysningar om folk, og kor stor denne kapasiteten faktisk er.
-        </p>
+        {heroEyebrow && <p className="eyebrow">{heroEyebrow}</p>}
+        {heroTitle && <h1>{heroTitle}</h1>}
+        {heroLede && <p className="lede">{heroLede}</p>}
         <p className="scroll-hint">
           Scroll for å utforske
           <span className="arrow" aria-hidden="true">↓</span>
         </p>
       </header>
 
-      <article className="article">
-        <section>
-          <div className="section-head">
-            <h2>Føremål</h2>
-            <div className="rule" />
-          </div>
-          <p>
-            Norsk offentlegheit diskuterer overvaking stykkevis, eitt kamera eller eitt register om gongen. Her
-            blir trådane samla i éin struktur, slik at det heilskaplege biletet, og maktforholda bak, blir
-            mogleg å sjå.
-          </p>
-          <blockquote>
-            <p>
-              <strong>6 kamera:</strong> Politiforum skildra i 2013 at politiet hadde{" "}
-              <a
-                href="https://www.politiforum.no/nyheter/oslo-seks-politikameraer/112206"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                "skarve seks kameraer"
-              </a>{" "}
-              ved Oslo S. Poenget her er ikkje talet i seg sjølv, men spranget frå eigarskap til tilgang:
-              kontrollkapasiteten ligg i nettverket rundt kameraa.
-            </p>
-          </blockquote>
-
-          <blockquote>
-            <p>
-              <strong>Opent budsjett:</strong> Etterretningstenesta låg på{" "}
-              <a
-                href="https://www.regjeringen.no/no/dokumenter/stprp-nr-1-2004-2005-/id297065/?ch=4"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                691,845 mill. kroner i 2005
-              </a>
-              ; i statsbudsjettet for 2025 er kap. 1735 foreslått til{" "}
-              <a
-                href="https://www.regjeringen.no/no/dokumenter/prop.-1-s-20242025/id3057361/?ch=3"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                4,299 mrd. kroner
-              </a>
-              .
-            </p>
-          </blockquote>
-
-          <blockquote>
-            <p>
-              <strong>Berande tese:</strong> Makt over informasjon ligg ikkje først og fremst i kven som{" "}
-              <em>eig</em> utstyret, men i kven som kan <em>mobilisere</em> det. Politiet eig få kamera sjølv,
-              men har tilgang til titusenvis.
-            </p>
-          </blockquote>
-          <ul className="lead-list">
-            <li>
-              <strong>Nodemodell:</strong> kvar eining (system, organisasjon, lovheimel, måling, datadeling,
-              sak) er ein <em>node</em> i same database.
-            </li>
-            <li>
-              <strong>Relasjonar:</strong> ein <em>sjølvrelasjon</em> bind nodane saman til éin samanhengande
-              graf i staden for mange lausrivne tabellar.
-            </li>
-            <li>
-              <strong>Fire gradar av kontroll:</strong> kvar tilgang er klassifisert som <em>eigd</em>,{" "}
-              <em>drifta</em>, <em>tilgjengeleg</em> eller <em>regelmessig utlevert</em>.
-            </li>
-            <li>
-              <strong>Fri dataflate:</strong> nodar, kantar, lag, fargar og filternamn blir lesne frå grafdata.
-              Når Notion-synken oppdaterer fila, skal kartet følgje etter utan kodeendring.
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <div className="section-head">
-            <h2>Infrastrukturen for kontroll</h2>
-            <div className="rule" />
-          </div>
-          <p>
-            Overvaking i Noreg veks sjeldan gjennom store, opne vedtak. Han veks gjennom mange små, tekniske
-            avgjerder som kvar for seg verkar uskuldige, men som til saman byggjer ein{" "}
-            <strong>infrastruktur for kontroll</strong>. Eit kamera blir sett opp for å tryggje ein butikk. Eit
-            register blir oppretta for å løyse ei konkret oppgåve. Ein heimel for utlevering blir vedteken for
-            å hjelpe etterforsking. Først når desse banda blir sette saman, kjem mønsteret til syne.
-          </p>
-          <p>
-            Det avgjerande er ikkje talet på kamera, men <em>rekkjevidda</em> til dei som kan be om opptaka.
-            Politiet eig sjølv få kamera, men kan krevje utlevering frå titusenvis av private og kommunale
-            kamera. Tolletaten og Statens vegvesen driv landsdekkjande <strong>ANPR</strong>, automatisk
-            skiltattkjenning, som les og lagrar rørslene til kvar bil som passerer. Teleselskapa sit på
-            lokasjons- og trafikkdata som kan hentast ut ved rettsordre. Saman utgjer dette ein kapasitet ingen
-            einskild aktør har bygd med vilje, men som likevel finst.
-          </p>
-          <blockquote>
-            <p>
-              <strong>Infrastruktur for kontroll:</strong> summen av kamera, register og heimlar som gjer det
-              mogleg å sjå, lagre og kople saman opplysningar om folk, uavhengig av kven som eig kvar einskild
-              del.
-            </p>
-          </blockquote>
-          <p>
-            Påstanden er ikkje at Noreg er ein <em>overvakingsstat</em>. Påstanden er at sjølve{" "}
-            <strong>kapasiteten</strong> alt er på plass, fordelt mellom mange hender, og at terskelen for å
-            mobilisere han er låg og lite synleg. Demokratisk kontroll føreset at me kan sjå heile biletet,
-            ikkje berre delane.
-          </p>
-        </section>
-      </article>
+      {articleSections.length > 0 && (
+        <article className="article">
+          {articleSections.map(({ section, blocks }) => (
+            <section key={section}>
+              <div className="section-head">
+                <h2>{headingFor(blocks) ?? section}</h2>
+                <div className="rule" />
+              </div>
+              <ContentBlocks blocks={bodyBlocks(blocks)} />
+            </section>
+          ))}
+        </article>
+      )}
 
       <section className="map-shell" aria-label="Overvakingskartet">
-        <div className="map-intro">
-          <h2>Kartet</h2>
-          <p>
-            Alt innhaldet ligg i Overvakingskartet nedanfor. Bruk <em>Type</em>-filteret for å sjå systema,
-            aktørane, tilgangane eller målingane kvar for seg.
-          </p>
-        </div>
+        {mapBlocks.length > 0 && (
+          <div className="map-intro">
+            {headingFor(mapBlocks) && <h2>{headingFor(mapBlocks)}</h2>}
+            {bodyBlocks(mapBlocks).map((block) => (
+              <ContentParagraph block={block} key={block.id} />
+            ))}
+          </div>
+        )}
 
         <div className="graph-wrap">
           <div className="controls">
@@ -349,7 +492,7 @@ export default function App() {
             {loading && <div className="state">Lastar grafdata …</div>}
             {error && <div className="state error">{error}</div>}
             {!loading && !error && visibleGraph.nodes.length === 0 && (
-              <div className="state">Ingen grafdata enno. Køyr Notion-synken når GitHub secrets er sett.</div>
+              <div className="state">Ingen grafdata frå Notion enno. Sjekk Notion-tilgang og miljøvariablar.</div>
             )}
             {!loading && !error && visibleGraph.nodes.length > 0 && (
               <>
@@ -358,6 +501,9 @@ export default function App() {
                   graphData={{ nodes: visibleGraph.nodes, links: visibleGraph.edges }}
                   backgroundColor="#fffdf8"
                   minZoom={minGraphZoom}
+                  onRenderFramePre={(ctx, globalScale) =>
+                    drawLayerClusters(ctx, globalScale, clusterCenters, visibleLayerCounts, layerColors)
+                  }
                   nodeId="id"
                   nodeLabel={(node) => `${node.label} · ${node.type}${node.lag ? ` · ${node.lag}` : ""}`}
                   linkSource="source"
@@ -432,6 +578,8 @@ export default function App() {
                     <span className="tag">{selected.type}</span>
                     <h3>{selected.label}</h3>
 
+                    {selected.skildring && <p className="detail-skildring">{selected.skildring}</p>}
+
                     <div className="detail-rule" />
 
                     <dl>
@@ -459,30 +607,96 @@ export default function App() {
                           <dd>{selected.kategori}</dd>
                         </div>
                       )}
+                      {selected.geografi && (
+                        <div className="field">
+                          <dt>Geografi</dt>
+                          <dd>{selected.geografi}</dd>
+                        </div>
+                      )}
+                      {selected.heimel && (
+                        <div className="field">
+                          <dt>Heimel</dt>
+                          <dd>{selected.heimel}</dd>
+                        </div>
+                      )}
                       {selected.status && (
                         <div className="field">
                           <dt>Status</dt>
                           <dd>{selected.status}</dd>
                         </div>
                       )}
+                      {selected.prioritet && (
+                        <div className="field">
+                          <dt>Prioritet</dt>
+                          <dd>{selected.prioritet}</dd>
+                        </div>
+                      )}
                     </dl>
+
+                    {selected.metrics && selected.metrics.length > 0 && (
+                      <>
+                        <div className="detail-rule" />
+                        <p className="conn-title">Målingar</p>
+                        {selected.metrics.map((metric: Metric) => (
+                          <div className="metric-row" key={metric.id}>
+                            <span className="metric-name">
+                              {metric.metrikkType ?? "Måling"}
+                              {metric.aar ? ` (${metric.aar})` : ""}
+                            </span>
+                            <span className="metric-value">{metricText(metric)}</span>
+                            {metric.kjeldeUrl && (
+                              <a
+                                className="metric-source"
+                                href={metric.kjeldeUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {metric.kjeldeTittel ?? "kjelde"} ↗
+                              </a>
+                            )}
+                          </div>
+                        ))}
+                      </>
+                    )}
+
+                    {selected.merknad && <p className="detail-merknad">{selected.merknad}</p>}
 
                     {selectedConnections.length > 0 && (
                       <>
                         <div className="detail-rule" />
-                        <p className="conn-title">Relasjonar</p>
-                        {selectedConnections.map(({ edge, other }) => (
-                          <button
-                            type="button"
-                            className="conn-row"
-                            key={edge.id}
-                            onClick={() => setSelected(other)}
-                          >
-                            <span className="conn-dot" style={{ background: edgeColor(edge) }} />
-                            <span className="conn-name">{other.label}</span>
-                            <span className="conn-rel">{edge.relasjonstype}</span>
-                          </button>
-                        ))}
+                        <p className="conn-title">Relasjonar ({selectedConnections.length})</p>
+                        {selectedConnections.map(({ edge, other }) => {
+                          const outgoing = edgeEndId(edge.source) === selected.id
+                          const meta = [edge.mekanisme, accessLabel(edge.tilgangsniva), edge.praksis]
+                            .filter(Boolean)
+                            .join(" · ")
+                          return (
+                            <div className="conn-item" key={edge.id}>
+                              <button type="button" className="conn-row" onClick={() => setSelected(other)}>
+                                <span className="conn-dot" style={{ background: edgeColor(edge) }} />
+                                <span className="conn-name">
+                                  <span className="conn-dir" aria-hidden="true">
+                                    {outgoing ? "→" : "←"}
+                                  </span>{" "}
+                                  {other.label}
+                                </span>
+                                <span className="conn-rel">{edge.relasjonstype}</span>
+                                {meta && <span className="conn-meta">{meta}</span>}
+                              </button>
+                              {edge.merknad && <p className="conn-note">{edge.merknad}</p>}
+                              {edge.kjeldeUrl && (
+                                <a
+                                  className="conn-source"
+                                  href={edge.kjeldeUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {edge.kjeldeTittel ?? "kjelde"} ↗
+                                </a>
+                              )}
+                            </div>
+                          )
+                        })}
                       </>
                     )}
 
@@ -493,7 +707,7 @@ export default function App() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Opne kjelde ↗
+                        {selected.kjeldeTittel ?? "Opne kjelde"} ↗
                       </a>
                     )}
                   </aside>
@@ -504,12 +718,13 @@ export default function App() {
         </div>
       </section>
 
-      <footer className="site-footer">
-        <p>
-          På lengre sikt skal same metode nyttast til å kartleggje korleis økonomisk og politisk makt er
-          konsentrert i Noreg, etter mønster frå relasjonelle kartleggingar som <em>The Authoritarian Stack</em>.
-        </p>
-      </footer>
+      {footerBlocks.length > 0 && (
+        <footer className="site-footer">
+          {bodyBlocks(footerBlocks).map((block) => (
+            <ContentParagraph block={block} key={block.id} />
+          ))}
+        </footer>
+      )}
     </main>
   )
 }
