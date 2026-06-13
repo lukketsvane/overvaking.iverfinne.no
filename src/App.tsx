@@ -31,16 +31,22 @@ function textSet(values: Array<string | undefined>) {
 }
 
 function nodeColor(node: GraphNode) {
-  return nodePalette.get(node.lag ?? "") ?? "#7c8798"
+  return nodePalette.get(node.lag ?? "") ?? "#8a8170"
 }
 
 function edgeColor(edge: GraphEdge) {
-  return edgePalette.get(edge.relasjonstype ?? "") ?? "rgba(148, 163, 184, 0.72)"
+  return edgePalette.get(edge.relasjonstype ?? "") ?? "rgba(131, 122, 108, 0.6)"
 }
 
 function edgeWidth(edge: GraphEdge) {
   const level = edge.tilgangsniva ?? 1
   return Math.max(1, Math.min(5, level + 1))
+}
+
+type EdgeWithNodes = GraphEdge & { source: string | GraphNode; target: string | GraphNode }
+
+function edgeEndId(value: string | GraphNode): string {
+  return typeof value === "string" ? value : value.id
 }
 
 export default function App() {
@@ -50,6 +56,7 @@ export default function App() {
   const [error, setError] = useState<string | null>(null)
   const [typeFilter, setTypeFilter] = useState("Alle")
   const [lagFilter, setLagFilter] = useState("Alle")
+  const [selected, setSelected] = useState<GraphNode | null>(null)
 
   useEffect(() => {
     fetch("/data/graph.json", { cache: "no-store" })
@@ -76,9 +83,26 @@ export default function App() {
     return { nodes, edges }
   }, [graph, typeFilter, lagFilter])
 
+  const nodeById = useMemo(() => new Map(graph.nodes.map((node) => [node.id, node])), [graph.nodes])
+
+  const selectedConnections = useMemo(() => {
+    if (!selected) return []
+    return (graph.edges as EdgeWithNodes[])
+      .map((edge) => {
+        const sourceId = edgeEndId(edge.source)
+        const targetId = edgeEndId(edge.target)
+        if (sourceId !== selected.id && targetId !== selected.id) return null
+        const otherId = sourceId === selected.id ? targetId : sourceId
+        const other = nodeById.get(otherId)
+        if (!other) return null
+        return { edge, other }
+      })
+      .filter((value): value is { edge: GraphEdge; other: GraphNode } => value !== null)
+  }, [selected, graph.edges, nodeById])
+
   useEffect(() => {
-    graphRef.current?.d3Force("charge")?.strength(-130)
-    graphRef.current?.d3Force("link")?.distance(85)
+    graphRef.current?.d3Force("charge")?.strength(-150)
+    graphRef.current?.d3Force("link")?.distance(90)
   }, [visibleGraph])
 
   const stats = [
@@ -87,87 +111,302 @@ export default function App() {
     { label: "Synlege", value: visibleGraph.nodes.length },
   ]
 
+  const handleZoom = (factor: number) => {
+    const current = graphRef.current?.zoom() ?? 1
+    graphRef.current?.zoom(current * factor, 320)
+  }
+
   return (
     <main>
       <header className="hero">
-        <p className="eyebrow">opendata · noreg</p>
+        <p className="eyebrow">Opendata · Noreg</p>
         <h1>Overvakingskartet</h1>
         <p className="lede">
-          Eit ope, kjeldeført kart over system, organisasjonar, lovheimlar og datatilgang i norsk overvakingsinfrastruktur.
+          Eit ope, relasjonelt kart over statleg og kommersiell overvaking i Noreg. Prosjektet sporar kven som
+          kan sjå, registrere og kople saman opplysningar om folk, og kor stor denne kapasiteten faktisk er.
+        </p>
+        <p className="scroll-hint">
+          Scroll for å utforske
+          <span className="arrow" aria-hidden="true">↓</span>
         </p>
       </header>
 
-      <section className="panel controls" aria-label="Filter">
-        <div className="stats">
-          {stats.map((stat) => (
-            <div className="stat" key={stat.label}>
-              <strong>{stat.value}</strong>
-              <span>{stat.label}</span>
-            </div>
-          ))}
+      <article className="article">
+        <section>
+          <div className="section-head">
+            <h2>Føremål</h2>
+            <div className="rule" />
+          </div>
+          <p>
+            Norsk offentlegheit diskuterer overvaking stykkevis, eitt kamera eller eitt register om gongen. Her
+            blir trådane samla i éin struktur, slik at det heilskaplege biletet, og maktforholda bak, blir
+            mogleg å sjå.
+          </p>
+          <blockquote>
+            <p>
+              <strong>Berande tese:</strong> Makt over informasjon ligg ikkje først og fremst i kven som{" "}
+              <em>eig</em> utstyret, men i kven som kan <em>mobilisere</em> det. Politiet eig få kamera sjølv,
+              men har tilgang til titusenvis.
+            </p>
+          </blockquote>
+          <ul className="lead-list">
+            <li>
+              <strong>Nodemodell:</strong> kvar eining (system, organisasjon, lovheimel, måling, datadeling,
+              sak) er ein <em>node</em> i same database.
+            </li>
+            <li>
+              <strong>Relasjonar:</strong> ein <em>sjølvrelasjon</em> bind nodane saman til éin samanhengande
+              graf i staden for mange lausrivne tabellar.
+            </li>
+            <li>
+              <strong>Fire gradar av kontroll:</strong> kvar tilgang er klassifisert som <em>eigd</em>,{" "}
+              <em>drifta</em>, <em>tilgjengeleg</em> eller <em>regelmessig utlevert</em>.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <div className="section-head">
+            <h2>Infrastrukturen for kontroll</h2>
+            <div className="rule" />
+          </div>
+          <p>
+            Overvaking i Noreg veks sjeldan gjennom store, opne vedtak. Han veks gjennom mange små, tekniske
+            avgjerder som kvar for seg verkar uskuldige, men som til saman byggjer ein{" "}
+            <strong>infrastruktur for kontroll</strong>. Eit kamera blir sett opp for å tryggje ein butikk. Eit
+            register blir oppretta for å løyse ei konkret oppgåve. Ein heimel for utlevering blir vedteken for
+            å hjelpe etterforsking. Først når desse banda blir sette saman, kjem mønsteret til syne.
+          </p>
+          <p>
+            Det avgjerande er ikkje talet på kamera, men <em>rekkjevidda</em> til dei som kan be om opptaka.
+            Politiet eig sjølv få kamera, men kan krevje utlevering frå titusenvis av private og kommunale
+            kamera. Tolletaten og Statens vegvesen driv landsdekkjande <strong>ANPR</strong>, automatisk
+            skiltattkjenning, som les og lagrar rørslene til kvar bil som passerer. Teleselskapa sit på
+            lokasjons- og trafikkdata som kan hentast ut ved rettsordre. Saman utgjer dette ein kapasitet ingen
+            einskild aktør har bygd med vilje, men som likevel finst.
+          </p>
+          <blockquote>
+            <p>
+              <strong>Infrastruktur for kontroll:</strong> summen av kamera, register og heimlar som gjer det
+              mogleg å sjå, lagre og kople saman opplysningar om folk, uavhengig av kven som eig kvar einskild
+              del.
+            </p>
+          </blockquote>
+          <p>
+            Påstanden er ikkje at Noreg er ein <em>overvakingsstat</em>. Påstanden er at sjølve{" "}
+            <strong>kapasiteten</strong> alt er på plass, fordelt mellom mange hender, og at terskelen for å
+            mobilisere han er låg og lite synleg. Demokratisk kontroll føreset at me kan sjå heile biletet,
+            ikkje berre delane.
+          </p>
+        </section>
+      </article>
+
+      <section className="map-shell" aria-label="Overvakingskartet">
+        <div className="map-intro">
+          <h2>Kartet</h2>
+          <p>
+            Alt innhaldet ligg i Overvakingskartet nedanfor. Bruk <em>Type</em>-filteret for å sjå systema,
+            aktørane, tilgangane eller målingane kvar for seg.
+          </p>
         </div>
 
-        <label>
-          Type
-          <select value={typeFilter} onChange={(event) => setTypeFilter(event.target.value)}>
-            <option>Alle</option>
-            {types.map((type) => (
-              <option key={type}>{type}</option>
-            ))}
-          </select>
-        </label>
+        <div className="graph-wrap">
+          <div className="controls">
+            <div className="stats">
+              {stats.map((stat) => (
+                <div className="stat" key={stat.label}>
+                  <strong>{stat.value}</strong>
+                  <span>{stat.label}</span>
+                </div>
+              ))}
+            </div>
 
-        <label>
-          Lag
-          <select value={lagFilter} onChange={(event) => setLagFilter(event.target.value)}>
-            <option>Alle</option>
-            {lags.map((lag) => (
-              <option key={lag}>{lag}</option>
-            ))}
-          </select>
-        </label>
-      </section>
+            <label>
+              Type
+              <select value={typeFilter} onChange={(event) => setTypeFilter(event.target.value)}>
+                <option>Alle</option>
+                {types.map((type) => (
+                  <option key={type}>{type}</option>
+                ))}
+              </select>
+            </label>
 
-      <section className="graph-card">
-        {loading && <div className="state">Lastar grafdata …</div>}
-        {error && <div className="state error">{error}</div>}
-        {!loading && !error && visibleGraph.nodes.length === 0 && (
-          <div className="state">
-            Ingen grafdata enno. Køyr Notion-synken når GitHub secrets er sett.
+            <label>
+              Lag
+              <select value={lagFilter} onChange={(event) => setLagFilter(event.target.value)}>
+                <option>Alle</option>
+                {lags.map((lag) => (
+                  <option key={lag}>{lag}</option>
+                ))}
+              </select>
+            </label>
           </div>
-        )}
-        {!loading && !error && visibleGraph.nodes.length > 0 && (
-          <ForceGraph2D
-            ref={graphRef}
-            graphData={visibleGraph}
-            nodeId="id"
-            nodeLabel={(node) => `${node.label} · ${node.type}${node.lag ? ` · ${node.lag}` : ""}`}
-            linkSource="source"
-            linkTarget="target"
-            linkLabel={(link) => link.relasjonstype}
-            linkColor={(link) => edgeColor(link)}
-            linkWidth={(link) => edgeWidth(link)}
-            nodeCanvasObject={(node, ctx, globalScale) => {
-              const label = node.label
-              const radius = Math.max(5, Math.min(12, 8 / Math.sqrt(globalScale)))
-              ctx.beginPath()
-              ctx.arc(node.x ?? 0, node.y ?? 0, radius, 0, 2 * Math.PI)
-              ctx.fillStyle = nodeColor(node)
-              ctx.fill()
-              if (globalScale > 0.8) {
-                ctx.font = `${12 / globalScale}px Inter, system-ui, sans-serif`
-                ctx.textAlign = "center"
-                ctx.textBaseline = "top"
-                ctx.fillStyle = "#d7dde8"
-                ctx.fillText(label, node.x ?? 0, (node.y ?? 0) + radius + 3)
-              }
-            }}
-            onNodeClick={(node) => {
-              if (node.kjeldeUrl) window.open(node.kjeldeUrl, "_blank", "noopener,noreferrer")
-            }}
-          />
-        )}
+
+          <div className="graph-card">
+            {loading && <div className="state">Lastar grafdata …</div>}
+            {error && <div className="state error">{error}</div>}
+            {!loading && !error && visibleGraph.nodes.length === 0 && (
+              <div className="state">Ingen grafdata enno. Køyr Notion-synken når GitHub secrets er sett.</div>
+            )}
+            {!loading && !error && visibleGraph.nodes.length > 0 && (
+              <>
+                <ForceGraph2D
+                  ref={graphRef}
+                  graphData={{ nodes: visibleGraph.nodes, links: visibleGraph.edges }}
+                  backgroundColor="#fffdf8"
+                  nodeId="id"
+                  nodeLabel={(node) => `${node.label} · ${node.type}${node.lag ? ` · ${node.lag}` : ""}`}
+                  linkSource="source"
+                  linkTarget="target"
+                  linkLabel={(link) => link.relasjonstype}
+                  linkColor={(link) => edgeColor(link)}
+                  linkWidth={(link) => edgeWidth(link)}
+                  linkDirectionalArrowLength={4}
+                  linkDirectionalArrowRelPos={1}
+                  nodeCanvasObject={(node, ctx, globalScale) => {
+                    const label = node.label
+                    const isSelected = selected?.id === node.id
+                    const radius = Math.max(5, Math.min(13, 9 / Math.sqrt(globalScale)))
+                    ctx.beginPath()
+                    ctx.arc(node.x ?? 0, node.y ?? 0, radius, 0, 2 * Math.PI)
+                    ctx.fillStyle = nodeColor(node)
+                    ctx.fill()
+                    if (isSelected) {
+                      ctx.lineWidth = 2 / globalScale
+                      ctx.strokeStyle = "#1a1714"
+                      ctx.stroke()
+                    }
+                    if (globalScale > 0.7) {
+                      ctx.font = `${11 / globalScale}px Inter, system-ui, sans-serif`
+                      ctx.textAlign = "center"
+                      ctx.textBaseline = "top"
+                      ctx.fillStyle = "#4a443c"
+                      ctx.fillText(label, node.x ?? 0, (node.y ?? 0) + radius + 3)
+                    }
+                  }}
+                  onNodeClick={(node) => setSelected(node)}
+                  onBackgroundClick={() => setSelected(null)}
+                />
+
+                <div className="legend" aria-hidden="true">
+                  <h4>Lag</h4>
+                  {Array.from(nodePalette.entries())
+                    .filter(([key]) => lags.includes(key))
+                    .map(([key, color]) => (
+                      <div className="legend-row" key={key}>
+                        <span className="legend-dot" style={{ background: color }} />
+                        {key}
+                      </div>
+                    ))}
+                </div>
+
+                <div className="zoom-controls">
+                  <button type="button" aria-label="Zoom inn" onClick={() => handleZoom(1.4)}>
+                    +
+                  </button>
+                  <button type="button" aria-label="Zoom ut" onClick={() => handleZoom(1 / 1.4)}>
+                    −
+                  </button>
+                  <button
+                    type="button"
+                    aria-label="Tilbakestill"
+                    onClick={() => graphRef.current?.zoomToFit(420, 60)}
+                  >
+                    ⟳
+                  </button>
+                </div>
+
+                {selected && (
+                  <aside className="detail" aria-label={`Detaljar for ${selected.label}`}>
+                    <button
+                      type="button"
+                      className="detail-close"
+                      aria-label="Lukk"
+                      onClick={() => setSelected(null)}
+                    >
+                      ×
+                    </button>
+                    <span className="tag">{selected.type}</span>
+                    <h3>{selected.label}</h3>
+
+                    <div className="detail-rule" />
+
+                    <dl>
+                      {selected.lag && (
+                        <div className="field">
+                          <dt>Lag</dt>
+                          <dd>{selected.lag}</dd>
+                        </div>
+                      )}
+                      {selected.sektor && (
+                        <div className="field">
+                          <dt>Sektor</dt>
+                          <dd>{selected.sektor}</dd>
+                        </div>
+                      )}
+                      {selected.orgType && (
+                        <div className="field">
+                          <dt>Org-type</dt>
+                          <dd>{selected.orgType}</dd>
+                        </div>
+                      )}
+                      {selected.kategori && (
+                        <div className="field">
+                          <dt>Kategori</dt>
+                          <dd>{selected.kategori}</dd>
+                        </div>
+                      )}
+                      {selected.status && (
+                        <div className="field">
+                          <dt>Status</dt>
+                          <dd>{selected.status}</dd>
+                        </div>
+                      )}
+                    </dl>
+
+                    {selectedConnections.length > 0 && (
+                      <>
+                        <div className="detail-rule" />
+                        <p className="conn-title">Relasjonar</p>
+                        {selectedConnections.map(({ edge, other }) => (
+                          <button
+                            type="button"
+                            className="conn-row"
+                            key={edge.id}
+                            onClick={() => setSelected(other)}
+                          >
+                            <span className="conn-dot" style={{ background: edgeColor(edge) }} />
+                            <span className="conn-name">{other.label}</span>
+                            <span className="conn-rel">{edge.relasjonstype}</span>
+                          </button>
+                        ))}
+                      </>
+                    )}
+
+                    {selected.kjeldeUrl && (
+                      <a
+                        className="detail-source"
+                        href={selected.kjeldeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Opne kjelde ↗
+                      </a>
+                    )}
+                  </aside>
+                )}
+              </>
+            )}
+          </div>
+        </div>
       </section>
+
+      <footer className="site-footer">
+        <p>
+          På lengre sikt skal same metode nyttast til å kartleggje korleis økonomisk og politisk makt er
+          konsentrert i Noreg, etter mønster frå relasjonelle kartleggingar som <em>The Authoritarian Stack</em>.
+        </p>
+      </footer>
     </main>
   )
 }
