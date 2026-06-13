@@ -2,7 +2,9 @@ import { useEffect, useMemo, useRef, useState } from "react"
 import ForceGraph2D, { type ForceGraphMethods } from "react-force-graph-2d"
 import type { Graph, GraphEdge, GraphNode } from "./types"
 
-const nodePalette = new Map<string, string>([
+const minGraphZoom = 0.58
+
+const fallbackNodePalette = new Map<string, string>([
   ["Kamera og sensorar", "#4f8cff"],
   ["Register og biometri", "#9b6cff"],
   ["Kommunikasjon og etterretning", "#ff5d73"],
@@ -13,7 +15,7 @@ const nodePalette = new Map<string, string>([
   ["Media", "#ff7bd5"],
 ])
 
-const edgePalette = new Map<string, string>([
+const fallbackEdgePalette = new Map<string, string>([
   ["Eig", "#30a46c"],
   ["Driftar", "#3b82f6"],
   ["Direkte tilgang", "#e5484d"],
@@ -27,6 +29,7 @@ const edgePalette = new Map<string, string>([
 const emptyGraph: Graph = { nodes: [], edges: [] }
 
 type RawGraph = {
+  meta?: Graph["meta"]
   nodes?: Array<GraphNode & { layer?: string; name?: string }>
   edges?: Array<Partial<GraphEdge> & { from?: string; to?: string; label?: string; relation?: string }>
   links?: Array<Partial<GraphEdge> & { from?: string; to?: string; label?: string; relation?: string }>
@@ -71,15 +74,22 @@ function normalizeGraph(raw: RawGraph): Graph {
     })
     .filter((edge): edge is GraphEdge => edge !== null)
 
-  return { nodes, edges }
+  return { meta: raw.meta, nodes, edges }
 }
 
-function nodeColor(node: GraphNode) {
-  return nodePalette.get(node.lag ?? "") ?? "#8a8170"
+function colorFromText(value: string | undefined, fallback = "#8a8170") {
+  if (!value) return fallback
+  let hash = 0
+  for (const char of value) hash = (hash * 31 + char.charCodeAt(0)) % 360
+  return `hsl(${hash} 58% 52%)`
+}
+
+function nodeColor(node: GraphNode, layerColors: Map<string, string>) {
+  return node.color ?? layerColors.get(node.lag ?? "") ?? colorFromText(node.lag)
 }
 
 function edgeColor(edge: GraphEdge) {
-  return edgePalette.get(edge.relasjonstype ?? "") ?? "rgba(131, 122, 108, 0.6)"
+  return fallbackEdgePalette.get(edge.relasjonstype ?? "") ?? colorFromText(edge.relasjonstype, "#837a6c")
 }
 
 function edgeWidth(edge: GraphEdge) {
@@ -115,6 +125,14 @@ export default function App() {
 
   const types = useMemo(() => textSet(graph.nodes.map((node) => node.type)), [graph.nodes])
   const lags = useMemo(() => textSet(graph.nodes.map((node) => node.lag)), [graph.nodes])
+  const layerColors = useMemo(() => {
+    const colors = new Map(fallbackNodePalette)
+    for (const [lag, color] of Object.entries(graph.meta?.lagFargar ?? {})) colors.set(lag, color)
+    for (const node of graph.nodes) {
+      if (node.lag && node.color) colors.set(node.lag, node.color)
+    }
+    return colors
+  }, [graph.meta?.lagFargar, graph.nodes])
 
   const visibleGraph = useMemo(() => {
     const nodes = graph.nodes.filter((node) => {
@@ -157,7 +175,7 @@ export default function App() {
 
   const handleZoom = (factor: number) => {
     const current = graphRef.current?.zoom() ?? 1
-    graphRef.current?.zoom(current * factor, 320)
+    graphRef.current?.zoom(Math.max(minGraphZoom, current * factor), 320)
   }
 
   return (
@@ -188,6 +206,43 @@ export default function App() {
           </p>
           <blockquote>
             <p>
+              <strong>6 kamera:</strong> Politiforum skildra i 2013 at politiet hadde{" "}
+              <a
+                href="https://www.politiforum.no/nyheter/oslo-seks-politikameraer/112206"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                "skarve seks kameraer"
+              </a>{" "}
+              ved Oslo S. Poenget her er ikkje talet i seg sjølv, men spranget frå eigarskap til tilgang:
+              kontrollkapasiteten ligg i nettverket rundt kameraa.
+            </p>
+          </blockquote>
+
+          <blockquote>
+            <p>
+              <strong>Opent budsjett:</strong> Etterretningstenesta låg på{" "}
+              <a
+                href="https://www.regjeringen.no/no/dokumenter/stprp-nr-1-2004-2005-/id297065/?ch=4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                691,845 mill. kroner i 2005
+              </a>
+              ; i statsbudsjettet for 2025 er kap. 1735 foreslått til{" "}
+              <a
+                href="https://www.regjeringen.no/no/dokumenter/prop.-1-s-20242025/id3057361/?ch=3"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                4,299 mrd. kroner
+              </a>
+              .
+            </p>
+          </blockquote>
+
+          <blockquote>
+            <p>
               <strong>Berande tese:</strong> Makt over informasjon ligg ikkje først og fremst i kven som{" "}
               <em>eig</em> utstyret, men i kven som kan <em>mobilisere</em> det. Politiet eig få kamera sjølv,
               men har tilgang til titusenvis.
@@ -205,6 +260,10 @@ export default function App() {
             <li>
               <strong>Fire gradar av kontroll:</strong> kvar tilgang er klassifisert som <em>eigd</em>,{" "}
               <em>drifta</em>, <em>tilgjengeleg</em> eller <em>regelmessig utlevert</em>.
+            </li>
+            <li>
+              <strong>Fri dataflate:</strong> nodar, kantar, lag, fargar og filternamn blir lesne frå grafdata.
+              Når Notion-synken oppdaterer fila, skal kartet følgje etter utan kodeendring.
             </li>
           </ul>
         </section>
@@ -298,6 +357,7 @@ export default function App() {
                   ref={graphRef}
                   graphData={{ nodes: visibleGraph.nodes, links: visibleGraph.edges }}
                   backgroundColor="#fffdf8"
+                  minZoom={minGraphZoom}
                   nodeId="id"
                   nodeLabel={(node) => `${node.label} · ${node.type}${node.lag ? ` · ${node.lag}` : ""}`}
                   linkSource="source"
@@ -313,7 +373,7 @@ export default function App() {
                     const radius = Math.max(5, Math.min(13, 9 / Math.sqrt(globalScale)))
                     ctx.beginPath()
                     ctx.arc(node.x ?? 0, node.y ?? 0, radius, 0, 2 * Math.PI)
-                    ctx.fillStyle = nodeColor(node)
+                    ctx.fillStyle = nodeColor(node, layerColors)
                     ctx.fill()
                     if (isSelected) {
                       ctx.lineWidth = 2 / globalScale
@@ -334,11 +394,10 @@ export default function App() {
 
                 <div className="legend" aria-hidden="true">
                   <h4>Lag</h4>
-                  {Array.from(nodePalette.entries())
-                    .filter(([key]) => lags.includes(key))
-                    .map(([key, color]) => (
+                  {lags
+                    .map((key) => (
                       <div className="legend-row" key={key}>
-                        <span className="legend-dot" style={{ background: color }} />
+                        <span className="legend-dot" style={{ background: layerColors.get(key) ?? colorFromText(key) }} />
                         {key}
                       </div>
                     ))}

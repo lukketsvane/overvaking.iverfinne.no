@@ -3,6 +3,7 @@ export type GraphNode = {
   label: string
   type: string
   lag?: string
+  color?: string
   sektor?: string
   orgType?: string
   status?: string
@@ -21,6 +22,12 @@ export type GraphEdge = {
 }
 
 export type Graph = {
+  meta?: {
+    kjelde?: string
+    nodar?: number
+    kantar?: number
+    lagFargar?: Record<string, string>
+  }
   nodes: GraphNode[]
   edges: GraphEdge[]
 }
