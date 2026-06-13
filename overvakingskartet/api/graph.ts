@@ -14,7 +14,7 @@ import {
   selectName,
   urlValue,
   type NotionPage,
-} from "./_graph"
+} from "./_graph.js"
 
 type ContentBlock = {
   id: string
