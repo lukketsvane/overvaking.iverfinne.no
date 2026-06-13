@@ -6,10 +6,12 @@
 import { mkdirSync, writeFileSync } from "node:fs"
 import { buildGraph, fetchAllRows, type GraphEdge, type GraphNode } from "../api/_graph.js"
 
-const sourceId = process.env.NOTION_DATA_SOURCE_ID ?? process.env.NOTION_DB_ID
+const dataSourceId = process.env.NOTION_DATA_SOURCE_ID
+const databaseId = process.env.NOTION_DB_ID
+const sourceId = dataSourceId ?? databaseId
 if (!sourceId) throw new Error("Manglar NOTION_DATA_SOURCE_ID/NOTION_DB_ID")
 
-const rows = await fetchAllRows(sourceId)
+const rows = await fetchAllRows(sourceId, dataSourceId ? "dataSource" : "database")
 const g = buildGraph(rows)
 
 const pct = (n: number, d: number) => (d ? Math.round((100 * n) / d) : 0)

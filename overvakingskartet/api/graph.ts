@@ -129,7 +129,9 @@ function mapContent(page: NotionPage, index: number): ContentBlock | null {
 }
 
 async function handleGraphRequest() {
-  const sourceId = process.env.NOTION_DATA_SOURCE_ID ?? process.env.NOTION_DB_ID
+  const dataSourceId = process.env.NOTION_DATA_SOURCE_ID
+  const databaseId = process.env.NOTION_DB_ID
+  const sourceId = dataSourceId ?? databaseId
   const contentPageId = process.env.NOTION_CONTENT_PAGE_ID ?? process.env.NOTION_INTRO_PAGE_ID
 
   if (!process.env.NOTION_TOKEN || !sourceId) {
@@ -137,7 +139,7 @@ async function handleGraphRequest() {
   }
 
   try {
-    const rows = await fetchAllRows(sourceId)
+    const rows = await fetchAllRows(sourceId, dataSourceId ? "dataSource" : "database")
     const graph = buildGraph(rows)
 
     const blocks: ContentBlock[] = []

@@ -301,22 +301,51 @@ export function buildGraph(rows: NotionPage[]): GraphPayload {
   }
 }
 
-export async function fetchAllRows(sourceId: string): Promise<NotionPage[]> {
+type NotionSourceKind = "dataSource" | "database" | "auto"
+
+export async function fetchAllRows(sourceId: string, sourceKind: NotionSourceKind = "auto"): Promise<NotionPage[]> {
   const notion = getNotion()
-  const out: NotionPage[] = []
-  let cursor: string | undefined
 
-  do {
-    const args = { page_size: 100, start_cursor: cursor }
-    let res: any
+  const queryRows = async (dataSourceId: string) => {
+    const out: NotionPage[] = []
+    let cursor: string | undefined
+
+    do {
+      const res: any = await (notion as any).dataSources.query({
+        data_source_id: dataSourceId,
+        page_size: 100,
+        start_cursor: cursor,
+      })
+      out.push(...((res.results ?? []) as NotionPage[]))
+      cursor = res.has_more ? res.next_cursor : undefined
+    } while (cursor)
+
+    return out
+  }
+
+  const firstDataSourceIdFromDatabase = async (databaseId: string, originalError?: unknown) => {
     try {
-      res = await (notion as any).dataSources.query({ data_source_id: sourceId, ...args })
+      const database: any = await (notion as any).databases.retrieve({ database_id: databaseId })
+      const dataSourceId = database?.data_sources?.[0]?.id
+      if (dataSourceId) return dataSourceId
     } catch {
-      res = await (notion as any).databases.query({ database_id: sourceId, ...args })
+      if (originalError) throw originalError
+      throw new Error("Fann ikkje Notion-databasen")
     }
-    out.push(...((res.results ?? []) as NotionPage[]))
-    cursor = res.has_more ? res.next_cursor : undefined
-  } while (cursor)
+    if (originalError) throw originalError
+    throw new Error("Notion-databasen har ingen data sources")
+  }
 
-  return out.filter((page) => !page.archived && !page.in_trash)
+  if (sourceKind === "database") {
+    const dataSourceId = await firstDataSourceIdFromDatabase(sourceId)
+    return (await queryRows(dataSourceId)).filter((page) => !page.archived && !page.in_trash)
+  }
+
+  try {
+    return (await queryRows(sourceId)).filter((page) => !page.archived && !page.in_trash)
+  } catch (sourceError) {
+    if (sourceKind === "dataSource") throw sourceError
+    const dataSourceId = await firstDataSourceIdFromDatabase(sourceId, sourceError)
+    return (await queryRows(dataSourceId)).filter((page) => !page.archived && !page.in_trash)
+  }
 }
