@@ -50,7 +50,7 @@ function edgeEndId(value: string | GraphNode): string {
 }
 
 export default function App() {
-  const graphRef = useRef<ForceGraphMethods<GraphNode, GraphEdge>>()
+  const graphRef = useRef<ForceGraphMethods<GraphNode, GraphEdge> | undefined>(undefined)
   const [graph, setGraph] = useState<Graph>(emptyGraph)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
