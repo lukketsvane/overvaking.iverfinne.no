@@ -1,4 +1,36 @@
 {
-  "nodes": [],
-  "edges": []
+  "nodes": [
+    { "id": "politiet", "label": "Politiet", "type": "Organisasjon", "lag": "Justis og kontroll", "sektor": "Stat", "orgType": "Direktorat", "status": "Aktiv", "kjeldeUrl": "https://www.politiet.no" },
+    { "id": "pst", "label": "PST", "type": "Organisasjon", "lag": "Kommunikasjon og etterretning", "sektor": "Stat", "orgType": "Tryggingsteneste", "status": "Aktiv" },
+    { "id": "etterretningstenesta", "label": "Etterretningstenesta", "type": "Organisasjon", "lag": "Kommunikasjon og etterretning", "sektor": "Stat", "orgType": "Forsvar", "status": "Aktiv" },
+    { "id": "tolletaten", "label": "Tolletaten", "type": "Organisasjon", "lag": "Justis og kontroll", "sektor": "Stat", "orgType": "Etat", "status": "Aktiv" },
+    { "id": "vegvesen", "label": "Statens vegvesen", "type": "Organisasjon", "lag": "Datainfrastruktur", "sektor": "Stat", "orgType": "Etat", "status": "Aktiv" },
+    { "id": "anpr", "label": "ANPR (skiltattkjenning)", "type": "System", "lag": "Kamera og sensorar", "kategori": "Måling", "status": "I drift" },
+    { "id": "private-kamera", "label": "Private overvakingskamera", "type": "System", "lag": "Kamera og sensorar", "kategori": "Måling", "status": "Spreidd" },
+    { "id": "kommunale-kamera", "label": "Kommunale kamera", "type": "System", "lag": "Kamera og sensorar", "kategori": "Måling", "status": "I drift" },
+    { "id": "folkeregister", "label": "Folkeregisteret", "type": "System", "lag": "Register og biometri", "kategori": "Register", "status": "Aktiv" },
+    { "id": "pass-biometri", "label": "Pass- og biometriregister", "type": "System", "lag": "Register og biometri", "kategori": "Register", "status": "Aktiv" },
+    { "id": "teleselskap", "label": "Teleselskapa", "type": "Organisasjon", "lag": "Kapital og eigarskap", "sektor": "Privat", "orgType": "Selskap", "status": "Aktiv" },
+    { "id": "teledata", "label": "Lokasjons- og trafikkdata", "type": "System", "lag": "Datainfrastruktur", "kategori": "Datakjelde", "status": "Lagra" },
+    { "id": "ekomlov", "label": "Ekomlova", "type": "Lovheimel", "lag": "Politikk og styring", "kategori": "Lov", "status": "Gjeldande" },
+    { "id": "politiregisterlov", "label": "Politiregisterlova", "type": "Lovheimel", "lag": "Politikk og styring", "kategori": "Lov", "status": "Gjeldande" },
+    { "id": "datatilsynet", "label": "Datatilsynet", "type": "Tilsyn", "lag": "Politikk og styring", "sektor": "Stat", "orgType": "Tilsyn", "status": "Aktiv", "kjeldeUrl": "https://www.datatilsynet.no" }
+  ],
+  "edges": [
+    { "id": "e1", "source": "politiet", "target": "private-kamera", "relasjonstype": "Kan krevje utlevering", "tilgangsniva": 3, "praksis": "Utlevering ved etterforsking" },
+    { "id": "e2", "source": "politiet", "target": "kommunale-kamera", "relasjonstype": "Kan krevje utlevering", "tilgangsniva": 3 },
+    { "id": "e3", "source": "politiet", "target": "folkeregister", "relasjonstype": "Direkte tilgang", "tilgangsniva": 4 },
+    { "id": "e4", "source": "politiet", "target": "pass-biometri", "relasjonstype": "Direkte tilgang", "tilgangsniva": 4 },
+    { "id": "e5", "source": "tolletaten", "target": "anpr", "relasjonstype": "Driftar", "tilgangsniva": 4 },
+    { "id": "e6", "source": "vegvesen", "target": "anpr", "relasjonstype": "Eig", "tilgangsniva": 4 },
+    { "id": "e7", "source": "teleselskap", "target": "teledata", "relasjonstype": "Eig", "tilgangsniva": 4 },
+    { "id": "e8", "source": "politiet", "target": "teledata", "relasjonstype": "Rettsordre", "tilgangsniva": 2 },
+    { "id": "e9", "source": "pst", "target": "teledata", "relasjonstype": "Rettsordre", "tilgangsniva": 2 },
+    { "id": "e10", "source": "etterretningstenesta", "target": "teledata", "relasjonstype": "Direkte tilgang", "tilgangsniva": 3 },
+    { "id": "e11", "source": "teleselskap", "target": "politiet", "relasjonstype": "Utleverer regelmessig", "tilgangsniva": 3 },
+    { "id": "e12", "source": "ekomlov", "target": "teledata", "relasjonstype": "Driftar", "tilgangsniva": 1 },
+    { "id": "e13", "source": "politiregisterlov", "target": "politiet", "relasjonstype": "Driftar", "tilgangsniva": 1 },
+    { "id": "e14", "source": "datatilsynet", "target": "private-kamera", "relasjonstype": "Driftar", "tilgangsniva": 1 },
+    { "id": "e15", "source": "pst", "target": "folkeregister", "relasjonstype": "Direkte tilgang", "tilgangsniva": 4 }
+  ]
 }
