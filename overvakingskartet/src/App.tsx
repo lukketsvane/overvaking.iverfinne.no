@@ -26,8 +26,52 @@ const edgePalette = new Map<string, string>([
 
 const emptyGraph: Graph = { nodes: [], edges: [] }
 
+type RawGraph = {
+  nodes?: Array<GraphNode & { layer?: string; name?: string }>
+  edges?: Array<Partial<GraphEdge> & { from?: string; to?: string; label?: string; relation?: string }>
+  links?: Array<Partial<GraphEdge> & { from?: string; to?: string; label?: string; relation?: string }>
+}
+
 function textSet(values: Array<string | undefined>) {
   return Array.from(new Set(values.filter(Boolean) as string[])).sort((a, b) => a.localeCompare(b, "nn"))
+}
+
+function normalizeType(type: string | undefined) {
+  if (!type) return "Ukjend"
+  return type.charAt(0).toUpperCase() + type.slice(1)
+}
+
+function normalizeGraph(raw: RawGraph): Graph {
+  const nodes = (raw.nodes ?? []).map((node) => ({
+    ...node,
+    label: node.label ?? node.name ?? node.id,
+    type: normalizeType(node.type),
+    lag: node.lag ?? node.layer,
+  }))
+
+  const edgeInput = raw.edges ?? raw.links ?? []
+  const edges = edgeInput
+    .map((edge, index): GraphEdge | null => {
+      const source = edge.source ?? edge.from
+      const target = edge.target ?? edge.to
+      if (!source || !target) return null
+
+      const normalized: GraphEdge = {
+        id: edge.id ?? `${source}-${target}-${index}`,
+        source,
+        target,
+        relasjonstype: edge.relasjonstype ?? edge.relation ?? edge.label ?? "Relasjon",
+      }
+
+      if (edge.mekanisme) normalized.mekanisme = edge.mekanisme
+      if (typeof edge.tilgangsniva === "number") normalized.tilgangsniva = edge.tilgangsniva
+      if (edge.praksis) normalized.praksis = edge.praksis
+
+      return normalized
+    })
+    .filter((edge): edge is GraphEdge => edge !== null)
+
+  return { nodes, edges }
 }
 
 function nodeColor(node: GraphNode) {
@@ -62,9 +106,9 @@ export default function App() {
     fetch("/data/graph.json", { cache: "no-store" })
       .then((res) => {
         if (!res.ok) throw new Error(`Kunne ikkje lese data/graph.json (${res.status})`)
-        return res.json() as Promise<Graph>
+        return res.json() as Promise<RawGraph>
       })
-      .then((data) => setGraph(data))
+      .then((data) => setGraph(normalizeGraph(data)))
       .catch((err: unknown) => setError(err instanceof Error ? err.message : "Ukjend feil"))
       .finally(() => setLoading(false))
   }, [])
